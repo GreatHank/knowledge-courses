@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="63pt" height="13pt" viewBox="0 0 63 13" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T11:29:21.052566</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 13 
+L 63 13 
+L 63 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <!-- $\mathbf{x}_0,\mathbf{y}_0,\mathbf{z}_0$ -->
+   <g transform="translate(0 9) scale(0.18 -0.18)">
+    <defs>
+     <path id="STIXGeneral-Bold-78" d="M 3098 0 
+L 1555 0 
+L 1555 154 
+Q 1843 173 1843 282 
+Q 1843 384 1632 691 
+Q 1485 896 1363 1094 
+Q 1350 1082 1315 1037 
+Q 1280 992 1261 966 
+Q 851 474 851 307 
+Q 851 173 1171 154 
+L 1171 0 
+L 90 0 
+L 90 154 
+Q 269 166 406 278 
+Q 544 390 813 749 
+L 1088 1107 
+Q 1120 1146 1136 1168 
+Q 1152 1190 1158 1196 
+Q 1165 1203 1181 1225 
+Q 1197 1248 1229 1286 
+L 410 2547 
+Q 314 2694 256 2736 
+Q 198 2778 77 2797 
+L 77 2950 
+L 1677 2950 
+L 1677 2797 
+Q 1376 2790 1376 2675 
+Q 1376 2534 1747 2048 
+Q 1811 1971 1830 1939 
+L 2061 2234 
+Q 2304 2547 2304 2643 
+Q 2304 2714 2259 2742 
+Q 2214 2771 2106 2784 
+L 1978 2797 
+L 1978 2950 
+L 3053 2950 
+L 3053 2797 
+Q 2771 2752 2605 2547 
+L 1958 1741 
+L 2906 282 
+Q 2957 198 3098 154 
+L 3098 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-30" d="M 3046 2112 
+Q 3046 1683 2963 1302 
+Q 2880 922 2717 602 
+Q 2554 282 2266 96 
+Q 1978 -90 1600 -90 
+Q 1210 -90 915 108 
+Q 621 307 461 640 
+Q 301 973 227 1350 
+Q 154 1728 154 2150 
+Q 154 2746 301 3222 
+Q 448 3699 790 4012 
+Q 1133 4326 1626 4326 
+Q 2253 4326 2649 3712 
+Q 3046 3098 3046 2112 
+z
+M 2432 2080 
+Q 2432 3091 2217 3625 
+Q 2003 4160 1587 4160 
+Q 1190 4160 979 3622 
+Q 768 3085 768 2106 
+Q 768 1120 979 598 
+Q 1190 77 1600 77 
+Q 2003 77 2217 598 
+Q 2432 1120 2432 2080 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-2c" d="M 531 -902 
+L 467 -781 
+Q 998 -422 998 -96 
+Q 998 -13 909 -13 
+Q 883 -13 822 -25 
+Q 762 -38 723 -38 
+Q 352 -38 352 288 
+Q 352 454 457 553 
+Q 563 653 736 653 
+Q 954 653 1101 496 
+Q 1248 339 1248 96 
+Q 1248 -198 1053 -473 
+Q 858 -749 531 -902 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Bold-79" d="M 3085 2950 
+L 3085 2797 
+Q 2931 2778 2854 2710 
+Q 2778 2643 2701 2445 
+L 1754 -102 
+Q 1466 -877 1261 -1101 
+Q 1062 -1312 723 -1312 
+Q 448 -1312 275 -1171 
+Q 102 -1030 102 -806 
+Q 102 -621 211 -499 
+Q 320 -378 499 -378 
+Q 659 -378 771 -474 
+Q 883 -570 883 -710 
+Q 883 -736 870 -800 
+L 864 -838 
+Q 864 -883 896 -915 
+Q 928 -947 973 -947 
+Q 1216 -947 1395 -422 
+L 1510 -83 
+L 749 1773 
+Q 435 2547 320 2707 
+Q 269 2771 102 2797 
+L 102 2950 
+L 1696 2950 
+L 1696 2797 
+L 1594 2790 
+Q 1363 2771 1363 2630 
+Q 1363 2586 1491 2259 
+L 1952 1069 
+L 2387 2272 
+Q 2458 2477 2458 2586 
+Q 2458 2701 2387 2745 
+Q 2317 2790 2112 2797 
+L 2112 2950 
+L 3085 2950 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Bold-7a" d="M 2688 1024 
+L 2586 0 
+L 134 0 
+L 134 160 
+L 1632 2746 
+Q 954 2746 742 2624 
+Q 531 2502 410 2042 
+L 243 2042 
+L 288 2950 
+L 2662 2950 
+L 2662 2784 
+L 1184 205 
+L 1370 205 
+Q 1760 205 1955 285 
+Q 2150 365 2310 582 
+Q 2438 774 2509 1024 
+L 2688 1024 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#STIXGeneral-Bold-78" transform="translate(0 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Regular-30" transform="translate(51.543266 -12.321875) scale(0.7)"/>
+    <use xlink:href="#STIXGeneral-Regular-2c" transform="translate(90.95263 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Bold-79" transform="translate(130.392611 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Regular-30" transform="translate(181.935877 -12.321875) scale(0.7)"/>
+    <use xlink:href="#STIXGeneral-Regular-2c" transform="translate(221.345242 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Bold-7a" transform="translate(260.785223 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Regular-30" transform="translate(306.728498 -12.321875) scale(0.7)"/>
+   </g>
+  </g>
+ </g>
+</svg>

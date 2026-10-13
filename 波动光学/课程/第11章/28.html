@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>怎样利用倏逝场耦合和扫描近场 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 28</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-28">返回本章首页</a></div><h1>28 怎样利用倏逝场耦合和扫描近场</h1><p class="meta">§11-2 光在电介质分界面上的反射与折射.pptx · 原幻灯片P37–38</p><p>用第三物体改变单界面条件，解释受抑全反射、输出耦合与近场显微镜装置。</p><nav class="resource-links"><a href="index.html#deck-map-11-2">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-2.html">本课件题目与解析</a></nav><section class="lesson lesson-content" id="lesson-28-content"><h2>当前位置：第二侧有衰减场 → 近邻物体可以取走能量</h2>
+<p>上一课的理想条件是<strong>第二介质占据无限半空间，而且不吸收</strong>。现在把另一个透明物体放到很近的位置，反射不再全部返回；再把一根细探针放到近场里，可以逐点读出样品附近的光学变化。问题是：<strong>零法向平均流的结论为什么会改变？</strong></p>
+<h3>先读原P37的总结，再修改边界条件</h3>
+<figure><img alt="原P37全反射总结倏逝调制器及棱镜波导耦合图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P037.png"/><figcaption>原P37：右图为带间隙d的倏逝波光调制器；左下为棱镜P与导光介质G靠近的耦合示意。</figcaption></figure>
+<p>课件总结全反射的三个特点：理想无耗散单界面反射比1；反射相位发生变化；第二侧有倏逝场。应用包括反射棱镜、光纤（传像、传光、通信、传感）、薄膜光波导、光学纳米测量和光调制。这些用途分别利用方向保持、相位或近场，并非同一种器件。</p>
+<p>看右图：He–Ne光束从左进入第一棱镜 <img alt="P_1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d1641bdc80ea783c.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>；斜面附近还有另一块棱镜 <img alt="P_2" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-c5e705958e40c3bd.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，两者之间隔着低折射率间隙 <img alt="d" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-18ac3e7343f01689.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。原图的 <img alt="V_1,V_2" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d4e59c20b1674655.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 标示两路输出所在位置；图示没有给探测器的具体电路，不把它们凭空改成电压源。远离时主要向下反射；间隙足够薄时，倏逝场能到达第二棱镜，在那里形成可传播场，右侧出现透射输出，向下的反射能量相应减少。这称<strong>受抑全反射</strong>（frustrated total internal reflection）。</p>
+<h3>为什么单界面结论不能继续照搬？</h3>
+<p>单个衰减解是 <img alt="A e^{-\kappa z}" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-317973b9a00dc35f.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，其相应纯s/p平均法向流为零；有限间隙中必须同时满足两侧边界条件，场一般含有</p>
+<div class="equation" role="math"><img alt="\widetilde E(z)=A e^{-\kappa z}+B e^{+\kappa z}." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-79f24fcce9bd4b34.svg" style="width:181.3px;height:auto"/></div>
+<p>增长项只存在于<strong>有限厚度的间隙</strong>，没有在无源无限半空间中增长到无穷，故不违背上一课的根选择。两个分量的相位和交叉项可以使法向平均能流不再为零；因此不能仍按单界面衰减解断言第二棱镜永远收不到能量。</p>
+<p><strong>补充解释：</strong><img alt="\kappa d" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b72bab344d38f138.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 是无量纲量，衡量间隙对场的抑制。<img alt="d\gg1/\kappa" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-73a9e66b0428b7a6.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 时耦合很弱；<img alt="d" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-18ac3e7343f01689.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 减小时场重叠加强。精确透射率还取决于三种介质折射率、角度和s/p偏振，不能只写“透射率恒等于 <img alt="e^{-2\kappa d}" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-20ec43503944d08e.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>”。指数因子描述衰减尺度，不等于完整三层解。</p>
+<p>调制器让 <img alt="d" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-18ac3e7343f01689.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 或相邻介质条件发生变化，便把近场耦合变化变成两路输出功率变化；在理想无损模型里能量守恒是 <img alt="R+T=1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-3f7377faef184aaf.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，而非仍有 <img alt="R=1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-5751c3ebba6a1cb4.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/> 再另凭空多出一束光。</p>
+<h3>P37左下：把棱镜中的光送进薄膜导光结构</h3>
+<p>原图棱镜P靠近介质G，入射束在底面附近形成倏逝场，G中画出的折线表示被耦入后继续导光。棱镜与导光结构的位置、间隙和切向相位匹配控制耦合。<img alt="\theta,\beta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-de9dbbde032684d7.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 是原图所示光线各自的几何角，未给出完整材料和模式参数，本课保留原示意，不擅自从图推算具体耦合效率或所有波导模。作为输出耦合器时反过来利用同样的近场匹配，从波导提取一部分光。</p>
+<h3>P38近场扫描：光路、探针控制和读数分别看</h3>
+<figure><img alt="原P38近场扫描显微镜光纤针尖压电器光电倍增管和计算机反馈" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P038.png"/><figcaption>原P38：下部是棱镜—样品—针尖的光学关系；上部与左侧是收光、扫描、反馈及成像系统。</figcaption></figure>
+<p>从下往上读原图：</p>
+<ol>
+<li>棱镜内红线在上表面全内反射，样品位于该表面附近；近场受到样品的局部结构影响。</li>
+<li>光纤针尖靠近样品，收集局部场中能与针尖耦合的部分。针尖不是在遥远像面接收整幅普通显微图像。</li>
+<li>光经光纤送到光电倍增管，转换成可记录的信号。</li>
+<li><img alt="xyz" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-3608bca1e44ea6c4.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 运动机构按点移动针尖；压电转换器与反馈控制维持位置/距离关系，避免每一像素的收光变化仅由高度变化造成。</li>
+<li>计算机控制扫描并处理各点信号，组合成图像。</li>
+</ol>
+<p>这里光信号的路线是“近场 → 针尖 → 光纤 → 探测”，控制关系是“扫描/反馈 → 针尖位置 → 改变收光条件”，两类箭头不能混成同一条光线。原图连线本身没有逐根标出电流或数据方向，本课按各模块用途解释，不凭图虚构控制器内部电路。</p>
+<p><strong>补充解释：</strong>近场中的局部高空间频率通常在远场传播前已衰减，针尖必须在近场距离内取样；因此可获得普通远场成像难以接触的信息。实际分辨率还受针尖尺寸、针尖—样品间距、扫描反馈与噪声影响，不能仅凭“穿深一个波长”推出仪器分辨率。本页没有给数值分辨率或针尖尺寸，不另加测验或演算条件。</p>
+<h3>放回本份课件逻辑链</h3>
+<p>单界面倏逝场 → 修改成有限间隙/第三物体 → 可以传递法向能量 → 输出耦合与近场取样。下一课回到“相位而非损耗”，把全反射做成偏振相位器。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-28">返回本章首页</a><a href="27.html">← 上一课</a><a href="29.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>读振幅与相位曲线：零点、半波损失和适用边界 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 21</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-21">返回本章首页</a></div><h1>21 读振幅与相位曲线：零点、半波损失和适用边界</h1><p class="meta">§11-2 光在电介质分界面上的反射与折射.pptx · 原幻灯片P14–19</p><p>按光疏/光密两种方向读原曲线，用明确基底区分相位与向量方向，并核对课件概括中的条件。</p><nav class="resource-links"><a href="index.html#deck-map-11-2">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-2.html">本课件题目与解析</a></nav><section class="lesson lesson-content" id="lesson-21-content"><h2>窗玻璃换一个角度，反光为什么会变</h2>
+<p>玻璃反光强弱随角度变化，某些偏振甚至能在一个角度消失。本课先读<strong>电场振幅系数</strong>，尚不把图上<img alt="r,t" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-123037f468bda6c2.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>当作能量比例。P14备注明确要求观察系数的数值和符号变化；该课堂观察指令已单独保留为题目区任务，下面直接给解释，不要求你先作答。</p>
+<figure><img alt="原课件P14：空气到n=1.5玻璃与玻璃到空气的rs rp ts tp随入射角曲线" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P014.png"/><figcaption>横轴为<img alt="\theta_1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-9f146cf9b0e1580e.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，纵轴为振幅系数；左图<img alt="n_2/n_1=1.5" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-af8213216ed6c634.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，右图<img alt="n_2/n_1=1/1.5" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-2649a79d8fc3fb88.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。虚线<img alt="\theta_B" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-da59beec7a83d628.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>是p反射零点，<img alt="\theta_c" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-6dd64ab67621615b.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>是传播折射支的临界边缘。</figcaption></figure>
+<h2>左图：空气到玻璃</h2>
+<p>从已推导的余弦公式计算，正入射<img alt="r_s=-0.2,r_p=+0.2,t_s=t_p=0.8" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-bc16fa24d7c72155.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。随着<img alt="\theta_1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-9f146cf9b0e1580e.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>增加，<img alt="r_s" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0876bfe73de67b89.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>始终负，模值逐渐趋近1；<img alt="r_p" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0d5a58c436e4715b.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>先正，在Brewster角<img alt="\theta_B\approx56.31^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-322b71cdf090e985.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>为零，再负，掠入射极限趋<img alt="-1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-1bad6b8cf97131fc.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>。<img alt="t_s,t_p" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-245c0b3b4bcb3b84.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>在传播折射支均正，掠入射趋零。</p>
+<p>这个“p消失”是某一入射偏振分量的反射振幅为零；若入射本来就是纯p光，反射光整体为零。若原入射同时有s、p，则剩下s反射。课件“只有s波”隐含入射含有s分量。</p>
+<h2>右图：玻璃到空气</h2>
+<p>正入射<img alt="r_s=+0.2,r_p=-0.2,t_s=t_p=1.2" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-ab641043a669f563.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。在<img alt="\theta_B\approx33.69^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-20edf7c37e59c458.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>处<img alt="r_p=0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-00dd5539a3d992fb.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。继续增加到<img alt="\theta_c=\arcsin(1/1.5)\approx41.81^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-3544d1624d07464d.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，<img alt="\theta_2\to90^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-6e60c702e731d7ec.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>；<img alt="r_s,r_p\to1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-81ed955c243a82a5.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。临界边缘<img alt="t_s\to2,t_p\to3" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b0d9bc0c85ab4ddd.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，并不趋零。</p>
+<p>这立即提示：<strong>电场透射幅值大于入射，不等于传走更多能量。</strong>折射束在临界角沿界面传播，法向能流趋零；下一课会把<img alt="\cos\theta_2" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0ef07c5bafa28488.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>因子补上。</p>
+<p>P14在临界角后把反射曲线画成1，应读作<img alt="|r_s|=|r_p|=1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b52dabe3244ddba9.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>的模；系数本身为复数，不是实常量1。透射曲线不再画出的是实角传播折射支，不能推出介质2的场消失；P15“透射光消失”必须限定为没有向介质2深处传播的透射束，倏逝场后面仍要讨论。</p>
+<h2>把P15–17的相位规则放到一张带条件的表</h2>
+<p>在无吸收、实折射率、未全反射的普通界面，<img alt="r_s,r_p,t_s,t_p" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-1b455bf7532926e6.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>为实数。正系数的基底振幅相位为0，负系数为<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>（与<img alt="-\pi" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-13d281dc720d0daf.svg" style="height:0.50em;width:auto;vertical-align:-0.22em"/>等价）。以下沿P9的s、p基底比较：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>入射方向与角度范围</th>
+<th><img alt="r_s" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0876bfe73de67b89.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/></th>
+<th><img alt="r_p" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0d5a58c436e4715b.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/></th>
+<th>相位含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光疏到光密，<img alt="0\leq\theta_1&lt;\theta_B" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b29b8e0b43e44c35.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/></td>
+<td>负</td>
+<td>正</td>
+<td>s基底振幅反相，p基底振幅同相</td>
+</tr>
+<tr>
+<td>光疏到光密，<img alt="\theta_B&lt;\theta_1&lt;90^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-39e83c6e30fbf77c.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/></td>
+<td>负</td>
+<td>负</td>
+<td>两个基底振幅均反相</td>
+</tr>
+<tr>
+<td>光密到光疏，<img alt="0\leq\theta_1&lt;\theta_B" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b29b8e0b43e44c35.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/></td>
+<td>正</td>
+<td>负</td>
+<td>s基底振幅同相，p基底振幅反相</td>
+</tr>
+<tr>
+<td>光密到光疏，<img alt="\theta_B&lt;\theta_1&lt;\theta_c" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0330f151f8b9eaf2.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/></td>
+<td>正</td>
+<td>正</td>
+<td>两个基底振幅均同相</td>
+</tr>
+<tr>
+<td>光密到光疏，<img alt="\theta_1&gt;\theta_c" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-16a954c09cb73cdd.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/></td>
+<td>复数、模1</td>
+<td>复数、模1</td>
+<td>相位随角度连续变化，不能只分正负</td>
+</tr>
+</tbody>
+</table></div>
+<p>在<img alt="\theta_B" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-da59beec7a83d628.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>处<img alt="r_p=0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-00dd5539a3d992fb.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，p反射场不存在，<strong>它的相位无定义</strong>；图上的“相位跳变”表示从零点两边趋近的极限，不能给零振幅本身指定一个相位。正入射时s、p基底不同所致的符号差异，已在上一课还原为同一固定坐标响应。</p>
+<p>传播折射支的<img alt="t_s,t_p&gt;0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-b26f728d88171366.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，所以相对于所选基底和同一界面参考点，折射不额外引入0/π跳变。它不是说“在介质中传播不累积相位”；波仍会积累<img alt="\mathbf{k}_t\cdot\mathbf{r}-\omega t" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-34514db45b5c1205.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，不同折射方向的电场矢量也不会与原矢量处处平行。</p>
+<figure><img alt="原课件P17图11-9：n大于1与小于1时s p反射相位的阶跃及全反射连续曲线" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P017.png"/><figcaption>P17上排是光疏到光密：s在π、p越过Brewster零点后取π。下排是光密到光疏：临界角后出现连续相位延迟。90°端点的竖线是图的画法，不代表物理相位在端点突然归零。</figcaption></figure>
+<p>课件P3采用<img alt="e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-fe48d8e71df90b44.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。在后续全反射公式中<img alt="r=|r|e^{-i\eta}" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-886826721a7adc07.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，<img alt="\eta&gt;0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-ae1c26bac5186b16.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>表示<strong>正的相位延迟量</strong>，而系数的复辐角为<img alt="\arg r=-\eta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-768761811e7e2cec.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。P17画的是正延迟支；不要把图中正的<img alt="\delta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d203ba01eef4198c.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>直接替换成相同符号的<img alt="\arg r" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-5ab517a10e170747.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。全反射部分会把公式逐步推出来。</p>
+<h2>P18三张矢量图不是三个时间阶段</h2>
+<figure><img alt="原课件P18：光疏到光密，小于等于大于Brewster角三种光矢量取向" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P018.png"/><figcaption>P18从左到右分别为<img alt="\theta_1+\theta_2&lt;90^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-776b7c856911e227.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、等于<img alt="90^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-a8985d93b216df97.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>、大于<img alt="90^\circ" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-a8985d93b216df97.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>三种不同入射条件。矩形是垂直各束传播方向的电场振动平面，箭头是分量及合电场方向。</figcaption></figure>
+<p>左图：反射s取相反基底方向，p按图规定正方向，合电场由两分量相加。中图：p反射为零，反射场只有s；不是图上所有电场都消失。右图：p反射也改变基底振幅符号，合电场的取向随之改变。透射电场始终垂直折射方向，因此传播方向变了，它的几何取向也会随之变。这是参数比较图，不能当成一束光随时间依次经历三种状态的动画。</p>
+<h2>怎样理解“半波损失”</h2>
+<p>反射相位增加<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>，在同频干涉中等效于增加半个波长的相位差，称半波损失；它不是能量损失一半。正入射光疏到光密，固定横向坐标的反射系数<img alt="(n_1-n_2)/(n_1+n_2)&lt;0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-c547a68b3198bf44.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，两横向分量均反相。光密到光疏正入射则为正，不发生该<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>跳变。</p>
+<p>P16及P19同时把光密到光疏的<strong>掠入射</strong>概括为“不发生半波损失”，这与P17全反射相位趋<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>的曲线及后续全反射公式不一致。应当区分：正入射为实系数同相；超过临界角后出现连续的相位延迟，在掠入射极限延迟趋<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>。不能把正入射的结论扩展到掠入射。课件此处概括范围问题保留在核验记录中。</p>
+<h2>把P19五条总结读准</h2>
+<p>P19作为总结页有五项实质内容，分别对应前面的透射、Brewster零点、分量相位、半波损失和全反射：</p>
+<ul>
+<li>“透射同向”应读作基底振幅正，不等于入、折射传播方向相同；传播折射支<img alt="t_p\geq t_s" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-446507232bede742.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，正入射取等号。由上课三角式<img alt="t_p/t_s=1/\cos(\theta_1-\theta_2)" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-7573ccb54bedfd8e.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>可见斜入射且折射角不同时严格大于。</li>
+<li>普通非磁介质、不同折射率时有一个Brewster角使p反射为零；光密到光疏时该角小于临界角。</li>
+<li>“p、s相位规律完全相反”不是所有角度都成立。上表中越过光疏到光密的Brewster角后二者都负，光密到光疏的Brewster角与临界角之间二者都正；正负判断还依赖已规定的p基底。</li>
+<li>正入射半波损失规则成立，掠入射的高折射率到低折射率情形应按全反射连续相位讨论。</li>
+<li>光密到光疏确实存在全反射支，s、p相位随入射角连续变化，两者通常不同，能改变反射光的偏振状态。</li>
+</ul>
+<p><strong>回到本节主线：</strong>振幅系数同时携带大小和相位，但能量还没有算。下一课从Poynting矢量与界面投影解释：<img alt="t&gt;1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-5ce044e087a57112.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>为何不违背守恒，<img alt="r" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-454349e422f05297.svg" style="height:0.50em;width:auto;vertical-align:-0.22em"/>与反射率为什么不是同一量。</p>
+<figure class="computed"><img alt="补充定量计算：空气与折射率1.5玻璃界面" src="../../assets/11-2/amplitude.svg"/><figcaption>补充计算图，采用非磁性、无吸收、平面界面模型。横轴是入射角；纵轴是课件局部s/p基矢下的振幅系数。全反射区虚线表示模为1，不能把复系数本身当作实数1。原课件曲线保留在上文，本图为解析式计算。</figcaption><p class="meta"><a href="../../assets/11-2/amplitude.svg">打开原尺寸计算图</a>；用浏览器返回本课。</p></figure></section><nav class="lesson-nav"><a href="index.html#lesson-21">返回本章首页</a><a href="20.html">← 上一课</a><a href="22.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

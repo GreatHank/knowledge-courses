@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13pt" height="11pt" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T12:49:15.816089</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 11 
+L 13 11 
+L 13 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <!-- $\Phi$ -->
+   <g style="fill: #111827" transform="translate(0 11) scale(0.16 -0.16)">
+    <defs>
+     <path id="STIXGeneral-Regular-3a6" d="M 2765 3712 
+L 2765 3584 
+Q 3117 3584 3440 3501 
+Q 3763 3418 4041 3248 
+Q 4320 3078 4489 2787 
+Q 4659 2496 4659 2112 
+Q 4659 1754 4489 1462 
+Q 4320 1171 4054 1001 
+Q 3789 832 3494 745 
+Q 3200 659 2925 659 
+L 2765 659 
+L 2765 550 
+Q 2765 307 2909 224 
+Q 3053 141 3424 122 
+L 3424 0 
+L 1466 0 
+L 1466 122 
+Q 1798 122 1955 214 
+Q 2112 307 2112 544 
+L 2112 659 
+L 2003 659 
+Q 1133 659 678 1056 
+Q 224 1453 224 2112 
+Q 224 2496 387 2787 
+Q 550 3078 828 3248 
+Q 1107 3418 1430 3501 
+Q 1754 3584 2112 3584 
+L 2112 3712 
+Q 2112 3942 1987 4028 
+Q 1862 4115 1466 4115 
+L 1466 4237 
+L 3424 4237 
+L 3424 4115 
+Q 3027 4115 2896 4019 
+Q 2765 3923 2765 3712 
+z
+M 2752 3347 
+L 2752 896 
+Q 3232 896 3597 1206 
+Q 3962 1517 3962 2035 
+Q 3962 2554 3645 2950 
+Q 3328 3347 2752 3347 
+z
+M 2125 896 
+L 2125 3347 
+Q 1613 3347 1267 2940 
+Q 922 2534 922 2035 
+Q 922 1562 1245 1229 
+Q 1568 896 2125 896 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#STIXGeneral-Regular-3a6" transform="translate(0 0.796875)"/>
+   </g>
+  </g>
+ </g>
+</svg>

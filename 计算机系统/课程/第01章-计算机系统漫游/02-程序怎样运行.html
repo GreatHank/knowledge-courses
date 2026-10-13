@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>第 1 章 · 第 2 课 · 程序怎样运行 · CSAPP</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/></head><body data-page="lesson"><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main">
+<header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">CSAPP</a><span aria-hidden="true">→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 计算机系统漫游</a><span aria-hidden="true">→</span><span aria-current="page">第 2 课 · 程序怎样运行</span></nav><p class="eyebrow">第 1 章 / 第 2 课 · §1.4</p><h1>程序怎样运行</h1><p class="lesson-question">输入 ./hello 后，计算机到底在做什么？</p><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#chapter-map">查看本章总图</a></div><details class="course-menu"><summary>展开本章课程目录 · 5 课</summary><nav aria-label="本章小课程"><a href="01-%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%BF%BB%E8%AF%91.html">第 1 课 · 表示与翻译<span>§1.1–1.3</span></a><a aria-current="page" href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html">第 2 课 · 程序怎样运行<span>§1.4</span></a><a href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html">第 3 课 · 缓存与存储层次<span>§1.5–1.6</span></a><a href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html">第 4 课 · 操作系统提供什么<span>§1.7</span></a><a href="05-%E7%BD%91%E7%BB%9C%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%9D%E6%83%B3.html">第 5 课 · 网络与系统思想<span>§1.8–1.10</span></a></nav></details></header>
+<section><p class="location">章节图位置：从顶行“可执行文件 hello”走向“启动与运行”，展开 CPU、主存、I/O 的配合。</p><h2>同一个文件，怎样变成一次正在发生的执行？</h2>
+<pre><code>linux&gt; ./hello
+hello, world
+linux&gt;</code></pre><p>这三行看起来紧挨着，背后却有<strong>命令解释、建立运行环境、取指执行、输出、结束</strong>。先沿图的绿色箭头跟一次运行，再看灰色箭头中代码和数据的去向。</p>
+<iframe class="map" src="../../assets/diagrams/architecture-csapp-ch01-rest-20261013-111214/run.html" title="从 shell 请求运行到 hello 输出结束"></iframe><p class="note"><a href="../../assets/diagrams/architecture-csapp-ch01-rest-20261013-111214/run.html">单独打开、放大或导出此图</a> · Archify 伴读重组图；核心关系直接显示，节点可展开补充。</p>
+<p class="key">上面是“谁让下一件事发生”，下面是“执行所需的信息从哪里来”。两条线在 CPU 执行处相遇；它们不是两次独立的运行。</p>
+<div class="cards"><article class="card"><h3>shell：接收命令的人</h3><p>shell 是命令解释程序，本身也要运行。<code>./hello</code> 指定当前目录中的 hello；shell 请求操作系统启动它。</p></article><article class="card"><h3>操作系统：建立运行条件</h3><p>内核参与准备地址空间、装载与安排执行。程序从启动代码开始，随后进入 <code>main</code>；启动细节留到进程与链接章节。</p></article></div>
+<p class="note">这是前台命令的简化路径。shell 启动外部程序所需的进程创建与 exec 细节未展开；也不表示内核在一条机器指令之后，才把整个文件一次性装完。</p></section>
+<section><h2>先认清原书硬件图中的四个角色</h2>
+<figure><img alt="原书 Figure 1.4：CPU 经总线与主存和 I/O 设备连接" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-4-hardware.png"/><figcaption>原书 Figure 1.4，PDF 第 45 页（印刷页 44）。这是教材用于推理的硬件组织示意，不是所有实际计算机的固定布线。</figcaption></figure>
+<div class="cards">
+<article class="card"><h3>CPU：执行指令</h3><p>图左上角。PC 保存指令地址；寄存器保存少量工作信息；ALU 执行算术和逻辑操作。</p></article>
+<article class="card"><h3>主存：正在使用的代码与数据</h3><p>图右侧 Main memory。程序运行时需要的指令和数据通过存储系统供 CPU 使用。</p></article>
+<article class="card"><h3>I/O：与外部交换信息</h3><p>图下方的磁盘、键盘与显示设备。它们通过控制器或适配器接入系统。</p></article>
+<article class="card"><h3>总线：传输信息的通道</h3><p>图中的宽灰线连接各部件。这里强调传输关系；主存、CPU 和设备各有不同职责。</p></article>
+</div><p>定位右下角磁盘中的 <code>hello executable</code>：它仍是一个保存着代码和数据的<strong>文件</strong>。接下来才是让其中的指令参与执行。</p></section>
+<section><h2>放大两次搬运：装入，然后输出</h2>
+<div class="cards"><article class="card"><h3>① 磁盘 → 主存</h3>
+<figure><img alt="原书 Figure 1.6：hello 的代码和字符串由磁盘装入主存" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-6-load.png"/><figcaption>Figure 1.6，PDF 第 49 页（印刷页 48）。跟黑色箭头看数据路径。</figcaption></figure>
+<p>磁盘保存的机器代码和字符串进入主存。教材用 <strong>DMA（直接内存访问）</strong>说明：数据可由设备传到主存，不必每个字节都经 CPU 寄存器中转。</p><p>CPU 与操作系统仍参与发起和管理传输；“直接”描述的是数据搬运路径。</p></article>
+<article class="card"><h3>② 主存中的字符串 → 显示输出</h3>
+<figure><img alt="原书 Figure 1.7：字符串经 CPU 和 I/O 路径到显示设备" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-7-output.png"/><figcaption>Figure 1.7，同一原书页。蓝色区域标出本次涉及的部件。</figcaption></figure>
+<p>CPU 执行输出相关指令，把字符串送入输出路径。实际程序通过库函数和操作系统 I/O 服务完成输出；图把软件层次暂时省略了。</p><p><code>hello, world</code> 来自程序的数据。CPU 此刻执行的是机器指令，不是在现场重新翻译 <code>hello.c</code>。</p></article></div>
+<p class="key">CPU 负责执行并协调许多操作；数据的每一次移动，并不都等于 CPU 逐字节亲自复制。</p></section>
+<section><h2>“执行指令”可以先理解到什么程度？</h2><p>假设内存中的 <code>x</code> 当前为 2，要实现 <code>x = x + 3</code>。下面是把效果拆开的教学模型，R 代表一个寄存器。</p>
+<div class="table-wrap"><table><thead><tr><th>动作</th><th>CPU 内的 R</th><th>内存中的 x</th><th>发生的变化</th></tr></thead><tbody>
+<tr><td>开始</td><td>尚未使用</td><td>2</td><td>数值在内存里</td></tr><tr><td>Load：取数</td><td>2</td><td>2</td><td>把 x 的值取到 R</td></tr><tr><td>Operate：加 3</td><td>5</td><td>2</td><td>运算结果先在寄存器中</td></tr><tr><td>Store：存回</td><td>5</td><td>5</td><td>把结果写回 x</td></tr></tbody></table></div>
+<p class="note">这是操作效果的分解，不是实际 x86-64 汇编，也不承诺编译器会生成恰好三条指令。</p>
+<div class="cards"><article class="card"><h3>PC 决定去哪里取指令</h3><p>CPU 取出并解释指令，完成它要求的操作，然后继续。通常转到后续指令；跳转指令则改变接下来执行的位置。</p><p>“下一条”不等于地址简单加 1；x86-64 指令长度并不固定。</p></article>
+<article class="card"><h3>指令效果与内部实现分开看</h3><p><strong>ISA（指令集体系结构）</strong>规定软件能依赖的指令行为。<strong>微体系结构</strong>解释处理器内部怎样实现这些行为。</p><p>本轮按顺序讲指令效果。真实处理器可以重叠处理多条指令，第 4–5 章再深入。</p></article></div>
+<p>回到局部图的右上角：“hello 的指令在 CPU 上执行”现在可以拆成取指、操作寄存器或内存、改变控制位置。执行需要持续获得信息，因而 CPU 再快，也会受到数据供应速度的影响。</p></section>
+<section><h2>把这一段放回章节图</h2><div class="cards"><article class="card"><h3>文件：保存了什么</h3><p>可执行文件是静态内容；程序结束后，它仍可留在磁盘中。</p></article><article class="card"><h3>进程：这一次运行</h3><p>进程包含执行状态与运行资源。同一个文件可以被多次运行，形成不同的进程。</p></article></div>
+<p>我们已经把“文件 → 运行 → 输出”接起来。接下来沿章节图中 CPU 与存储之间的联系，解释为什么系统需要缓存。</p>
+<p class="note">来源：§1.4，已查看 <span>PDF 第 45 页硬件图</span>、<span>第 47 页指令操作与 ISA</span>、<span>第 49 页装载与输出图</span>。x 的演示为自拟。</p>
+<p class="next"><a href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html">接着读：缓存为什么能让程序快起来 →</a></p></section>
+<footer class="lesson-footer"><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">返回全书总览</a></div><nav aria-label="上一课与下一课" class="lesson-pager"><a class="button" href="01-%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%BF%BB%E8%AF%91.html" rel="prev">← 上一课 · 表示与翻译</a><a class="button" href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html" rel="next">下一课 · 缓存与存储层次 →</a></nav><p class="note"></p><p class="note">依据 CSAPP 第 3 版全球版，采用 C、x86-64、Linux/Unix 背景。原书图保留英文；中文说明与示例属于伴读解释。示例用于推理，未在当前 Windows 环境执行。</p></footer>
+</main></body></html>

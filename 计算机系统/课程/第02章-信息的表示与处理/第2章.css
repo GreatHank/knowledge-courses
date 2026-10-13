@@ -1,0 +1,10 @@
+.bit-switches{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;max-width:760px}
+.bit-switches button{font:inherit;min-width:0;min-height:100px;padding:5px;border:1px solid #97b4c8;border-radius:10px;color:#174057;background:#eaf4fa;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bit-switches button[aria-pressed=true]{background:#c4f0ed;border-color:#188e8d;color:#115352}
+.bit-switches button:focus-visible{outline:3px solid #0a97b4;outline-offset:3px}
+.bit-switches b{font-size:28px}.bit-switches small{font-size:12px;white-space:nowrap}.number{font-size:38px;font-weight:700;margin:5px 0}
+.bit-fields{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0;font-family:Consolas,monospace}.bit-fields span{padding:13px;border-radius:8px;min-width:0;overflow-wrap:anywhere}.sign-field{background:#ffe1c4;color:#67380a}.exponent-field{background:#b9ecfa;color:#164656}.fraction-field{background:#dce5f4;color:#223e67}
+@media(prefers-color-scheme:dark){.bit-switches button{background:#203c50;color:#c9eafa;border-color:#4f7590}.bit-switches button[aria-pressed=true]{background:#18524f;color:#aff3e7;border-color:#48b6a6}}
+@media(max-width:600px){.bit-switches{gap:4px}.bit-switches button{min-height:90px;padding:3px}.bit-switches small{font-size:10px}.bit-switches b{font-size:24px}.bit-fields span{padding:10px}.bit-fields b{font-size:14px}}
+@media(max-width:600px){.table-wrap table{min-width:620px}.table-wrap th:first-child,.table-wrap td:first-child{min-width:110px}.table-wrap::before{content:"表格可左右滑动";display:block;font-size:12px;color:#526174}.table-wrap{margin-top:16px}}
+@media(max-width:600px) and (prefers-color-scheme:dark){.table-wrap::before{color:#adbdcf}}

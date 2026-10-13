@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>第 1 章 · 第 3 课 · 缓存与存储层次 · CSAPP</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/></head><body data-page="lesson"><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main">
+<header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">CSAPP</a><span aria-hidden="true">→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 计算机系统漫游</a><span aria-hidden="true">→</span><span aria-current="page">第 3 课 · 缓存与存储层次</span></nav><p class="eyebrow">第 1 章 / 第 3 课 · §1.5–1.6</p><h1>缓存与存储层次</h1><p class="lesson-question">CPU 在等什么，缓存又帮了什么忙？</p><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#chapter-map">查看本章总图</a></div><details class="course-menu"><summary>展开本章课程目录 · 5 课</summary><nav aria-label="本章小课程"><a href="01-%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%BF%BB%E8%AF%91.html">第 1 课 · 表示与翻译<span>§1.1–1.3</span></a><a href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html">第 2 课 · 程序怎样运行<span>§1.4</span></a><a aria-current="page" href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html">第 3 课 · 缓存与存储层次<span>§1.5–1.6</span></a><a href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html">第 4 课 · 操作系统提供什么<span>§1.7</span></a><a href="05-%E7%BD%91%E7%BB%9C%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%9D%E6%83%B3.html">第 5 课 · 网络与系统思想<span>§1.8–1.10</span></a></nav></details></header>
+<section><p class="location">章节图位置：CPU 与“缓存／主存／存储”之间的联系。这是运行期间持续发生的配合，不是执行完 CPU 阶段后才进入存储阶段。</p>
+<h2>上一页的搬运，可能比计算更费时间</h2><p>CPU 执行加法之前，需要先拿到操作数；取下一条指令，也需要拿到指令字节。存储系统跟不上时，计算能力就无法充分发挥。</p>
+<figure><img alt="原书 Figure 1.9：从寄存器、各级缓存、主存到本地和远程存储的层次" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-9-hierarchy.png"/><figcaption>Figure 1.9，PDF 第 51 页（印刷页 50）。沿左边的上下箭头读容量、速度与单位容量成本的取舍。</figcaption></figure>
+<div class="cards"><article class="card"><h3>往上看：快，但空间有限</h3><p>靠近 CPU 的存储通常更小、更快、单位容量更贵。不能简单用同样成本把所有数据都放进最快的一层。</p></article><article class="card"><h3>往下看：大，但取得更慢</h3><p>较低层提供容量；较高层保留有用内容的副本。系统希望多数访问能在较高层得到满足。</p></article></div>
+<p class="key">缓存（cache）的核心作用：把有希望再次使用的信息留在更快的一层，减少反复向较慢层索取。</p>
+<p class="note">这是一种层次组织示例。图中的 L0–L6 是整张层次图的层级编号；不能把 “L4 主存”误读为所有机器都配备了“L4 CPU 缓存”。</p></section>
+<section><h2>放大一次读取：命中与未命中</h2>
+<iframe class="map short" src="../../assets/diagrams/architecture-csapp-ch01-rest-20261013-111214/cache.html" title="一次读取的缓存命中与未命中路径"></iframe><p class="note"><a href="../../assets/diagrams/architecture-csapp-ch01-rest-20261013-111214/cache.html">单独打开、放大或导出此图</a> · Archify 伴读重组图；核心关系直接显示，节点可展开补充。</p>
+<div class="cards"><article class="card"><h3>先走横向绿线：命中 hit</h3><p>当前缓存已有所需内容，便可从这一层取得。一次访问少走了下面那段路。</p></article><article class="card"><h3>再走向下紫线：未命中 miss</h3><p>这一层没有，需要向下一层取回包含目标内容的块，并放入缓存。下一层可能仍是缓存，也可能是主存。</p></article></div>
+<p>看右下角“取回一块”：传输单位通常大于本次所需的一个值。所以刚访问某个位置后，附近内容也可能已在缓存里。</p>
+<p class="key">L1 未命中 ≠ 必须读磁盘。未命中只说明“当前这一层没有”；后续要看下一层是否能提供。</p>
+<p class="note">图示一次读取的基本模型，省略替换、写入策略和实际时序优化。块传输与命中／未命中细节回查 §6.3.1，<span>PDF 第 649 页（印刷页 648）</span>。</p></section>
+<section><h2>为什么“留下一块”经常有用？先看数组</h2>
+<pre><code>int a[8] = {2, 4, 6, 8, 10, 12, 14, 16};
+int sum = 0;
+for (int i = 0; i &lt; 8; i++)
+    sum += a[i];</code></pre>
+<p>这里只需跟着下标看：程序依次访问 <code>a[0]</code>、<code>a[1]</code>、<code>a[2]</code>……数组元素连续排列，因此一次取来的邻近数据，有机会很快用上。</p>
+<div class="table-wrap"><table><caption>教学假设：一块恰好放 4 个整数，a[0] 位于块开头；开始时不在缓存中，中途不被替换。</caption><thead><tr><th>访问</th><th>a[0]</th><th>a[1]</th><th>a[2]</th><th>a[3]</th><th>a[4]</th><th>a[5]</th></tr></thead><tbody>
+<tr><th>当前层结果</th><td class="b">未命中</td><td class="a">命中</td><td class="a">命中</td><td class="a">命中</td><td class="b">未命中</td><td class="a">命中</td></tr>
+<tr><th>原因</th><td>取回 0–3</td><td colspan="3">使用同一块内的邻居</td><td>取回 4–7</td><td>使用邻居</td></tr></tbody></table></div>
+<div class="cards"><article class="card"><h3>空间局部性 · spatial locality</h3><p>刚访问一个位置，接下来很可能访问附近位置。上面连续走过数组，就是直观例子。</p></article><article class="card"><h3>时间局部性 · temporal locality</h3><p>刚使用的信息，短时间内很可能再次使用。循环体的指令会重复执行，就是一个例子。</p></article></div>
+<p class="note">表格只解释机制，不是实际硬件的缓存行大小或本机测量结果。sum 可能保存在寄存器里，不能仅凭 C 源码断言每轮都读写其内存位置。</p>
+<p>回看缓存图：局部性回答的是<strong>“已经填入的块，之后是否有用”</strong>。有缓存不等于所有程序都会同样受益；访问位置、重复利用和工作数据的大小都会影响结果。</p></section>
+<section><h2>四个容易混在一起的词</h2>
+<div class="table-wrap"><table><thead><tr><th>位置</th><th>先抓住的角色</th><th>此刻怎样与程序关联</th></tr></thead><tbody>
+<tr><td>寄存器 registers</td><td>CPU 内的少量工作位置</td><td>机器指令直接指定使用哪些寄存器</td></tr>
+<tr><td>CPU 缓存 caches</td><td>保存较低存储层内容的副本</td><td>基本命中、取块通常由硬件处理；程序的访问方式影响效果</td></tr>
+<tr><td>主存 main memory</td><td>运行时的主要内存容量</td><td>保存正在使用的代码与数据，通常由 DRAM 构成</td></tr>
+<tr><td>磁盘等持久存储</td><td>长期保存文件</td><td>可执行文件保存于此；相应内容在需要时进入内存体系</td></tr></tbody></table></div>
+<p>这一段解释了<strong>存储层次怎样影响性能</strong>。下一段换一个问题：许多程序一起用 CPU 和内存，谁保证每次运行有自己的状态与受保护的空间？</p>
+<p class="note">来源：§1.5–1.6 与 Figure 1.9，<span>原书层次图</span>；块传输补充见上方 §6.3.1。数组、简化命中表为自拟。</p>
+<p class="next"><a href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html">接着读：进程、虚拟内存和文件怎样组织运行 →</a></p></section>
+<footer class="lesson-footer"><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">返回全书总览</a></div><nav aria-label="上一课与下一课" class="lesson-pager"><a class="button" href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html" rel="prev">← 上一课 · 程序怎样运行</a><a class="button" href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html" rel="next">下一课 · 操作系统提供什么 →</a></nav><p class="note"></p><p class="note">依据 CSAPP 第 3 版全球版，采用 C、x86-64、Linux/Unix 背景。原书图保留英文；中文说明与示例属于伴读解释。示例用于推理，未在当前 Windows 环境执行。</p></footer>
+</main></body></html>

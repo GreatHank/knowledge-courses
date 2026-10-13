@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>给界面增加相位梯度：从Snell定律到超表面 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 17</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-17">返回本章首页</a></div><h1>17 给界面增加相位梯度：从Snell定律到超表面</h1><p class="meta">§11-2 光在电介质分界面上的反射与折射.pptx · 原幻灯片P5–8</p><p>看清广义折反射改变了普通界面的哪项假设，并逐项阅读课件的历史应用图。</p><nav class="resource-links"><a href="index.html#deck-map-11-2">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-2.html">本课件题目与解析</a></nav><section class="lesson lesson-content" id="lesson-17-content"><h2>薄薄一层为什么也能弯光</h2>
+<p>上一课的普通平面界面要求三束波沿面的相位梯度一致。P5–8插入了一段知识拓展：把表面做成空间变化的微结构，让不同位置增加不同的相位，出射方向就可以改变。这与§11-1透镜通过改变波前使光聚焦相连，只是这里把相位控制集中到薄表面。</p>
+<figure><img alt="原课件P5：普通反射与Snell折射定律，以及2011年广义折反射论文题名" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P005.png"/><figcaption>P5上半页给出普通定律；下半页是课件采用的2011年论文截图与题名。此处讲课件中的相位机制，不把图中引用数当作当前统计。</figcaption></figure>
+<p>先确认普通定律：</p>
+<div class="equation" role="math"><img alt="\theta_r=\theta_i,\qquad n_t\sin\theta_t=n_i\sin\theta_i." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-3b34672d928cf374.svg" style="width:238.7px;height:auto"/></div>
+<p><img alt="i,t,r" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-f951d7b5f7f67958.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>依次为入射、透射、反射，<img alt="\theta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-2b4af44cb17349bb.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>从法线量起。普通定律的条件包含沿界面均匀、静止以及仅取镜面传播级次。课件“打破300年来未曾改变的定律”是这段拓展的历史表述；更准确地说，是改变普通界面的假设后得到新关系，Maxwell边界规律仍然成立。</p>
+<h2>表面相位怎样变成出射方向</h2>
+<p><strong>补充解释：</strong>沿<img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>的入射相位为<img alt="k_{ix}x" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-427c1523e31ff40b.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，若表面传输响应附加<img alt="\Phi(x)" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-e66d38316d935de8.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，透射相位在表面成为<img alt="k_{ix}x+\Phi(x)" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-01d7c0192810a7c3.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>。对<img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>求导就是沿面的相位梯度：</p>
+<div class="equation" role="math"><img alt="k_{tx}=k_{ix}+\frac{d\Phi}{dx}." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d69a90d87e8e1e53.svg" style="width:114.7px;height:auto"/></div>
+<p>用<img alt="k_0=2\pi/\lambda_0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-000d79c4ff074666.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="k_{jx}=n_jk_0\sin\theta_j" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-69a613442aca652e.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，得到</p>
+<div class="equation" role="math"><img alt="n_t\sin\theta_t-n_i\sin\theta_i
+=\frac{\lambda_0}{2\pi}\frac{d\Phi}{dx}." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-75305030fabaf814.svg" style="width:206.7px;height:auto"/></div>
+<p>类似地，若反射响应的附加相位为<img alt="\Phi_r(x)" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-937c333892df73a6.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>：</p>
+<div class="equation" role="math"><img alt="\sin\theta_r-\sin\theta_i
+=\frac{\lambda_0}{2\pi n_i}\frac{d\Phi_r}{dx}." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-fd7e97f7f88b4bf1.svg" style="width:193.3px;height:auto"/></div>
+<p><img alt="\lambda_0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7238fc50817cce55.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>为真空波长，单位m；<img alt="\Phi" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-9a2ae80e5efa1bd7.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>为相位，单位rad，梯度单位rad/m。右端无量纲。这里采用带符号的沿面方向：<img alt="+x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-04a6fb1693451286.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>相位梯度为正。换<img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>方向、换附加相位定义，右端符号随约定改变，不能只背一个正号。</p>
+<p>若<img alt="d\Phi/dx=0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-9a28d5afec606849.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，回到普通Snell关系；若梯度为常量，增加固定沿面波矢；若梯度随位置变，波前的局部方向也随位置变，可用于聚焦。这是相位梯度近似下的静态机制示意，并未在本课程中仿真真实纳米结构的电磁场。</p>
+<figure><img alt="原课件P6：广义反射与临界角式、超表面微结构以及2010和2016年Science历史报道" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P006.png"/><figcaption>P6左上是相位梯度改变出射条件的公式；左下图是表面结构与光束方向；右侧是课件列出的历史报道。</figcaption></figure>
+<p>P6还列出一类广义临界入射角：</p>
+<div class="equation" role="math"><img alt="\theta_c=\arcsin\left(\pm\frac{n_t}{n_i}
+-\frac{\lambda_0}{2\pi n_i}\frac{d\Phi}{dx}\right)." src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0b102aacb251af4a.svg" style="width:220.0px;height:auto"/></div>
+<p>它来自透射传播支达到<img alt="\sin\theta_t=\pm1" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-be01c4acc6eebeb5.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>的边缘；<img alt="\pm" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-e64495f92493d8b0.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>对应沿界面两种带符号方向。只有反正弦的参数在<img alt="[-1,1]" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-471610700dbccc74.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>内才有实角。这里的“广义临界角”不能与本节后面均匀介质界面的唯一普通临界角不加区分地混用；表面梯度与衍射级次也会影响哪些出射束可传播。</p>
+<p>P6的Science封面和2016年报道，均作为课件的历史例子保留。原PPTX中的GIF封面实际只有1帧，没有可演示的动态图时序。课件说超材料/超表面在相关年代的突破地位，本文不延伸为对当前排名的判断。</p>
+<h2>读P7的八类应用：分别在控制什么</h2>
+<figure><img alt="原课件P7：光栅分束、图像显示、全息显示、透镜成像、矢量光束、光谱探测、边缘识别和衍射神经网络" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P007.png"/><figcaption>P7每个小图是一类应用；光路与示例像均保留原页，不用一张关系图替代实际装置图。</figcaption></figure>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原页应用</th>
+<th>此刻要读懂的控制量与结果</th>
+<th>课件图下注记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光栅分束</td>
+<td>周期结构给光增加若干离散沿面波矢，产生不同出射方向</td>
+<td>Opt. Lett. 2015, 40, 18</td>
+</tr>
+<tr>
+<td>图像显示</td>
+<td>位置相关的光学响应组成空间图案，图中为彩色显示示例</td>
+<td>Scientific Reports 2015, 5, 1</td>
+</tr>
+<tr>
+<td>全息显示</td>
+<td>设计空间相位，传播后合成目标像；图中保留偏振控制元件</td>
+<td>Nat. Nanotechnol. 2015, 10, 4</td>
+</tr>
+<tr>
+<td>透镜成像</td>
+<td>不同位置提供不同相位梯度，使波前会聚，图中为平面结构和焦点</td>
+<td>Light Sci. &amp; Appl. 2018, 7, 1</td>
+</tr>
+<tr>
+<td>矢量光束</td>
+<td>同时控制局部偏振方向与空间分布；不能只用一个标量相位概括</td>
+<td>ACS Photonics 2016, 3, 9</td>
+</tr>
+<tr>
+<td>光谱探测</td>
+<td>不同波长受不同响应，把谱信息转换为空间或强度信息</td>
+<td>Science 2018, 360, 6393</td>
+</tr>
+<tr>
+<td>边缘轮廓识别</td>
+<td>原页以未调制和调制后的USTC图案比较，突出轮廓</td>
+<td>Light Sci Appl 11, 62 (2022)</td>
+</tr>
+<tr>
+<td>衍射神经网络</td>
+<td>输入波经多个相位层传播到输出平面，图中为平面波输入和分层结构</td>
+<td>Light Sci Appl 9, 59 (2020)</td>
+</tr>
+</tbody>
+</table></div>
+<p>表中控制机制是<strong>补充解释</strong>，仅用来读课件图的分工；具体器件的结构参数、效率和完整方法没有在本套课件这一页展开，不能凭缩略图补造。参考条目按原课件保留，未在这里独立精读相应论文。</p>
+<h2>P8为什么从光学跳到通信</h2>
+<figure><img alt="原课件P8：2021年6G白皮书、全息通信假想图和智能超表面通信工作示意" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-2/P008.png"/><figcaption>P8左边是2021年6月白皮书封面；中间明确写“全息通信假想图”；右边是智能超表面改变通信传播路径的工作示意。</figcaption></figure>
+<p>原课件列出“全息通信”为6G业务之一、“智能超表面技术”为关键技术之一，并在假想图旁标平均吞吐量需求约1.5 Gbps。保留为课件给出的需求背景，不把假想图当作已经实现的产品，也不把这个数推广为任何全息通信系统的固定需求。右图黄色箭头表示被结构表面改变的信号传播路径；通信示意与前面的光学例子共享“表面结构控制波”的思路，频段和具体器件条件不同。</p>
+<p><strong>回到本节主线：</strong>P5–8是方向控制的拓展支线。普通光学界面的方向由相位匹配确定；接下来返回无相位梯度的界面，解振幅、相位和能流，不把超表面的附加响应混入普通菲涅尔公式。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-17">返回本章首页</a><a href="16.html">← 上一课</a><a href="18.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

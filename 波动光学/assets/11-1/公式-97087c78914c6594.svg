@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19pt" height="12pt" viewBox="0 0 19 12" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T11:29:25.082911</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 12 
+L 19 12 
+L 19 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <!-- $\varphi_0$ -->
+   <g transform="translate(0 8) scale(0.18 -0.18)">
+    <defs>
+     <path id="STIXGeneral-Italic-3c6" d="M 1402 64 
+L 1702 1133 
+Q 1792 1459 1894 1712 
+Q 1997 1965 2147 2221 
+Q 2298 2477 2509 2617 
+Q 2720 2758 2970 2758 
+Q 3776 2758 3776 1946 
+Q 3776 1606 3625 1225 
+Q 3475 845 3148 496 
+Q 2822 147 2394 6 
+Q 2144 -70 1850 -70 
+L 1510 -1312 
+L 1018 -1312 
+L 1363 -70 
+Q 832 -70 646 0 
+Q 173 186 173 813 
+Q 173 1306 489 1827 
+Q 806 2349 1274 2618 
+Q 1638 2822 1907 2822 
+L 1907 2720 
+Q 1581 2637 1299 2281 
+Q 1018 1926 864 1481 
+Q 710 1037 710 640 
+Q 710 320 889 192 
+Q 1069 64 1402 64 
+z
+M 2298 1594 
+L 1888 64 
+Q 2150 64 2330 160 
+Q 2688 352 2963 969 
+Q 3238 1587 3238 2099 
+Q 3238 2330 3193 2451 
+Q 3149 2573 3097 2598 
+Q 3046 2624 2963 2624 
+Q 2752 2624 2595 2365 
+Q 2438 2106 2298 1594 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-30" d="M 3046 2112 
+Q 3046 1683 2963 1302 
+Q 2880 922 2717 602 
+Q 2554 282 2266 96 
+Q 1978 -90 1600 -90 
+Q 1210 -90 915 108 
+Q 621 307 461 640 
+Q 301 973 227 1350 
+Q 154 1728 154 2150 
+Q 154 2746 301 3222 
+Q 448 3699 790 4012 
+Q 1133 4326 1626 4326 
+Q 2253 4326 2649 3712 
+Q 3046 3098 3046 2112 
+z
+M 2432 2080 
+Q 2432 3091 2217 3625 
+Q 2003 4160 1587 4160 
+Q 1190 4160 979 3622 
+Q 768 3085 768 2106 
+Q 768 1120 979 598 
+Q 1190 77 1600 77 
+Q 2003 77 2217 598 
+Q 2432 1120 2432 2080 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#STIXGeneral-Italic-3c6" transform="translate(0 0.90625)"/>
+    <use xlink:href="#STIXGeneral-Regular-30" transform="translate(62.199997 -12.321875) scale(0.7)"/>
+   </g>
+  </g>
+ </g>
+</svg>
