@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>§11-3 金属界面 · 推导与示例 · 波动光学题目</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav aria-label="当前位置" class="breadcrumb"><a href="../../index.html">波动光学</a> <span aria-hidden="true">›</span> <a href="../index.html">题目</a> <span aria-hidden="true">›</span> <a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html">第11章</a> <span aria-hidden="true">›</span> <span>§11-3 金属界面 · 推导与示例</span></nav><nav aria-label="全课程入口"><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a></nav></header><main class="page"><section class="panel"><h1>§11-3 金属界面 · 推导与示例</h1></section><section class="panel" id="题目目录"><h2>6个讲授推导、观察与示例</h2><p>7页静态和读取副本备注已检查，未发现独立例题/练习题。这里保留原讲授过程中的6个条目，含1个银的典型数值示例；无独立题干的内容明确标注。原PPT完整动画点击未核验。</p><ul><li><a href="#11-3-演算01">11-3-演算01 · 含传导电流的波动方程与复折射率</a></li><li><a href="#11-3-演算02">11-3-演算02 · 穿透深度与良导体近似</a></li><li><a href="#11-3-示例01">11-3-示例01 · 银在550 nm下的穿透深度</a></li><li><a href="#11-3-演算03">11-3-演算03 · 复菲涅尔反射比及正入射极限</a></li><li><a href="#11-3-观察01">11-3-观察01 · 七种金属表值和两张反射比曲线</a></li><li><a href="#11-3-演算04">11-3-演算04 · 偏振变化与金属光学常数反演</a></li></ul></section><article class="question panel" id="11-3-演算01"><h2>11-3-演算01 · 含传导电流的波动方程与复折射率</h2><p class="meta">原讲授推导目标，非独立练习 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P2、P3</p><div class="lesson-content"><p>原P2由“<img alt="\rho_e=0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-e430b56f00fa3f48.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，<img alt="\mathbf j=\sigma\mathbf E" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-ec26ef5b6fe9c1d9.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>”写出Maxwell方程组，要求“取旋度”；备注为“采用和求波动方程同样的方法！”。P3继续定义复介电常数、复位相速度、复折射率和复波数。这里按连续讲授过程归档，不补造数值题干。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>均匀、线性、各向同性局域介质；体内净电荷密度为0</li>
+<li>简单导电模型j=σE，时间因子exp(−iωt)</li>
+<li>复折射率原定义为N=n(1+iκ)，虚部为nκ</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>由两条旋度方程推出含传导电流项的波动方程</li>
+<li>辨认复介电常数与N、复波数之间的关系</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>Maxwell方程</li>
+<li>取旋度恒等式</li>
+<li>单频复表示</li>
+<li>被动介质的衰减分支</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P2" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P002.png"/></figure><figure><img alt="§11-3原页P3" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P003.png"/></figure></details><details id="11-3-演算01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P3原页给出</p>
+<div class="equation" role="math"><img alt="\nabla^2\mathbf E-\mu\sigma\partial_t\mathbf E-\mu\epsilon\partial_t^2\mathbf E=0," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-cb7d89a3239fc46f.svg" style="width:225.3px;height:auto"/></div>
+<div class="equation" role="math"><img alt="\nabla^2\widetilde{\mathbf E}+\omega^2\mu(\epsilon+i\sigma/\omega)\widetilde{\mathbf E}=0," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-64334088aa579edb.svg" style="width:230.7px;height:auto"/></div>
+<p>并定义<img alt="\widetilde\epsilon=\epsilon+i\sigma/\omega" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0226516af21c0da1.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，<img alt="\widetilde v=c_0/\sqrt{\mu_r\widetilde\epsilon_r}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-1c92b0a9102b0a02.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>，<img alt="N=n(1+i\kappa)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8b5c4a1a1a92c828.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="\widetilde k=k_0N" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-178a0d3fae5c9e88.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>。P2原数量级、单位及载流子表面分布的文字原样留在折叠原页中，未以补充解释改写。</p>
+</div><p>对应原页：<span>P2</span> · <span>P3</span></p></details><details id="11-3-演算01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>含传导电流的四个宏观场方程为</p>
+<div class="equation" role="math"><img alt="\nabla\cdot\mathbf E=0,\quad\nabla\cdot\mathbf B=0," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2ed82c5a69bd0a3f.svg" style="width:180.0px;height:auto"/></div>
+<div class="equation" role="math"><img alt="\nabla\times\mathbf E=-\mu\partial_t\mathbf H,
+\qquad\nabla\times\mathbf H=\sigma\mathbf E+\epsilon\partial_t\mathbf E." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-c2feb440a89c0082.svg" style="width:334.7px;height:auto"/></div>
+<p>对第一条旋度式再取旋度，利用<img alt="\mu" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-492247e1bab15272.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>为空间常数：</p>
+<div class="equation" role="math"><img alt="\nabla\times(\nabla\times\mathbf E)
+=-\mu\partial_t(\sigma\mathbf E+\epsilon\partial_t\mathbf E)." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-5a8afd6741226e2c.svg" style="width:269.3px;height:auto"/></div>
+<p>恒等式<img alt="\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-bd6f5c01c9a34824.svg" style="height:1.19em;width:auto;vertical-align:-0.22em"/>和零散度条件，使左边成为<img alt="-\nabla^2\mathbf E" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-d3e844d50ad64616.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，故</p>
+<div class="equation" role="math"><img alt="\nabla^2\mathbf E-\mu\sigma\partial_t\mathbf E
+-\mu\epsilon\partial_t^2\mathbf E=0." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-bd36d726da5e3aa4.svg" style="width:225.3px;height:auto"/></div>
+<p>新增的一阶时间导数来自传导电流。令<img alt="\sigma\to0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2c759c69584aed2a.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，就返回§11-1的无耗散波动方程；各项的单位均为V/m³。</p>
+<h2>单频表示把损耗收入复介电常数</h2>
+<p>对复振幅使用<img alt="\partial_t\to-i\omega" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-12c0da079aacf9f6.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="\partial_t^2\to-\omega^2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-9d697b38ca2ef94f.svg" style="height:1.19em;width:auto;vertical-align:-0.22em"/>：</p>
+<div class="equation" role="math"><img alt="\nabla^2\widetilde{\mathbf E}
++\omega^2\mu\left(\epsilon+i\frac{\sigma}{\omega}\right)
+\widetilde{\mathbf E}=0." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-26cdc38955ce32c2.svg" style="width:213.3px;height:auto"/></div>
+<p>定义<img alt="\widetilde\epsilon=\epsilon+i\sigma/\omega" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0226516af21c0da1.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，<img alt="\widetilde\epsilon_r=\widetilde\epsilon/\epsilon_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8413dd11d4b59b6d.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，以及<img alt="\mu_r=\mu/\mu_0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-aaf2d0e083174ed8.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/>，可写成与透明介质同形的Helmholtz方程。这里的“同形”仅指代数结构相同；损耗和能量转化由复参数描述，并未被略去。</p>
+<figure><img alt="课件P3：含耗散波动方程，复介电常数、复位相速度、复折射率和波数" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P003.png"/><figcaption>原P3定义必须整体读：本课件使用N=n(1+iκ)，所以虚部是nκ。</figcaption></figure>
+<p>令<img alt="c_0=1/\sqrt{\epsilon_0\mu_0}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f60312bf200a1773.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>、<img alt="k_0=\omega/c_0=2\pi/\lambda_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-ac25e7b35bd92fdd.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，定义</p>
+<div class="equation" role="math"><img alt="N=\widetilde n=\sqrt{\mu_r\widetilde\epsilon_r}
+=n(1+i\kappa)=n+iK,\qquad K=n\kappa," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-6033716f50c9070f.svg" style="width:394.7px;height:auto"/></div>
+<div class="equation" role="math"><img alt="\widetilde k=k_0N,\qquad\widetilde v=\frac{c_0}{N}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-ad3d490f342ba01c.svg" style="width:156.0px;height:auto"/></div>
+<p><img alt="n" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1b16b1df538ba12d.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>、<img alt="K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-86be9a55762d316a.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>、<img alt="\kappa" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-055de4ec3d8e4886.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>均无量纲。<img alt="\widetilde k" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-152380ca5fee3168.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>单位m⁻¹；复数<img alt="\widetilde v" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-3323d1822e9c5f0f.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>是简写，不能直接当作某个可测的实传播速度。在此均匀平面波模型中，等相位面速度是<img alt="\omega/\operatorname{Re}\widetilde k=c_0/n" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8290cc8e76d5c194.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>，振幅衰减由<img alt="k_0K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-923c83867a9757d1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>决定。</p>
+<p>为避免与一些教材把“κ”直接定义成虚部的习惯冲突，后文用<img alt="K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-86be9a55762d316a.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>记虚部；原课件的<img alt="\kappa=K/n" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-250398837ce6a6c7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>仍保留。对被动吸收介质和向内部传播的解，选择<img alt="K\geq0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-75d3cb461bd03814.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，因为<img alt="e^{i\widetilde kx}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b5befb48b3687f4a.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>应随<img alt="x&gt;0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-17be29a8a74e8994.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>减小。</p>
+<p><strong>补充解释：</strong>若把<img alt="\epsilon,\mu,\sigma" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-52f383abe8a819ce.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>暂取实数，平方比较得</p>
+<div class="equation" role="math"><img alt="n^2-K^2=\mu_r\frac{\epsilon}{\epsilon_0},
+\qquad2nK=\mu_r\frac{\sigma}{\epsilon_0\omega}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-44f08af2d1ca3ab9.svg" style="width:268.0px;height:auto"/></div>
+<p>令<img alt="a=\mu_r\epsilon/\epsilon_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-ec39a21ad1a18da9.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>、<img alt="b=\mu_r\sigma/(\epsilon_0\omega)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f5b46a36127855ee.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，则</p>
+<div class="equation" role="math"><img alt="n=\sqrt{\frac{\sqrt{a^2+b^2}+a}{2}},
+\quad K=\sqrt{\frac{\sqrt{a^2+b^2}-a}{2}}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-573f5357555cb7e6.svg" style="width:321.3px;height:auto"/></div>
+<p>这也说明原P4“κ正比于σ”不能由本页定义直接推出。在正实<img alt="\epsilon" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8bc4bfc2bdebfaac.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>的良导体近似中<img alt="n\approx K\propto\sqrt{\sigma}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8c9bd53277695287.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>，而<img alt="\kappa\approx1" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-dcec942dd006b2d9.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。可见光金属的电子响应具有频率依赖，使用原P6实测型光学常数时，应直接用该频率的<img alt="N" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8ce86a6ae65d3692.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，不能直接将直流电导率用于光学频段。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/32.html">返回第32课的完整条件与单位说明</a>。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：σ/ω数量级与单位、ω的Hz写法缺说明；载流子与净表面电荷不可混同；良导体近似需按频率检查</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/32.html">返回第32课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="11-3-演算02"><h2>11-3-演算02 · 穿透深度与良导体近似</h2><p class="meta">原讲授推导目标，非独立练习 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P4</p><div class="lesson-content"><p>原P4设单色平面波沿<img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>轴进入金属，给出<img alt="E=Ae^{-k_0n\kappa x}e^{i(k_0nx-\omega t)}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-17eeea280dbdbd30.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，将“振幅下降到界面上振幅的<img alt="1/e" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-9d57bbe2bb2ed7c8.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>时的深度”定义为<img alt="x_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-3078a09641b0267f.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>，并代入良导体近似继续演算。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>x从金属内侧表面起算，向内部为正</li>
+<li>λ0是与k0=2π/λ0对应的真空波长</li>
+<li>良导体趋肤式另限σ≫εω，参数按单频值取用</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>由定义求x0</li>
+<li>检查良导体近似的代数系数，区分振幅和能流的1/e深度</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>复波数</li>
+<li>指数包络</li>
+<li>趋肤深度</li>
+<li>量纲和极限检查</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P4" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P004.png"/></figure></details><details id="11-3-演算02-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>原P4先给</p>
+<div class="equation" role="math"><img alt="x_0=\frac{\lambda_0}{2\pi n\kappa}," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-25f153bd2bcc8b5f.svg" style="width:80.0px;height:auto"/></div>
+<p>之后的原推导末两项印为</p>
+<div class="equation" role="math"><img alt="\frac{\lambda_0}{2\pi c_0}\sqrt{\frac{2\omega}{\mu\sigma}}=\frac{2}{\sqrt{\omega\mu\sigma}}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f4c5d0c97c8c47a9.svg" style="width:150.7px;height:auto"/></div>
+<p>这里保留原页末项的2，不能把补充核对得到的√2标成课件原解。</p>
+</div><p>对应原页：<span>P4</span></p></details><details id="11-3-演算02-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>沿用<img alt="N=n+iK=n(1+i\kappa)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8351cca24b478f58.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>和<img alt="e^{-i\omega t}" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-af5258f7222f20b2.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>：</p>
+<div class="equation" role="math"><img alt="E(x,t)=A\exp[i(k_0Nx-\omega t)]
+=Ae^{-k_0Kx}e^{i(k_0nx-\omega t)}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-31bb25ff3bfd1c27.svg" style="width:408.0px;height:auto"/></div>
+<p><img alt="A" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-559aead08264d579.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>是金属内侧<img alt="x=0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-794d66ff4ebd363e.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>处的电场复振幅，单位V/m，通常不等于入射振幅。实部才是实际瞬时电场。相位<img alt="k_0nx-\omega t" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-727687997014a4de.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>控制波面前进，包络<img alt="|A|e^{-k_0Kx}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-19d83d7962eb159c.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>控制幅值减小，二者在同一空间同时存在。</p>
+<p><strong>振幅穿透深度</strong><img alt="\delta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d203ba01eef4198c.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>（原课件<img alt="x_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-3078a09641b0267f.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>）定义为<img alt="|E(\delta)|=|E(0)|/e" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d1731ec6842ccb31.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>。因此</p>
+<div class="equation" role="math"><img alt="k_0K\delta=1,\qquad
+\delta=x_0=\frac{1}{k_0K}=\frac{\lambda_0}{2\pi n\kappa}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-115e4cf2b666a260.svg" style="width:268.0px;height:auto"/></div>
+<p>该式中的<img alt="\lambda_0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7238fc50817cce55.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>必须与<img alt="k_0=2\pi/\lambda_0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-000d79c4ff074666.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>配套，不能换成金属内部的相位波长后还保留<img alt="n" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1b16b1df538ba12d.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>。<img alt="k_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-9817d114fe256b80.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>单位m⁻¹，<img alt="K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-86be9a55762d316a.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>无量纲，所以<img alt="\delta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d203ba01eef4198c.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>单位m。</p>
+<p>在固定均匀介质中，平均能流与场幅值平方成正比：</p>
+<div class="equation" role="math"><img alt="\frac{\langle S(x)\rangle}{\langle S(0)\rangle}
+=e^{-2k_0Kx}=e^{-2x/\delta}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b81550ce64bf542f.svg" style="width:196.0px;height:auto"/></div>
+<p>所以在<img alt="x=\delta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2f22615a49cc73b1.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>处能流是<img alt="e^{-2}\approx0.1353" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f5614fd60d553f2b.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，能流下降至<img alt="1/e" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-9d57bbe2bb2ed7c8.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>的深度为<img alt="\delta/2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b6a5407aead7d3d7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。振幅和强度的穿深采用不同定义，数值不能直接互换。</p>
+<figure class="computed"><img alt="解析计算曲线：振幅在归一化深度1到1/e，能流在0.5到1/e" src="../../assets/11-3/skin-depth.svg"/><figcaption>图由解析式计算得到，不是真实电磁场仿真。横轴x/δ，蓝线是振幅，橙线是平均能流；两条竖虚线分别标出各自的1/e深度。<a href="../../assets/11-3/skin-depth.svg">打开原尺寸计算图</a>，用浏览器返回本课。</figcaption></figure>
+<h2>良导体趋肤公式的每一步</h2>
+<p>限定<img alt="\sigma\gg\epsilon\omega" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-92a2ba7a3fd00a1a.svg" style="height:0.62em;width:auto;vertical-align:-0.22em"/>，先保留简单实电导模型，便有</p>
+<div class="equation" role="math"><img alt="\widetilde k^2=\mu\epsilon\omega^2+i\mu\sigma\omega
+\approx i\mu\sigma\omega." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-5e409750eee17f58.svg" style="width:220.0px;height:auto"/></div>
+<p>取满足向内衰减的平方根，因<img alt="\sqrt i=(1+i)/\sqrt2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0f46b4e25db7ca22.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>，</p>
+<div class="equation" role="math"><img alt="\widetilde k\approx(1+i)\sqrt{\frac{\mu\sigma\omega}{2}},
+\qquad
+\delta\approx\sqrt{\frac{2}{\mu\sigma\omega}}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-458e7f355006cd43.svg" style="width:265.3px;height:auto"/></div>
+<p>在上述近似中，频率或电导率单独增大，会使<img alt="\delta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-d203ba01eef4198c.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>按平方根反比减小；如果<img alt="\sigma(\omega)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-43c7bc907c28f5db.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="\epsilon(\omega)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d26f4a9c676aceb2.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>也随频率显著改变，就必须回到<img alt="1/\operatorname{Im}\widetilde k" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-7c8cb83b868454a9.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，不能把这句话当作全频段单调规律。</p>
+<p><strong>原页核对：</strong>P4最后印成<img alt="2/\sqrt{\omega\mu\sigma}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-80be1d17def0cf38.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>。但前一项为</p>
+<div class="equation" role="math"><img alt="\frac{\lambda_0}{2\pi c_0}\sqrt{\frac{2\omega}{\mu\sigma}}
+=\frac{1}{\omega}\sqrt{\frac{2\omega}{\mu\sigma}}
+=\frac{\sqrt2}{\sqrt{\omega\mu\sigma}}," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-73403f0909fc56c6.svg" style="width:228.0px;height:auto"/></div>
+<p>故末项应是<img alt="\sqrt2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-a546f4efcaafb7d8.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>而非<img alt="2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d4735e3a265e16ee.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>。上述系数由补充推导得到，原件仍保留原式。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原推导末项系数2与前式不一致，补充推导得到√2；振幅与能流1/e深度相差一倍</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/33.html">返回第33课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="11-3-示例01"><h2>11-3-示例01 · 银在550 nm下的穿透深度</h2><p class="meta">原页典型数据示例，无独立题干 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P4</p><div class="lesson-content"><p>原页“典型数据”给出银(Ag)、550 nm光入射，随后列出穿透深度计算结果。本条归档这个数值示例：原页没有单列问句，也没有给出σ、μ或该波长的n、κ；不能自行补齐后称为完整原题条件。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>银Ag；入射光波长550 nm</li>
+<li>原页x0指振幅下降至金属内侧表面振幅1/e的深度</li>
+<li>未列所用σ、μ、n、κ及其频率依赖；这些是缺失条件</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>按原讲授目标说明银中场的典型穿透尺度</li>
+<li>检查2.73 nm是否具备可独立复算的条件；不自动要求用户计算</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>材料参数与波长</li>
+<li>光频电导模型的适用范围</li>
+<li>原答案与补充估算的区分</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P4" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P004.png"/></figure></details><details id="11-3-示例01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>课件原文：“银(Ag)，550nm光入射，算得<img alt="x_0=2.73" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b6ef7cf8cd417b10.svg" style="height:0.88em;width:auto;vertical-align:-0.22em">nm”。结论为光只能透过金属表面很薄的一层。原页未列中间参数，当前保留原值，未标成已独立复现。</img></p>
+</div><p>对应原页：<span>P4</span></p></details><details id="11-3-示例01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p><strong>课件原内容：</strong>“银(Ag)，550 nm光入射，算得<img alt="x_0=2.73" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b6ef7cf8cd417b10.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> nm。”原页没有列出所用<img alt="\sigma" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-9c3245dfb4ac54c1.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>、<img alt="\mu" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-492247e1bab15272.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>或该波长的<img alt="n,K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2c38d8ca25161bf1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，因此目前尚不能独立复现这个材料数值。</p>
+<p><strong>补充核算：</strong>若仅为检验模型而额外取<img alt="\mu=\mu_0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-bb064f4a53035cac.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>，要用上述趋肤公式得到2.73 nm，需反推<img alt="\sigma\approx6.24\times10^7" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f44cf890228f86d2.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> S/m。这个参数由结果反推，属于核算时的假设；它既不是原题条件，也不是银在550 nm时光学电导率的测量值。</p>
+<p>原P6另一张表给出银在589.3 nm时<img alt="n=0.18,K=3.64" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d53d0672177e9185.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，用对应波长得到<img alt="\delta\approx25.77" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-e95f555dcffde45d.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/> nm。两个波长不同，使用的材料响应模型也未说明，不能以这张表“修正”550 nm原例；光频下采用恒定电导模型得到2.73 nm，仍需要相应材料参数支持。</p>
+<p>方法检查：先识别单频衰减模型和穿深定义，再查同一波长的材料参数。用不同波长589.3 nm表值只能得到另一明确条件下的结果，不能补进550 nm原示例。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原数值缺材料响应参数，尚未独立复现；补充反推的σ不是原题给定条件，也不是原波长的实测电导率</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/33.html">返回第33课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="11-3-演算03"><h2>11-3-演算03 · 复菲涅尔反射比及正入射极限</h2><p class="meta">原讲授公式与极限演算，非独立练习 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P5</p><div class="lesson-content"><p>原P5提出“复折射率代替实折射率，菲涅耳公式的替换”，分别列出s/p复反射系数、能量反射比和正入射情形，再说明高反射与导电响应的关系。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>原页采用N=n(1+iκ)</li>
+<li>正入射公式按空气侧入射、非磁单界面理解</li>
+<li>斜入射原简式隐含复折射角余弦近似1，需额外核查</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>区分反射系数的模与相位</li>
+<li>由复数模平方得到正入射反射比；说明斜入射简式条件</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>复反射系数</li>
+<li>法向复波数物理解</li>
+<li>正入射基矢符号</li>
+<li>反射与吸收的能量分账</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P5" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P005.png"/></figure></details><details id="11-3-演算03-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>原页给<img alt="r_s=-\sin(\theta_1-\widetilde\theta_2)/\sin(\theta_1+\widetilde\theta_2)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2f02f9289d9d7c0d.svg" style="height:1.12em;width:auto;vertical-align:-0.22em">、<img alt="r_p=\tan(\theta_1-\widetilde\theta_2)/\tan(\theta_1+\widetilde\theta_2)" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-995fafa3f175f8c6.svg" style="height:1.25em;width:auto;vertical-align:-0.22em"/>，均可写成模乘相位指数。正入射反射比为</img></p>
+<div class="equation" role="math"><img alt="R=\left|\frac{N-1}{N+1}\right|^2=\frac{n^2(1+\kappa^2)+1-2n}{n^2(1+\kappa^2)+1+2n}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-924dcbb3da575338.svg" style="width:237.3px;height:auto"/></div>
+<p>原页斜入射简式和定性文字见原图；原图没有单列近似条件。</p>
+</div><p>对应原页：<span>P5</span></p></details><details id="11-3-演算03-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>取静止平面界面<img alt="z=0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-25417ad198242a4d.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，空气在<img alt="z&lt;0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-bfe71e47702ed89f.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，金属在<img alt="z&gt;0" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-827b6e1b6678c640.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，入射面为<img alt="xz" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-8ec5e9e6f70bf1a0.svg" style="height:0.62em;width:auto;vertical-align:-0.22em"/>面，<img alt="\theta" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-2b4af44cb17349bb.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>从<img alt="+z" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1c7d38d7b45e0b2a.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>法线量起。空气折射率取1，金属非磁、各向同性且半无限，<img alt="N=n+iK" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-4bcf5167e667776b.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，时间因子仍为<img alt="e^{-i\omega t}" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-af5258f7222f20b2.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。</p>
+<p>界面平移对称使切向波数保持为<img alt="k_x=k_0\sin\theta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-37e668dded6fad41.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>。由<img alt="k_x^2+k_z^2=k_0^2N^2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-6693bf0db4a2ebea.svg" style="height:1.25em;width:auto;vertical-align:-0.22em"/>，定义</p>
+<div class="equation" role="math"><img alt="\beta=\sqrt{N^2-\sin^2\theta},\qquad k_z=k_0\beta." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-687d3a39e6c0c9a6.svg" style="width:262.7px;height:auto"/></div>
+<p>选择<img alt="\operatorname{Im}\beta&gt;0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b5d34355902dfff1.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>的向内衰减解。透明无耗散的极限还需选向内能流分支。这里<img alt="N" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8ce86a6ae65d3692.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>、<img alt="\beta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f3f3804480e8551a.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>无量纲，<img alt="k_z" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-7053ab49a6a3ff72.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>单位m⁻¹。原页的复折射角可形式地写成<img alt="N\sin\widetilde\theta_2=\sin\theta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-ebfa5b26b35589a9.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>、<img alt="N\cos\widetilde\theta_2=\beta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-3f06895ba8fce8c7.svg" style="height:1.19em;width:auto;vertical-align:-0.22em"/>，但不能把复角画成普通实几何角。</p>
+<h2>复系数仍由切向E、H连续得到</h2>
+<p>沿用第18课的局部基矢：<img alt="s=+y" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-e1dd788e5d8f980f.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，<img alt="\mathbf p_j=\mathbf s\times\widehat{\mathbf k}_j" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b1daf5d5c6ce9b59.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>。以<img alt="c=\cos\theta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-9b7718950f44448f.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>记空气侧余弦，s波的两条归一化边界式为</p>
+<div class="equation" role="math"><img alt="1+r_s=t_s,\qquad c(1-r_s)=\beta t_s." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2317ee6e31be12c0.svg" style="width:242.7px;height:auto"/></div>
+<p>联立即得</p>
+<div class="equation" role="math"><img alt="r_s=\frac{c-\beta}{c+\beta}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-54d6ffff003be690.svg" style="width:76.0px;height:auto"/></div>
+<p>p波可消去透射电场，切向导纳包含<img alt="N^2/\beta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0fd1a48bf7aaf911.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>，得到</p>
+<div class="equation" role="math"><img alt="r_p=\frac{N^2c-\beta}{N^2c+\beta}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-9a4e09e1ec29041a.svg" style="width:96.0px;height:auto"/></div>
+<p>这与原页复正弦、复正切形式一致，但不必反求多值复角。电场振幅比一般为复数：</p>
+<div class="equation" role="math"><img alt="r_j=|r_j|e^{i\delta_j},\qquad R_j=|r_j|^2,\quad j=s,p." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d6d03ba9314aaa9b.svg" style="width:278.7px;height:auto"/></div>
+<p>原页用<img alt="\rho_s,\rho_p" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-80950cec26efd74b.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>表示能量反射比，本文统一记<img alt="R_s,R_p" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-232cf8846e63c783.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，避免与电荷密度混淆。<img alt="\delta_j=\arg r_j" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-dcf0e376685e3ddf.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>相对于指定的局部正方向，不能脱离基矢谈正负号。</p>
+<h2>原页斜入射反射比的隐含近似</h2>
+<p>若<img alt="|\sin^2\theta/N^2|\ll1" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-7d85cb7818f15a95.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，可用<img alt="\beta\approx N" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-86037002759423ea.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。这时</p>
+<div class="equation" role="math"><img alt="R_s\approx\frac{(n-c)^2+K^2}{(n+c)^2+K^2}," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2682c6be9ee78672.svg" style="width:129.3px;height:auto"/></div>
+<div class="equation" role="math"><img alt="R_p\approx\frac{(nc-1)^2+(Kc)^2}{(nc+1)^2+(Kc)^2}
+=\frac{(n-1/c)^2+K^2}{(n+1/c)^2+K^2}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-544d2b7c91729f40.svg" style="width:265.3px;height:auto"/></div>
+<p>这是原P5中<img alt="K=n\kappa" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-34c4f524296f8d6a.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>对应的两个式子。第二种写法含<img alt="1/c" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-dffe3484421059af.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，掠入射应用极限或前一种写法。给定金属参数不够大时，要用精确的<img alt="\beta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f3f3804480e8551a.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>式；将n改为复数后，后续的近似仍需独立检查，不能因此视为精确式。</p>
+<h2>正入射：展开复数模平方</h2>
+<p><img alt="\theta=0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f37a3d18763ec453.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>时<img alt="\beta=N" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-957eb81c77724d60.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，故</p>
+<div class="equation" role="math"><img alt="r_s=\frac{1-N}{1+N},\qquad r_p=\frac{N-1}{N+1}=-r_s," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-4513e66a50b37305.svg" style="width:241.3px;height:auto"/></div>
+<div class="equation" role="math"><img alt="R=R_s=R_p
+=\frac{(n-1)^2+K^2}{(n+1)^2+K^2}
+=\frac{n^2(1+\kappa^2)+1-2n}{n^2(1+\kappa^2)+1+2n}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-42a3d21f7da91f04.svg" style="width:340.0px;height:auto"/></div>
+<p>分子分母分别是复差和复和的模平方。<img alt="r_p=-r_s" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0d0680ea69206bf1.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>来自反射p基矢的方向选择；换成共同的固定横向坐标，两种偏振的正入射反射行为相同。</p>
+<p>当<img alt="n" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1b16b1df538ba12d.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>固定、<img alt="K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-86be9a55762d316a.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>增大时，<img alt="R\to1" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-768b8c5176810aed.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>。原页“κ很大则反射强烈”要结合<img alt="n,K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2c38d8ca25161bf1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>的共同变化来理解，不能仅凭直流电导率大小给所有光频下的反射率排序。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：不能把原斜入射简式无条件当作精确式；原“金属几乎不透明”等结论需厚度、波段及材料条件</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/34.html">返回第34课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="11-3-观察01"><h2>11-3-观察01 · 七种金属表值和两张反射比曲线</h2><p class="meta">按原图与备注整理的观察任务，非原页独立题目 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P6</p><div class="lesson-content"><p>原P6给表11-2（λ=589.3 nm，θ1=0）、图11-23（金属反射比随波长变化）和图11-24（银、铜的反射比随入射角变化）。备注强调p分量极小值不为零、正入射反射较高。这些是原讲授材料，不补写成有明确分值的练习。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>原表列银、金、铝、水银、铜、镍（蒸发的）、铁（蒸发的），参数列为n、nκ、ρ</li>
+<li>光谱图含Ag/Au/Cu/Al/Rh；角度图未标波长</li>
+<li>原备注OCR有破损，保留原字串及原图，不把修复猜测当原文</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>完整读出原表和曲线主题、坐标与比较条件</li>
+<li>说明反射p分量非零极小值与偏振变化的区别；核对表值自洽性</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>选择性反射</li>
+<li>能量反射比</li>
+<li>伪布儒斯特极小值</li>
+<li>条件不同的数据不能强行合并</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P6" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P006.png"/></figure></details><details id="11-3-观察01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><figure><img alt="原表11-2裁图：银金铝水银铜镍铁，列为n、nκ和反射比ρ" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P006-%E8%A1%A811-2.png"><figcaption>由既有PDF裁取的原表副本，无数据改动。波长589.3 nm，入射角0；最后两种标有“蒸发的”。</figcaption></img></figure>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>金属</th>
+<th style="text-align:right">n</th>
+<th style="text-align:right">nκ</th>
+<th style="text-align:right">ρ（原表）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>银</td>
+<td style="text-align:right">0.18</td>
+<td style="text-align:right">3.64</td>
+<td style="text-align:right">0.95</td>
+</tr>
+<tr>
+<td>金</td>
+<td style="text-align:right">0.37</td>
+<td style="text-align:right">2.82</td>
+<td style="text-align:right">0.85</td>
+</tr>
+<tr>
+<td>铝</td>
+<td style="text-align:right">1.44</td>
+<td style="text-align:right">5.23</td>
+<td style="text-align:right">0.83</td>
+</tr>
+<tr>
+<td>水银</td>
+<td style="text-align:right">1.62</td>
+<td style="text-align:right">4.41</td>
+<td style="text-align:right">0.73</td>
+</tr>
+<tr>
+<td>铜</td>
+<td style="text-align:right">0.64</td>
+<td style="text-align:right">2.62</td>
+<td style="text-align:right">0.70</td>
+</tr>
+<tr>
+<td>镍（蒸发的）</td>
+<td style="text-align:right">1.30</td>
+<td style="text-align:right">1.97</td>
+<td style="text-align:right">0.43</td>
+</tr>
+<tr>
+<td>铁（蒸发的）</td>
+<td style="text-align:right">1.51</td>
+<td style="text-align:right">1.63</td>
+<td style="text-align:right">0.33</td>
+</tr>
+</tbody>
+</table></div>
+<p>图11-24画出p反射比极小值不为零、s随角度增大以及掠入射趋近1；表和两图原样保留在折叠原页。</p>
+</div><p>对应原页：<span>P6</span></p></details><details id="11-3-观察01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解析：按“固定什么、改变什么、纵轴是什么”逐图读取。原表nκ应作为复折射率虚部K代入正入射公式。水银和铜复算约0.75373、0.73205，与原ρ=0.73、0.70不一致，保留差异并等待资料依据；原表数值保持原样。</p>
+<p>原角度图未给波长，不能宣称由589.3 nm表格复现。第35课另以表格参数计算了明确条件下的两组角度曲线，原图与补充计算分别呈现。</p>
+<p>p分量没有变为零，说明本模型没有透明电介质的完全起偏角；s/p反射比例仍可不同，所以不能推成反射完全不改变偏振。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/35.html">第35课完整图表、七行复算和读图说明</a>。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：水银与铜的原表ρ与同表n,K代入空气正入射公式不一致，保留原表和补充复算；图11-24未标波长，不能与589.3nm表格强行匹配；原备注OCR有破损，原字串保留，辨认范围只用图示和可确认语义</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/35.html">返回第35课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="11-3-演算04"><h2>11-3-演算04 · 偏振变化与金属光学常数反演</h2><p class="meta">原P7物理讨论，补充演算另标 · §11-3 光在金属表面的反射和透射.ppt · 原幻灯片P7</p><div class="lesson-content"><p>原P7说明：s、p反射系数一般为复数，斜入射的两非零偏振分量可出现附加相位差，使入射光偏振态改变；反过来，测定反射偏振变化可用于测定金属光学常数n和κ。原页没有独立数值题，也没有给出反演计算式。</p>
+</div><h3>条件与原解使用的前提</h3><ul>
+<li>按原文取非正入射、非掠入射且入射振动面不与入射面重合或正交</li>
+<li>相位必须和局部s/p基矢、exp(−iωt)约定配套</li>
+<li>反演还需已知波长、入射角、环境和样品模型</li>
+</ul>
+<h3>要求或原讲授目标</h3><ul>
+<li>解释附加相位差为何使线偏振可能变为椭圆</li>
+<li>说明偏振测量可给光学常数信息的条件；原页未要求计算数值</li>
+</ul>
+<h3>对应知识点</h3><ul>
+<li>复振幅比</li>
+<li>偏振椭圆</li>
+<li>Ψ与差相位</li>
+<li>光学常数反演的模型约束</li>
+</ul>
+<p class="meta">已提取并核对既有静态原页和读取副本备注；离线解析已写，尚未现场伴读；用户阅读与理解尚未确认。</p><details><summary>查看原页（可能含课件答案）</summary><figure><img alt="§11-3原页P7" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-3/P007.png"/></figure></details><details id="11-3-演算04-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>原页的解析是定性说明：相位差依赖金属n和κ，反射偏振变化可用于测定光学常数。没有给独立的标准数值答案。原页“相位差非0或π”的文字保留在原图中，使用时需连同斜入射和非纯s/p条件理解。</p>
+</div><p>对应原页：<span>P7</span></p></details><details id="11-3-演算04-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p><img alt="r_s,r_p" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-4a7957ad90448a0a.svg" style="height:0.81em;width:auto;vertical-align:-0.22em">为电场复振幅反射系数，<img alt="R_s=|r_s|^2,R_p=|r_p|^2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-535a7dffbae44d6d.svg" style="height:1.19em;width:auto;vertical-align:-0.22em"/>为能量反射比。原课件的<img alt="\rho" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-dabec2cdc19c3167.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>表示反射比；下面另定义偏振复比<img alt="\rho_{\mathrm{ell}}=r_p/r_s" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d6b02787e6118f04.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，下标用于避免混淆。</img></p>
+<p>沿用局部s/p基矢与<img alt="e^{-i\omega t}" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-af5258f7222f20b2.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。若入射线偏振与p方向的夹角为<img alt="\alpha" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-4893e9df8b5496eb.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>，为明确入射分量的初相位，本段先取<img alt="0&lt;\alpha&lt;\pi/2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b077612dd64c6f03.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，即两入射分量同相且正实；其他象限先把分量的负号并入初始相位再计算。同一初相位可写成</p>
+<div class="equation" role="math"><img alt="\widetilde E_{ip}=E_0\cos\alpha,\quad
+\widetilde E_{is}=E_0\sin\alpha." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0d656582e4d9ec85.svg" style="width:250.7px;height:auto"/></div>
+<p>反射后为</p>
+<div class="equation" role="math"><img alt="\widetilde E_{rp}=r_pE_0\cos\alpha,
+\quad\widetilde E_{rs}=r_sE_0\sin\alpha." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-48e29dd12c429ef8.svg" style="width:285.3px;height:auto"/></div>
+<p>设<img alt="B_p=|r_pE_0\cos\alpha|" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-efdf36a6ba242776.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>、<img alt="B_s=|r_sE_0\sin\alpha|" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b80530c6d61d83e1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，相位差取</p>
+<div class="equation" role="math"><img alt="\Delta_{\mathrm{ell}}=\arg r_p-\arg r_s." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-59504ff74b92c973.svg" style="width:173.3px;height:auto"/></div>
+<p>这是有符号的偏振比相位，不能与上一节取正值的全反射延迟大小直接混用。令<img alt="u=\omega t-\arg r_s" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-1c472e308079ac56.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，两个实分量可写成</p>
+<div class="equation" role="math"><img alt="E_{rs}=B_s\cos u,\quad
+E_{rp}=B_p\cos(u-\Delta_{\mathrm{ell}})." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-381078ba27ebb63e.svg" style="width:316.0px;height:auto"/></div>
+<p>在<img alt="B_s,B_p" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-758e32c2a9d1be5a.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>均非零时，利用<img alt="\cos(u-\Delta)=\cos u\cos\Delta+\sin u\sin\Delta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-5b363415e749f93b.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>并消去u，可得</p>
+<div class="equation" role="math"><img alt="\left(\frac{E_{rs}}{B_s}\right)^2+
+\left(\frac{E_{rp}}{B_p}\right)^2
+-2\frac{E_{rs}E_{rp}}{B_sB_p}\cos\Delta_{\mathrm{ell}}
+=\sin^2\Delta_{\mathrm{ell}}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-8bcfa371df8c35cf.svg" style="width:354.7px;height:auto"/></div>
+<p>这是偏振椭圆的关系式，描述固定空间位置随时间的电场轨迹，不是光线的传播路径。</p>
+<h2>哪些情形仍是线偏振？</h2>
+<ul>
+<li>纯s或纯p入射时只有一个反射分量，仍为线偏振。</li>
+<li>两分量都存在但<img alt="\Delta_{\mathrm{ell}}=0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-b253270214692220.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>或<img alt="\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f1cf04093d08b6dc.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>（模<img alt="2\pi" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-fac740b460f42c05.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>）时，轨迹退化为直线，偏振方向仍可能因振幅比例变化而转动。</li>
+<li>若<img alt="|\Delta_{\mathrm{ell}}|=\pi/2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-603c0d15a7ebc13a.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>且<img alt="B_s=B_p" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f8d1caa4ce63bd44.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，才成为圆偏振；只有90°相位差通常得到椭圆。</li>
+<li>正入射时局部系数满足<img alt="r_p=-r_s" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-0d0680ea69206bf1.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>，但反射p基矢也反向。换到共同的固定横向基底，两方向作用相同，不能把这个代数负号当成金属在正入射引入了物理双折射。</li>
+</ul>
+<p>原P7给出的金属斜入射结论应在其被动、有耗、均匀各向同性模型内理解。对任意结构、任意频段或多层膜，需要重新检查系数；“反射都变椭圆”的概括不能代替这些条件。</p>
+<h2>椭偏测量观察的两个实数</h2>
+<p><strong>补充解释：</strong>偏振比常写为</p>
+<div class="equation" role="math"><img alt="\rho_{\mathrm{ell}}=\frac{r_p}{r_s}
+=\tan\Psi\,e^{i\Delta_{\mathrm{ell}}},
+\qquad\tan\Psi=\frac{|r_p|}{|r_s|}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-0a8dc459954eabbf.svg" style="width:301.3px;height:auto"/></div>
+<p>测量的是振幅比<img alt="\tan\Psi" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-96fe3d9a356c82bf.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>和差相位<img alt="\Delta_{\mathrm{ell}}" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d49b3632dcbac569.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，不是分别测出绝对入射相位。给定波长、入射角、环境折射率和样品模型后，它们提供求<img alt="n,K" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2c38d8ca25161bf1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>的两个实约束；原课件用的是<img alt="n,\kappa" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-6f84dc0ceb14ec18.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>，求出K后还需<img alt="\kappa=K/n" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-250398837ce6a6c7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。</p>
+<h3>半无限空气—金属模型的反演链（补充）</h3>
+<p>限空气侧、非磁、单个平面界面，无氧化层、粗糙层或薄膜。令<img alt="s=\sin\theta,c=\cos\theta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-c4743809414a4124.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="\beta^2=N^2-s^2" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-104e4fd2949a2853.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>。由第34课两式直接合并比值可得</p>
+<div class="equation" role="math"><img alt="\rho_{\mathrm{ell}}=
+\frac{s^2-c\beta}{s^2+c\beta},\qquad
+\frac{1-\rho_{\mathrm{ell}}}{1+\rho_{\mathrm{ell}}}
+=\frac{c\beta}{s^2}." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-c7a877ab0b8c4fa3.svg" style="width:220.0px;height:auto"/></div>
+<p>因此在非退化角度且分母非零时</p>
+<div class="equation" role="math"><img alt="N^2=s^2\left[1+\tan^2\theta
+\left(\frac{1-\rho_{\mathrm{ell}}}{1+\rho_{\mathrm{ell}}}\right)^2\right]." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-d2d45a11668bd2d6.svg" style="width:241.3px;height:auto"/></div>
+<p>最后取物理上被动吸收的平方根<img alt="N=n+iK" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-4bcf5167e667776b.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，选择<img alt="n\geq0,K\geq0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-e110e2e372112fbe.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>的普通非磁金属分支。正入射或极端角度的退化形式不能机械代入；多层膜中同一个比值可能对应多个厚度/材料组合，需另加结构信息和测量条件。</p>
+<h3>明示条件的数值演示</h3>
+<p>取<strong>原P6在589.3 nm给的银参数</strong><img alt="N=0.18+3.64i" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-048cdd7875063580.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>；另行选择空气侧<img alt="\theta=60^\circ" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-c0eb405879fe16a1.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>、入射<img alt="\alpha=45^\circ" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-94e5c1a1267e48ea.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>。角度与入射偏振是本讲新增的演示条件，不是原课件例题。</p>
+<p>用精确复菲涅尔式算得</p>
+<div class="equation" role="math"><img alt="r_s\approx-0.95329-0.25885i,
+\quad r_p\approx0.49530+0.81819i," src="../../assets/11-3/%E5%85%AC%E5%BC%8F-c543a12fe7472531.svg" style="width:457.3px;height:auto"/></div>
+<div class="equation" role="math"><img alt="\Psi\approx44.0753^\circ,
+\qquad\Delta_{\mathrm{ell}}\approx-136.3807^\circ." src="../../assets/11-3/%E5%85%AC%E5%BC%8F-972f4ee2b73a94b4.svg" style="width:329.3px;height:auto"/></div>
+<p>代回反演式恢复<img alt="N\approx0.18+3.64i" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-2293d9868dc26b42.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。这个结果只检验了理想模型的计算是否自洽；没有进行实际测量，也不能据此断定真实样品具有这些常数。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原页未给样品结构与测量数据，不能凭文字反演真实材料；半无限单界面反演式及银60°演示均为补充，不标成课件原答案</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/36.html">返回第36课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC11%E7%AB%A0/index.html#deck-11-3">返回第11章 · §11-3课程目录</a></p><footer class="page-footer"><nav class="nav-row"><a class="button" href="../index.html">返回全部题目</a><a class="button" href="../../index.html">返回全课程首页</a></nav><p class="meta">整理与解析材料供阅读，用户阅读和理解尚未确认；不要求作答，不进行评分。</p></footer></main></body></html>

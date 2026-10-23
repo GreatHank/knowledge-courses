@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>数字设计为什么要分层 · 第 1 章 · 数字集成电路</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/><link href="chapter.css" rel="stylesheet"/></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main"><header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">全书总览</a><span>→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 引言</a><span>→</span><span aria-current="page">小课程 01</span></nav><p class="eyebrow">§1.1–1.2 · PDF 1–10／书内 9–18</p><h1>数字设计为什么要分层</h1><p class="lesson-question">怎样用有限的模型，处理由大量晶体管组成的系统？</p><div class="page-actions"><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><a href="#sources">本课出处</a></div><details class="course-menu"><summary>本章课程目录</summary><nav aria-label="本章小课程"><a aria-current="page" href="01-%E5%88%86%E5%B1%82%E4%B8%8E%E6%A8%A1%E5%9E%8B.html"><b>01 · 数字设计为什么要分层</b><span>§1.1–1.2</span></a><a href="02-%E8%B7%A8%E5%B1%82%E8%BF%9E%E7%BA%BF.html"><b>02 · 时钟与供电为什么会跨越层次</b><span>§1.2 · 例 1.1–1.2</span></a><a href="03-%E6%88%90%E6%9C%AC%E4%B8%8E%E9%9D%A2%E7%A7%AF.html"><b>03 · 面积、良率与单片成本</b><span>§1.3.1</span></a><a href="04-%E9%80%BB%E8%BE%91%E7%94%B5%E5%B9%B3%E4%B8%8E%E5%99%AA%E5%A3%B0.html"><b>04 · 真实电压怎样承载可靠的 0 和 1</b><span>§1.3.2</span></a><a href="05-%E5%BB%B6%E8%BF%9F%E4%B8%8E%E8%B4%9F%E8%BD%BD.html"><b>05 · 延迟、负载与速度</b><span>§1.3.3</span></a><a href="06-%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%83%BD%E9%87%8F.html"><b>06 · 功率、能量与设计取舍</b><span>§1.3.4–1.4</span></a></nav></details></header>
+<section><h2>先把设计对象放到合适的层次</h2>
+<p>设计一个加法器时，可以先问输入的两个数怎样产生和；设计其中一个逻辑门时，要问输入电压怎样控制晶体管，把输出拉高或拉低。两种问题说的是同一个硬件，却需要不同的模型。</p>
+<p class="key">抽象（abstraction）把一个模块内部的细节，换成上层设计所需的功能、接口和性能信息。省去哪些细节，取决于当前要回答什么问题。</p>
+<p>§1.1 的历史线索是：器件和集成技术使电路规模不断增大，同时把功耗、可靠性和设计复杂度推到设计者面前。书中由双极型逻辑、NMOS 讲到 CMOS，随后以 CMOS 为主展开。这里用历史理解问题的来由；原书历史图中的集成度、频率增长趋势属于当时的观察，不作为今天的预测。</p></section>
+<section><h2>沿图 1.6，从器件走到系统</h2>
+<figure><a href="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC01%E7%AB%A0/%E5%9B%BE1-6-%E6%8A%BD%E8%B1%A1%E5%B1%82%E6%AC%A1.png"><img alt="五个嵌套层次，从内向外为器件、电路、逻辑门、功能模块、系统" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC01%E7%AB%A0/%E5%9B%BE1-6-%E6%8A%BD%E8%B1%A1%E5%B1%82%E6%AC%A1.png"/></a><figcaption>图 1.6：数字电路的设计抽象层次。原图裁剪，PDF 文件第 8 页／书内第 16 页；<span>查看原页</span>。点击图片可同窗放大，浏览器返回即可继续。</figcaption></figure>
+<p>先看图右下角的 <b>DEVICE</b>：这里需要晶体管的电流、电压和电容模型。外面一层 <b>CIRCUIT</b> 把晶体管连接成电路，分析节点电压怎样变化。再向外看 <b>GATE</b>，上层开始使用“与、或、非”等逻辑功能，但仍需要知道延迟和驱动条件。</p>
+<p><b>MODULE</b> 把门组织成加法器等功能模块；<b>SYSTEM</b> 再组织模块。图中嵌套表示“实现关系”，没有要求一次设计只能从内向外走。设计时可以先从系统需求向下分解，再用下层分析结果检查上层是否满足要求。</p>
+<div class="table-wrap"><table><thead><tr><th>当前层次</th><th>保留的信息</th><th>暂时不展开的细节</th></tr></thead><tbody>
+<tr><td>器件 → 电路</td><td>晶体管输入输出关系、寄生参数</td><td>完整的固体物理过程</td></tr>
+<tr><td>电路 → 门</td><td>逻辑功能、电平、延迟、负载条件</td><td>每个内部节点的完整波形</td></tr>
+<tr><td>门 → 模块 → 系统</td><td>模块功能、接口、时间与成本信息</td><td>所有晶体管的逐个连接</td></tr></tbody></table></div>
+<p class="note">表格为对 §1.2 的伴读归纳。某项细节只有在不影响当前判断时才能省略。</p></section>
+<section><h2>单元库把“已经分析过的电路”交给上层</h2>
+<p>对一个 AND 门，布尔式 Z = A·B 说明了逻辑功能，却没有回答它占多大面积、引脚在哪里、输出多久才到达。原文把布尔式、边界尺寸、端口位置和延迟放在一起，作为门的模型。</p>
+<p>单元库（cell library）保存可复用单元的版图，以及行为和性能的表征。设计工具据此连接单元、验证设计和组织版图，避免每个模块都重新设计基本门。复用的前提是：使用环境必须落在模型描述的条件内。</p>
+<p>换工艺后，器件特性可能变化；换连接后，负载和连线寄生参数也会变化。要判断一个模型能否继续使用，仍然需要理解电路内部的工作方式。书中强调的跨层问题，下一课会用时钟和供电说明。</p></section>
+<section><h2>回到本章总图的“01 → 02”</h2>
+<p>“理想连接需要回查”这条线指出了分层的边界：模块的逻辑可以局部描述，连接它们的线却有电阻、电容和传播时间。总图的“01 → 03”则说明，选择怎样实现功能，也会决定面积和制造成本。</p>
+<p>读完这一课，可以先把设计问题分成两类：当前模型已经描述的量，以及必须回到更低层或更大范围才能判断的量。后面的课程会逐项给这些量建立尺度。</p></section>
+<section id="sources"><h2>本课出处与范围</h2><p>依据 Rabaey、Chandrakasan、Nikolić 的 <cite>Digital Integrated Circuits: A Design Perspective</cite> 第二版，本地排版稿 §1.1–1.2，PDF 1–10／书内 9–18。<span>打开本课原文</span>；<span>来源及原稿差异记录</span>。</p><p class="note">中文串讲、读图指引和明确标出的推导为伴读解释。图注区分教材原图与解析示意；页面准备不代表已讨论或已经理解。</p></section><footer><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><nav aria-label="前后课程" class="lesson-pager"><span class="end-label">这是本章第一课</span><a class="button" href="02-%E8%B7%A8%E5%B1%82%E8%BF%9E%E7%BA%BF.html" rel="next">时钟与供电为什么会跨越层次 →</a></nav></footer></main></body></html>

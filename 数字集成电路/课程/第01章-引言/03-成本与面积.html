@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>面积、良率与单片成本 · 第 1 章 · 数字集成电路</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/><link href="chapter.css" rel="stylesheet"/></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main"><header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">全书总览</a><span>→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 引言</a><span>→</span><span aria-current="page">小课程 03</span></nav><p class="eyebrow">§1.3.1 · PDF 13–15／书内 21–23</p><h1>面积、良率与单片成本</h1><p class="lesson-question">芯片面积变大，为什么不只是少切出几颗芯片？</p><div class="page-actions"><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><a href="#sources">本课出处</a></div><details class="course-menu"><summary>本章课程目录</summary><nav aria-label="本章小课程"><a href="01-%E5%88%86%E5%B1%82%E4%B8%8E%E6%A8%A1%E5%9E%8B.html"><b>01 · 数字设计为什么要分层</b><span>§1.1–1.2</span></a><a href="02-%E8%B7%A8%E5%B1%82%E8%BF%9E%E7%BA%BF.html"><b>02 · 时钟与供电为什么会跨越层次</b><span>§1.2 · 例 1.1–1.2</span></a><a aria-current="page" href="03-%E6%88%90%E6%9C%AC%E4%B8%8E%E9%9D%A2%E7%A7%AF.html"><b>03 · 面积、良率与单片成本</b><span>§1.3.1</span></a><a href="04-%E9%80%BB%E8%BE%91%E7%94%B5%E5%B9%B3%E4%B8%8E%E5%99%AA%E5%A3%B0.html"><b>04 · 真实电压怎样承载可靠的 0 和 1</b><span>§1.3.2</span></a><a href="05-%E5%BB%B6%E8%BF%9F%E4%B8%8E%E8%B4%9F%E8%BD%BD.html"><b>05 · 延迟、负载与速度</b><span>§1.3.3</span></a><a href="06-%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%83%BD%E9%87%8F.html"><b>06 · 功率、能量与设计取舍</b><span>§1.3.4–1.4</span></a></nav></details></header>
+<section><h2>成本先分清“做一次”和“每颗都要做”</h2>
+<p>一套芯片设计需要设计、验证及其他前期投入；每生产一颗，还要承担制造、测试和封装等费用。销量改变的是前期投入如何分摊。</p>
+<div class="formula">单片总成本 = 单片可变成本 + 固定成本 / 产量</div>
+<p>这是式 (1.1) 的分解。式 (1.2) 进一步把可变成本写成“裸片成本＋裸片测试＋封装成本”，再除以最终测试良率。这样就不会把制造出一颗裸片与交付一颗合格产品混为一谈。</p></section>
+<section><h2>面积会从两个方向减少合格裸片</h2>
+<div class="cards"><article class="card"><h3>同一片晶圆，能排下的裸片变少</h3><p>面积越大，理论切割数越少；圆形晶圆边缘还有排不下完整裸片的损失。</p></article><article class="card"><h3>单颗裸片，碰到缺陷的机会变大</h3><p>在本节采用的随机缺陷模型中，裸片面积越大，良率越低。增加的面积不一定带来可售产品。</p></article></div>
+<div class="formula">裸片成本 = 晶圆成本 /（每片晶圆的裸片数 × 裸片良率）</div>
+<p>式 (1.3) 的分母是平均合格裸片数。看清这两个因子，就能理解为什么成本可能比面积增长得更快。</p>
+<p>本节采用的良率模型为：</p><div class="formula">Y = (1 + D·A/α)<sup>−α</sup></div>
+<p>A 是裸片面积，D 是单位面积缺陷数，二者必须使用一致的面积单位；α 是与工艺有关的模型参数。它是教材用于估算的模型，不能把一组 D、α 当成所有工艺的常数。</p></section>
+<section><h2>跟着例 1.3 算一次</h2>
+<p>原例给出直径 12 inch 的晶圆、裸片面积 2.5 cm²、D = 1 cm⁻²、α = 3。代入良率模型，得到 Y ≈ 0.162，即约 16.2%。这些参数用于原例，不代表当前工艺水平。</p>
+<p>计入圆形边缘损失的粗估式为：</p><div class="formula">N ≈ π(d/2)²/A − πd/√(2A)</div>
+<p>其中 d 是晶圆直径，N 是尚未扣除缺陷损失的裸片数。若把 12 inch 换成 30.48 cm，按该式复算约为 249 颗；再乘良率，平均合格数约为 40.4 颗。这个结果是模型平均值，不是承诺每片晶圆恰好得到 40 颗。</p>
+<p class="note">原稿 <span>例 1.3（PDF 15／书内 23）</span>写作 252 = 296 − 44、良率 16%、约 40 颗合格。裸片数与按所列参数复算的 249 有小幅数值差异，约 40 颗的结论一致；此处保留并说明差异，不改动原 PDF。</p></section>
+<section><h2>怎样理解书里的“面积四次方”</h2>
+<p>式 (1.5) 用四次方强调面积对成本的强烈影响。可以从前面的模型检查它的适用条件：先忽略晶圆边缘损失，并固定晶圆成本、D 和 α，裸片数才近似与 1/A 成正比。</p>
+<div class="formula">裸片成本 ∝ A·(1 + D·A/α)<sup>α</sup></div>
+<p>这是由式 (1.3)–(1.4) 得到的补充推导。当 D·A/α 远大于 1 时，它才进一步近似为 A<sup>α+1</sup>；取 α = 3 才出现 A⁴。缺陷影响很小时，成本反而接近随面积线性增长。因此，四次方不能直接用于任意面积或任意工艺。</p></section>
+<section><h2>晶体管数量还没有说完整个面积问题</h2>
+<p>晶体管数能提示实现规模，但复杂互连可能占据大量面积。上一课图 1.8 中加宽供电主干，也需要空间。规则、重复的结构还可能降低设计复杂度和设计投入。</p>
+<p>回到总图的“01 → 03”：功能分解后，需要继续问“这种实现占多少面积、能做出多少合格裸片、前期投入如何分摊”。这里建立的是成本分析的方法，还没有做任何实际工艺报价。</p></section>
+<section id="sources"><h2>本课出处与范围</h2><p>依据 Rabaey、Chandrakasan、Nikolić 的 <cite>Digital Integrated Circuits: A Design Perspective</cite> 第二版，本地排版稿 §1.3.1，PDF 13–15／书内 21–23。<span>打开本课原文</span>；<span>来源及原稿差异记录</span>。</p><p class="note">中文串讲、读图指引和明确标出的推导为伴读解释。图注区分教材原图与解析示意；页面准备不代表已讨论或已经理解。</p></section><footer><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><nav aria-label="前后课程" class="lesson-pager"><a class="button" href="02-%E8%B7%A8%E5%B1%82%E8%BF%9E%E7%BA%BF.html" rel="prev">← 时钟与供电为什么会跨越层次</a><a class="button" href="04-%E9%80%BB%E8%BE%91%E7%94%B5%E5%B9%B3%E4%B8%8E%E5%99%AA%E5%A3%B0.html" rel="next">真实电压怎样承载可靠的 0 和 1 →</a></nav></footer></main></body></html>

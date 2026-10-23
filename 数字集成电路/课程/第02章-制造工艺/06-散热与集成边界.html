@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>热怎样限制可同时工作的电路 · 第 2 章 · 数字集成电路</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/><link href="chapter.css" rel="stylesheet"/></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main"><header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">全书总览</a><span>→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 2 章 · 制造工艺</a><span>→</span><span aria-current="page">小课程 06</span></nav><p class="eyebrow">§2.4.3 · PDF 56–57／书内 64–65</p><h1>热怎样限制可同时工作的电路</h1><p class="lesson-question">功率、热阻和开关活动怎样共同限制集成规模？</p><div class="page-actions"><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><a href="#sources">本课出处</a></div><details class="course-menu"><summary>本章课程目录</summary><nav aria-label="本章小课程"><a href="01-%E8%8A%AF%E7%89%87%E7%BB%93%E6%9E%84%E4%B8%8E%E6%8E%A9%E8%86%9C.html"><b>01 · 从芯片剖面认识制造对象</b><span>§2.1–2.2.1</span></a><a href="02-%E5%85%89%E5%88%BB%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.html"><b>02 · 图形怎样变成材料上的变化</b><span>§2.2.2–2.2.3</span></a><a href="03-CMOS%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B.html"><b>03 · 把基本操作接成 CMOS 流程</b><span>§2.2.4</span></a><a href="04-%E7%89%88%E5%9B%BE%E4%B8%8E%E8%AE%BE%E8%AE%A1%E8%A7%84%E5%88%99.html"><b>04 · 从版图还原结构与连接</b><span>§2.3</span></a><a href="05-%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BA%92%E8%BF%9E.html"><b>05 · 裸片怎样接到电路板</b><span>§2.4–2.4.2</span></a><a aria-current="page" href="06-%E6%95%A3%E7%83%AD%E4%B8%8E%E9%9B%86%E6%88%90%E8%BE%B9%E7%95%8C.html"><b>06 · 热怎样限制可同时工作的电路</b><span>§2.4.3</span></a><a href="07-%E5%B7%A5%E8%89%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%85%A8%E7%AB%A0%E5%9B%9E%E7%9C%8B.html"><b>07 · 工艺变了，哪些模型也要变</b><span>§2.5–2.6</span></a></nav></details></header>
+<section><h2>电能消耗以后，还需要把热送出去</h2>
+<p>第一章讨论一次切换消耗多少能量，以及单位时间发生多少次切换。本课接着问：这些能量变成热以后，封装能否持续把它送到环境中？温度限制把允许功率与冷却条件连在一起。</p>
+<p class="key">相同的电路功率，热路径越难导热，稳态温升就越大。热路径改善后可以容许更大功率，但这不等于电路每次操作所需的能量已经降低。</p></section>
+<section><h2>先用一个热阻读懂温升</h2>
+<p>用热阻 θ 描述指定热源到指定环境之间的整体热路径，单位是 °C/W。在本课采用的简化稳态模型中：</p>
+<div class="formula">ΔT ≈ θP<br/>P<sub>max</sub> ≈ ΔT<sub>allowed</sub>/θ</div>
+<p>ΔT 是两端温差，P 是需要散出的功率。计算前必须说明环境温度、允许温升及热阻对应的边界；换了风冷条件或散热器，θ 也可能变化。这组式子用于解释原书热预算，不描述升温过程或局部热点。</p>
+<p>教材以一个 DIP 为例：自然冷却时 θ = 38 °C/W，强制冷却时为 25 °C/W。若允许温升为 75 °C，按同一稳态模型，功率分别约为 75/38 = 1.97 W 和 75/25 = 3 W。</p>
+<p class="note"><span>PDF 57／书内 65</span>把这个例子写成 2 W（3 W）时温升“低于 75 °C”。直接相乘分别为 76 °C 和 75 °C，因此这些功率只能看作近似量级，不能作为严格低于 75 °C 的保证。该页还留有补充热方程的编辑提示；本课明确给出使用的模型，原稿不改。</p></section>
+<section><h2>式 (2.2)：能容纳多少持续活动的门</h2>
+<p>设有 N<sub>G</sub> 个门，每个门每次切换消耗能量 E，时间尺度为门延迟 t<sub>p</sub>。先采用书中估算的强条件：<b>每个门都以每 t<sub>p</sub> 一次事件的速率持续活动</b>。则平均功率可估为：</p>
+<div class="formula">P ≈ N<sub>G</sub>E/t<sub>p</sub><br/>N<sub>G</sub>/t<sub>p</sub> ≤ ΔT<sub>allowed</sub>/(θE)</div>
+<p>第二行就是把功率代入热预算后得到的式 (2.2)。它把门数、速度、每次能量与散热能力放到同一个约束中；门做得更多、更频繁地工作，都可能增大散热负担。</p>
+<p>例 2.2 取 ΔT = 100 °C、θ = 2.5 °C/W、E = 0.1 pJ、t<sub>p</sub> = 1 ns。可散功率为 40 W，每个持续活动门的功率为 0.1 pJ / 1 ns = 0.1 mW，因此 N<sub>G</sub> 上限约为 400,000。</p>
+<p>这个结果依赖上述活动假设。真实电路中，不是所有门都在每个这样的时间间隔切换；若只给出“最多四十万门”而省去条件，就把热预算误当成了普遍集成度上限。</p></section>
+<section id="thermal-demo"><h2>分别改变热阻、事件能量和活动比例</h2>
+<p>下面保留例 2.2 的 ΔT = 100 °C、t<sub>p</sub> = 1 ns，并引入教学参数 a：每个门平均每 t<sub>p</sub> 发生 a 次事件。于是 P<sub>dynamic</sub> ≈ aN<sub>G</sub>E/t<sub>p</sub>。默认 a = 1 恢复原例；其余设置用于比较因果。</p>
+<div class="demo-controls"><label for="theta">θ / °C·W⁻¹ <output id="theta-value">2.5</output><input id="theta" max="10" min="0.5" step="0.5" type="range" value="2.5"/></label><label for="energy">E / pJ <output id="energy-value">0.10</output><input id="energy" max="0.5" min="0.05" step="0.05" type="range" value="0.1"/></label><label for="activity">活动比例 a <output id="activity-value">1.0</output><input id="activity" max="1" min="0.1" step="0.1" type="range" value="1"/></label></div>
+<div aria-live="polite" class="metrics"><p>允许总功率 <strong id="pmax">40.0 W</strong></p><p>按当前活动平均的单门功率 <strong id="pgate">0.100 mW</strong></p><p>本模型的门数上限 <strong id="nmax">400,000</strong></p></div>
+<div class="formula">N<sub>max</sub> = (ΔT/θ) · t<sub>p</sub>/(aE)</div>
+<p>θ 加倍，允许总功率减半；E 加倍，相同活动下可容纳的门数减半；a 减半，模型允许更多门共享同一热预算。只有改变 θ 才改变这里的散热功率上限，改变 E 或 a 改的是电路消耗这一预算的方式。</p>
+<p class="note">这是简化稳态公式的计算，未运行热仿真或电路仿真。示例暂未计入静态功率及其他模块功率；实际预算应先扣除这些消耗。a 接近零也不能据此认为可无限增加门数，面积、互连、漏电和局部热条件仍有约束。</p>
+<noscript><p class="note">脚本未运行，当前显示原例默认数值；正文、公式和导航仍可阅读。</p></noscript></section>
+<section><h2>从热预算回看第一章的能量与速度</h2>
+<p>减小一次事件能量，可以在同样事件速率下降低功率；减小热阻，则让同样功率造成较小温升。这是两种不同措施，可能需要同时考虑。实际设计还可以改变哪些模块何时工作，但必须同时满足任务的速度要求。</p>
+<p>总图的 <b>05 → 06</b> 说明封装给出热路径；第一章的能量与延迟尺度则进入本课的 E、t<sub>p</sub>。这条热约束把制造、封装与电路行为联系起来。</p></section>
+<section id="sources"><h2>本课出处与范围</h2><p>依据 Rabaey、Chandrakasan、Nikolić 的 <cite>Digital Integrated Circuits: A Design Perspective</cite> 第二版，本地排版稿 §2.4.3，PDF 56–57／书内 64–65。<span>打开本课原文</span>；<span>来源、原稿差异与材料限制</span>。</p><p class="note">中文串讲、读图指引和标明的推导为伴读解释。工艺数字及发展背景属于原书情境；页面准备不代表已讨论或已经理解。</p></section><footer><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><nav aria-label="前后课程" class="lesson-pager"><a class="button" href="05-%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BA%92%E8%BF%9E.html" rel="prev">← 裸片怎样接到电路板</a><a class="button" href="07-%E5%B7%A5%E8%89%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%85%A8%E7%AB%A0%E5%9B%9E%E7%9C%8B.html" rel="next">工艺变了，哪些模型也要变 →</a></nav></footer></main><script src="thermal-demo.js"></script></body></html>

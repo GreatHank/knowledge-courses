@@ -1,0 +1,9 @@
+.reading pre{font-size:16px;line-height:1.65;max-width:100%;overflow-x:auto;tab-size:4}.reading code{overflow-wrap:anywhere}.reading pre code{overflow-wrap:normal}.mobile-map img{width:100%;height:auto}.reading .formula{font-family:Cambria,Georgia,"Microsoft YaHei",serif}.inputs{grid-template-columns:repeat(2,minmax(0,1fr))}.table-wrap:focus-visible{outline:3px solid #0a97b4;outline-offset:4px}@media(max-width:750px){.reading pre{font-size:14px;padding:12px}.inputs{grid-template-columns:1fr}}
+
+.demo label{display:block}.demo input{max-width:100%;box-sizing:border-box}.reading p{overflow-wrap:break-word}
+
+.demo input[type=checkbox]{width:auto;display:inline-block;margin-right:.5em}
+
+.step-controls{display:flex;flex-wrap:wrap;gap:.7rem}.step-controls button{font:inherit;padding:.6rem 1rem;border-radius:8px;cursor:pointer;background:#edf3f9;color:inherit;border:1px solid #89a8b8}.step-controls button:disabled{opacity:.45;cursor:default}.demo output{display:block;margin-top:1rem}.demo table{margin-top:1rem}
+
+@media(prefers-color-scheme:dark){.step-controls button{background:#23324a;border-color:#6c8294}}

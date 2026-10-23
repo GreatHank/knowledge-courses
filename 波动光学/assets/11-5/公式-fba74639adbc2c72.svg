@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="38pt" height="18pt" viewBox="0 0 38 18" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-22T23:06:23.877541</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 18 
+L 38 18 
+L 38 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <!-- $\varphi=1'$ -->
+   <g style="fill: #111827" transform="translate(0 14) scale(0.16 -0.16)">
+    <defs>
+     <path id="STIXGeneral-Italic-3c6" d="M 1402 64 
+L 1702 1133 
+Q 1792 1459 1894 1712 
+Q 1997 1965 2147 2221 
+Q 2298 2477 2509 2617 
+Q 2720 2758 2970 2758 
+Q 3776 2758 3776 1946 
+Q 3776 1606 3625 1225 
+Q 3475 845 3148 496 
+Q 2822 147 2394 6 
+Q 2144 -70 1850 -70 
+L 1510 -1312 
+L 1018 -1312 
+L 1363 -70 
+Q 832 -70 646 0 
+Q 173 186 173 813 
+Q 173 1306 489 1827 
+Q 806 2349 1274 2618 
+Q 1638 2822 1907 2822 
+L 1907 2720 
+Q 1581 2637 1299 2281 
+Q 1018 1926 864 1481 
+Q 710 1037 710 640 
+Q 710 320 889 192 
+Q 1069 64 1402 64 
+z
+M 2298 1594 
+L 1888 64 
+Q 2150 64 2330 160 
+Q 2688 352 2963 969 
+Q 3238 1587 3238 2099 
+Q 3238 2330 3193 2451 
+Q 3149 2573 3097 2598 
+Q 3046 2624 2963 2624 
+Q 2752 2624 2595 2365 
+Q 2438 2106 2298 1594 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-3d" d="M 4077 2048 
+L 307 2048 
+L 307 2470 
+L 4077 2470 
+L 4077 2048 
+z
+M 4077 768 
+L 307 768 
+L 307 1190 
+L 4077 1190 
+L 4077 768 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-31" d="M 2522 0 
+L 755 0 
+L 755 96 
+Q 1107 115 1235 227 
+Q 1363 339 1363 608 
+L 1363 3482 
+Q 1363 3795 1171 3795 
+Q 1082 3795 883 3718 
+L 710 3654 
+L 710 3744 
+L 1856 4326 
+L 1914 4307 
+L 1914 486 
+Q 1914 275 2042 185 
+Q 2170 96 2522 96 
+L 2522 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-2032" d="M 480 2630 
+L 909 4045 
+Q 934 4141 960 4195 
+Q 986 4250 1043 4294 
+Q 1101 4339 1190 4339 
+Q 1274 4339 1322 4278 
+Q 1370 4218 1370 4128 
+Q 1370 4058 1280 3878 
+L 602 2573 
+L 480 2630 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#STIXGeneral-Italic-3c6" transform="translate(0 0.267188)"/>
+    <use xlink:href="#STIXGeneral-Regular-3d" transform="translate(76.639993 0.267188)"/>
+    <use xlink:href="#STIXGeneral-Regular-31" transform="translate(159.579974 0.267188)"/>
+    <use xlink:href="#STIXGeneral-Regular-2032" transform="translate(211.12324 35.542188) scale(0.7)"/>
+   </g>
+  </g>
+ </g>
+</svg>

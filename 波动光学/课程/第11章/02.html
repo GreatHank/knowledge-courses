@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>场量、积分规律与位移电流 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 02</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-02">返回本章首页</a></div><h1>02 场量、积分规律与位移电流</h1><p class="meta">原课件：§11-1 光的电磁性质.pptx · 原幻灯片 P5–11</p><p>用电容充电解释四个场量和麦克斯韦积分式。</p><div class="resource-links"><a href="index.html#deck-map">课件逻辑链</a> ·  ·  · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-1.html#11-1-题08">11-1-题08</a></div><div class="lesson-content"><section class="lesson" id="unit-2"><h2>四个电磁场量与两种观察方式（P5–8、P11）</h2><p><strong>现象与问题。</strong>一个闭合盒子可以统计穿出与穿入的场通量之差；一圈线圈可以测到沿回路累加的电动势。前者看穿过面的量，后者看沿线绕一圈的量。这两个几何问题对应四条麦克斯韦方程。</p>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>场量、积分规律与位移电流 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 02</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-02">返回本章首页</a></div><h1>02 场量、积分规律与位移电流</h1><p class="meta">原课件：§11-1 光的电磁性质.pptx · 原幻灯片 P5–11</p><p>用电容充电解释四个场量和麦克斯韦积分式。</p><div class="resource-links"><a href="index.html#deck-map">课件逻辑链</a> ·  ·  · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-1.html#11-1-题08">11-1-题08</a></div><div class="lesson-content"><section class="lesson" id="unit-2"><h2>四个电磁场量与两种观察方式（P5–8、P11）</h2><p>对一个闭合盒子，可以统计穿出与穿入的场通量之差；沿一圈线圈，可以测量绕回路累加的电动势。一个涉及穿过曲面的量，一个涉及沿闭合曲线的量，四条麦克斯韦方程分别描述这两类关系。</p>
 <p><img alt="麦克斯韦积分方程与符号，原幻灯片5" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-1/P005.png"/></p>
 <div class="table-scroll"><table>
 <thead>
@@ -53,26 +53,26 @@
 </tbody>
 </table></div>
 <p>“补充解释”中用下标<img alt="f,c" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-040634686f732efd.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>强调自由电荷和传导电流；原课件写<img alt="Q,\rho,I" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-fd3b5b30e28d3fe5.svg" style="height:0.89em;width:auto;vertical-align:-0.22em"/>。这里的<img alt="\sigma" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-9c3245dfb4ac54c1.svg" style="height:0.50em;width:auto;vertical-align:-0.22em"/>作为面元符号时不是后面电导率的<img alt="\sigma" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-9c3245dfb4ac54c1.svg" style="height:0.50em;width:auto;vertical-align:-0.22em"/>。</p>
-<p><strong>几何约定。</strong>闭合曲面一律取向外法线。开放曲面与它的边界回路采用右手取向：右手四指沿正向回路弯曲，拇指指向曲面正法线。点积只统计场在面法线或线切线方向上的分量；反向贡献为负。闭合曲面符号与闭合曲线符号不能混用。</p>
+<p><strong>几何约定：</strong>闭合曲面一律取向外法线。开放曲面与它的边界回路采用右手取向：右手四指沿正向回路弯曲，拇指指向曲面正法线。点积只统计场在面法线或线切线方向上的分量；反向贡献为负。闭合曲面符号与闭合曲线符号不能混用。</p>
 <p><strong>课件公式与含义。</strong></p>
 <div class="equation" role="math"><img alt="\oiint_S\mathbf D\cdot d\boldsymbol\sigma=Q_f,
 \qquad
 \oiint_S\mathbf B\cdot d\boldsymbol\sigma=0." src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1822920981b9d878.svg" style="width:297.9px;height:auto"/></div>
 <p>第一式的两边单位都是C。包围正电荷时净向外通量为正；包围负电荷时净通量为负。<img alt="Q_f" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-688d5aa3a341b160.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>是带正负号的电荷量，不是“有几个电荷”的个数。第二式的两边单位为Wb；任何闭合曲面上流入和流出的磁通量抵消。在本课的经典理论中不存在磁单极源，但“磁场无源”不等于“磁场为零”。</p>
 <p><img alt="法拉第感应的原图，原幻灯片8" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-1/P008.png"/></p>
-<p>图中的磁铁与线圈帮助我们想到感应实验。静止磁铁与静止线圈的组合本身不会使磁通随时间变；课件用这个装置引出磁通变化的情形。这里讨论固定回路的形式：</p>
+<p>图中的磁铁与线圈对应电磁感应实验。两者都静止时，磁通本身不会随时间变化；课件借这个装置讨论磁通变化时的情形。这里讨论固定回路的形式：</p>
 <div class="equation" role="math"><img alt="\oint_{\partial S}\mathbf E\cdot d\mathbf l
 =-\frac{d\Phi_B}{dt}
 =-\iint_S\frac{\partial\mathbf B}{\partial t}\cdot d\boldsymbol\sigma,
 \qquad \Phi_B=\iint_S\mathbf B\cdot d\boldsymbol\sigma." src="../../assets/11-1/%E5%85%AC%E5%BC%8F-f90b3daba077dff4.svg" style="width:457.5px;height:auto"/></div>
 <p>左边是每单位电荷绕一圈由电场提供的功，单位V；右边是磁通变化率，Wb/s也等于V。正法线方向的磁通增加时，电场环流为负；负号表示楞次定律的方向关系。沿环路测到这种电场不要求必须先放入金属线圈，线圈是观察它的工具。</p>
-<p><strong>补充解释。</strong>“阻碍变化”的直接对象是磁通变化趋势，不是无条件阻碍原有磁场。回路运动时，感应电动势还包括<img alt="\mathbf u\times\mathbf B" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-005bc41731c70981.svg" style="height:0.78em;width:auto;vertical-align:-0.22em"/>的贡献，不能直接把上面的固定曲面推导原样使用。</p>
-<p>P11重新展示全部四式，是汇总页，合并在此与下一模块。P5备注强调电场和磁场属于统一的电磁场；这应理解为方程相互耦合，不能据此编造先有电场、再有磁场的循环时间故事。</p>
-<p><strong>回主线。</strong>高斯定律约束场的源与通量；感应定律约束场的环流。还差一条环流规律，它解释充电电容为何要求“位移电流”。</p>
-</section><section class="lesson" id="unit-3"><h2>电容间没有自由电荷穿过，为何安培定律仍一致？（P9–10）</h2><p><strong>物理情景。</strong>给电容充电：导线上有传导电流，理想绝缘间隙中没有自由电荷横穿。如果只统计传导电流，同一个回路的磁场竟会取决于我们随手选的曲面，这是不可能的。</p>
+<p><strong>补充解释：</strong>“阻碍变化”的直接对象是磁通变化趋势，不是无条件阻碍原有磁场。回路运动时，感应电动势还包括<img alt="\mathbf u\times\mathbf B" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-005bc41731c70981.svg" style="height:0.78em;width:auto;vertical-align:-0.22em"/>的贡献，不能直接把上面的固定曲面推导原样使用。</p>
+<p>P11汇总四条方程，分别在这里和下一部分说明。P5备注强调电场和磁场属于统一的电磁场，指的是方程相互耦合；这不意味着电场先出现、磁场后出现，再轮流产生。</p>
+<p>高斯定律约束场的源与通量；感应定律约束场的环流。还差一条环流规律，它解释充电电容为何要求“位移电流”。</p>
+</section><section class="lesson" id="unit-3"><h2>电容间没有自由电荷穿过，为何安培定律仍一致？（P9–10）</h2><p>给电容充电时，导线上有传导电流，理想绝缘间隙中却没有自由电荷横穿。若只计传导电流，同一回路的磁场环流会随所选曲面而变，与它应有的唯一值矛盾。</p>
 <p><img alt="同一回路的两个曲面，原幻灯片9" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-1/P009.png"/></p>
-<p><strong>读图。</strong>黄色闭合线为<img alt="L" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-72dfcfb0c470ac25.svg" style="height:0.67em;width:auto;vertical-align:-0.22em"/>；<img alt="S_1,S_2" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-e4b086e5fb8b678e.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>共享这个边界。上图是稳恒电路，两个曲面都被相同电流穿过。下图含充电电容：选<img alt="S_1" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7f37d047e0568165.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>截到导线，选<img alt="S_2" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-db9af401ac382039.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>绕到电容间隙。在两次比较中，回路<img alt="L" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-72dfcfb0c470ac25.svg" style="height:0.67em;width:auto;vertical-align:-0.22em"/>和它的方向完全相同。</p>
-<p><strong>课件提出的矛盾。</strong>把稳恒公式硬用于下图，会分别得到</p>
+<p>黄色闭合线为<img alt="L" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-72dfcfb0c470ac25.svg" style="height:0.67em;width:auto;vertical-align:-0.22em"/>；<img alt="S_1,S_2" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-e4b086e5fb8b678e.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>共享这个边界。上图是稳恒电路，两个曲面都被相同电流穿过。下图含充电电容：选<img alt="S_1" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7f37d047e0568165.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>截到导线，选<img alt="S_2" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-db9af401ac382039.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>绕到电容间隙。在两次比较中，回路<img alt="L" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-72dfcfb0c470ac25.svg" style="height:0.67em;width:auto;vertical-align:-0.22em"/>和它的方向完全相同。</p>
+<p><strong>课件提出的矛盾：</strong>将稳恒电流的公式直接用于下图，会分别得到</p>
 <div class="equation" role="math"><img alt="\oint_L\mathbf H\cdot d\mathbf l
 =\iint_{S_1}\mathbf j\cdot d\boldsymbol\sigma=I_c,
 \quad
@@ -82,13 +82,13 @@
 <div class="equation" role="math"><img alt="\oint_L\mathbf H\cdot d\mathbf l
 =\iint_S\left(\mathbf j+\frac{\partial\mathbf D}{\partial t}\right)\cdot d\boldsymbol\sigma." src="../../assets/11-1/%E5%85%AC%E5%BC%8F-73995674bf4d5347.svg" style="width:244.7px;height:auto"/></div>
 <p><img alt="\partial\mathbf D/\partial t" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-32b5dab6e0a5ad0c.svg" style="height:0.78em;width:auto;vertical-align:-0.22em"/>的单位是A/m²，称位移电流密度；积分得到位移电流。它表示电位移变化，在真空中也存在，并不表示自由电荷真的穿过电容间隙。</p>
-<p><strong>补充解释：用充电量算出它为什么正好补上。</strong>理想平行板电容，板面积<img alt="A_p" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-db660538430f2d4b.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，忽略边缘场，板上自由电荷为<img alt="Q_f(t)" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-60cafbe95147c311.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。由高斯定律得间隙中的<img alt="D=Q_f/A_p" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1e08b12433adf631.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，方向由正板指向负板。于是</p>
+<p><strong>补充解释：由充电量求位移电流。</strong>理想平行板电容，板面积<img alt="A_p" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-db660538430f2d4b.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，忽略边缘场，板上自由电荷为<img alt="Q_f(t)" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-60cafbe95147c311.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。由高斯定律得间隙中的<img alt="D=Q_f/A_p" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-1e08b12433adf631.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，方向由正板指向负板。于是</p>
 <div class="equation" role="math"><img alt="I_d=\int_{A_p}\frac{\partial D}{\partial t}\,dS
 =A_p\frac{1}{A_p}\frac{dQ_f}{dt}
 =\frac{dQ_f}{dt}=I_c." src="../../assets/11-1/%E5%85%AC%E5%BC%8F-41b7ec80aac9af55.svg" style="width:311.2px;height:auto"/></div>
 <p>在<img alt="S_1" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7f37d047e0568165.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>上主要统计传导电流；在<img alt="S_2" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-db9af401ac382039.svg" style="height:0.83em;width:auto;vertical-align:-0.22em"/>上由位移电流提供相同总量。这里的简算使用均匀场与理想绝缘近似，实际边缘区域仍遵守完整方程。</p>
 <p>从守恒角度也能检验。局部电荷连续性为<img alt="\nabla\cdot\mathbf j=-\partial\rho_f/\partial t" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-0e3cfff53eac794d.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，而<img alt="\nabla\cdot\mathbf D=\rho_f" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-70dff113801d0f0f.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，因此</p>
 <div class="equation" role="math"><img alt="\nabla\cdot\left(\mathbf j+\partial_t\mathbf D\right)=0." src="../../assets/11-1/%E5%85%AC%E5%BC%8F-8e42ff95525cdf71.svg" style="width:158.3px;height:auto"/></div>
-<p>这说明全电流对同一边界的曲面选择一致；它不是仅凭形式对称添加的一项。</p>
-<p><strong>回主线。</strong>变化的电场和磁场能以统一规律相联系；下一步把整面、整圈的表达变为某一点附近的局部规律。</p>
+<p>因此，以同一回路为边界时，各曲面上的全电流一致。位移电流项满足电荷守恒的要求，并非仅为形式对称而添加。</p>
+<p>变化的电场和磁场能以统一规律相联系；下一步用局部形式描述某一点附近的场。</p>
 </section></div><nav class="lesson-nav"><a href="index.html#lesson-02">返回本章首页</a><a href="01.html">← 上一课</a><a href="03.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

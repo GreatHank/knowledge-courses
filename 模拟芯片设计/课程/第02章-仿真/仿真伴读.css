@@ -1,0 +1,1 @@
+pre{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px;overflow-x:auto;font-size:15px;line-height:1.8;tab-size:2}code{font-family:Consolas,"Microsoft YaHei",monospace;overflow-wrap:anywhere}pre code{overflow-wrap:normal}details{margin:20px 0}summary{cursor:pointer;color:var(--accent)}

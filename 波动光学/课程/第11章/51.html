@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>衰减波的谱线为什么是洛伦兹形 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 51</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-51">返回本章首页</a></div><h1>51 衰减波的谱线为什么是洛伦兹形</h1><p class="meta">§11-6 光波的傅立叶分析.ppt · 原幻灯片P14–15</p><p>完成衰减波原例题，再把第11章六份课件连起来。</p><nav class="resource-links"><a href="index.html#deck-map-11-6">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-6.html">本课件题目与解析</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-6.html#11-6-题03">11-6-题03</a></nav><section class="lesson lesson-content" id="lesson-51-content"><h2>发光越快衰减，谱线会变宽还是变窄？</h2>
+<p>P14原例二给<img alt="t&gt;0" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-953c0794968549f7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>时的复场<img alt="E(t)=ae^{-\alpha t}e^{-i\omega_0t}" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-01cb0fe8ca434e56.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，<img alt="t&lt;0" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-621d19bcc8bf64dd.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>为0，要求频谱与功率谱；<img alt="\alpha&gt;0" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-bfec8edd5df01fda.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，单位s⁻¹。采用与负时间指数一致的正号时间变换核，有</p>
+<div class="equation" role="math"><img alt="A(\omega)=\int_0^\infty E(t)e^{+i\omega t}dt=\frac{a}{\alpha+i(\omega_0-\omega)}," src="../../assets/11-6/%E5%85%AC%E5%BC%8F-0576d25ad22fe8a8.svg" style="width:292.0px;height:auto"/></div>
+<div class="equation" role="math"><img alt="I(\omega)=|A(\omega)|^2=\frac{a^2}{\alpha^2+(\omega-\omega_0)^2}." src="../../assets/11-6/%E5%85%AC%E5%BC%8F-8106240b9c2bd637.svg" style="width:234.7px;height:auto"/></div>
+<p>峰位在<img alt="\omega_0" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-c21a9164798ae206.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>，半高处为<img alt="\omega_0\pm\alpha" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-01b21816c94a6912.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，所以角频率半高全宽是<img alt="2\alpha" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-62013181963eb97d.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，对应Hz全宽<img alt="\alpha/\pi" class="inline-math" src="../../assets/11-6/%E5%85%AC%E5%BC%8F-3011bd093ec88461.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。衰减越快，相干振荡越短，谱线越宽。</p>
+<p><a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-6.html#11-6-%E9%A2%9803">例二的完整题干、必要原图与积分步骤</a>集中在题目区。原页把积分核印成<img alt="e^{-i\omega t}" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-af5258f7222f20b2.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，但其给出的结果对应正号核；原解完整保留，补充解析明确改用哪个约定。这里的I是未归一化谱模平方，不直接当成单位为W的总功率。</p>
+<h2>回到本章：这些工具分别解决什么问题（P15）？</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原课件</th>
+<th>核心问题</th>
+<th>后面怎样用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>§11-1 电磁性质</td>
+<td>场方程怎样成为光波，波前和能流怎样表示</td>
+<td>给出场、相位、强度和波列模型</td>
+</tr>
+<tr>
+<td>§11-2 介质界面</td>
+<td>方向、振幅、相位、偏振与能量如何改变</td>
+<td>全反射、起偏、薄膜与波导的基础</td>
+</tr>
+<tr>
+<td>§11-3 金属界面</td>
+<td>导电响应怎样改变穿透和反射</td>
+<td>复折射率与偏振测量</td>
+</tr>
+<tr>
+<td>§11-4 吸收、色散、散射</td>
+<td>光能、相位响应、方向和频率怎样变</td>
+<td>材料选择、传播损耗与频移</td>
+</tr>
+<tr>
+<td>§11-5 叠加</td>
+<td>分量相遇后，合场有什么特征</td>
+<td>干涉、驻波、偏振、拍和群速</td>
+</tr>
+<tr>
+<td>§11-6 傅立叶分析</td>
+<td>复杂波由哪些分量组成</td>
+<td>频谱、单色性，通向衍射和傅里叶光学</td>
+</tr>
+</tbody>
+</table></div>
+<p>这张表是概念依赖与建议学习顺序，不是光必须先后经历的过程。界面作用、吸收与叠加可能同时发生。</p>
+<p>六份课件共184张原幻灯片已有课程、原页与题目对应；第11章整理到此结束。原PPT完整点击放映、两处Flash和已列资料疑点仍待核验，离线写好不表示你已经阅读或掌握。可从<a href="index.html#courses">本章目录</a>或<a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/index.html">本章题目</a>按需要回看；下一章进入稳定干涉条纹。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-51">返回本章首页</a><a href="50.html">← 上一课</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

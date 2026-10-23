@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>§16-2 · 题目、推导与解析 · 波动光学题目</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav aria-label="当前位置" class="breadcrumb"><a href="../../index.html">波动光学</a> <span aria-hidden="true">›</span> <a href="../index.html">题目</a> <span aria-hidden="true">›</span> <a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html">第16章</a> <span aria-hidden="true">›</span> <span>§16-2 · 题目、推导与解析</span></nav><nav aria-label="全课程入口"><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a></nav></header><main class="page"><section class="panel"><h1>§16-2 · 题目、推导与解析</h1></section><section class="panel" id="题目目录"><nav class="nav-row"><a href="index.html">第16章题目目录</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">本课件课程</a></nav><h2>原题与课堂提问</h2><ul><li><a href="#16-2-题01">16-2-题01 · 由相对折射率差求数值孔径</a></li><li><a href="#16-2-题02">16-2-题02 · 阶跃多模光纤的最大时延差</a></li></ul><h2>原讲授推导与示例</h2><ul><li><a href="#16-2-演算01">16-2-演算01 · 贝塞尔场、特征根与LP模式</a></li><li><a href="#16-2-演算02">16-2-演算02 · 单模、模场与拍长</a></li><li><a href="#16-2-演算03">16-2-演算03 · 色散、响应和高斯带宽</a></li><li><a href="#16-2-演算04">16-2-演算04 · 损耗谱、旧标准表与测量</a></li><li><a href="#16-2-演算05">16-2-演算05 · 掺铒与拉曼放大</a></li><li><a href="#16-2-演算06">16-2-演算06 · 双包层与沿程功率</a></li><li><a href="#16-2-演算07">16-2-演算07 · 激光腔、泵浦与选频</a></li></ul><p class="meta">原件完整播放及列明的媒体缺口仍待核。题目整理不表示用户已经阅读或掌握。</p></section><article class="question panel" id="16-2-题01"><h2>16-2-题01 · 由相对折射率差求数值孔径</h2><p class="meta">备注中的原数值例 · §16-2 光在光纤中的传播.ppt · 原幻灯片P14</p><div class="lesson-content"><p>原P14备注给出的数值例：设相对折射率差 <img alt="\Delta=0.01" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-c1097c2af594095d.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，纤芯折射率 <img alt="n_1=1.5" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-beea650167495ca2.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，计算数值孔径与最大接收半角。原解按空气入射处理。</p>
+</div><p class="meta">知识点：接收角与多模时延：两个数值例子</p><details id="16-2-题01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>备注给NA约0.21、最大接收半角约12.2°；静态图给出端面折射与全反射几何。</p>
+<p><img alt="原课件P14，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P014.png"/></p>
+</div><p>对应原页：<span>P14</span></p></details><details id="16-2-题01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>先由定义得 <img alt="n_2=n_1(1-\Delta)=1.485" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-e684245add83dc7f.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。平端面子午射线模型中，空气折射与芯包全反射合并为 <img alt="\sin\theta_a=\sqrt{n_1^2-n_2^2}" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-7676a48a5a735a5b.svg" style="height:1.50em;width:auto;vertical-align:-0.22em"/>。精确得到NA=0.211601，<img alt="\theta_a=12.2162^\circ" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-5300363827b74c7e.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，与原解舍入相符。小折射率差近似 <img alt="n_1\sqrt{2\Delta}=0.212132" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-fa28dbf953407076.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>。</p>
+<p>NA无量纲，角度为半角，完整接收锥角是其两倍。若外部不是空气，应使用 <img alt="n_e\sin\theta_a=\mathrm{NA}" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-45f6b782c43b553d.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>；题目没有授权更改介质。NA描述接收几何，不等于实际耦入功率比。</p>
+</div></details><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/13.html">返回第13课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-题02"><h2>16-2-题02 · 阶跃多模光纤的最大时延差</h2><p class="meta">原数值例 · §16-2 光在光纤中的传播.ppt · 原幻灯片P15</p><div class="lesson-content"><p>原例：数值孔径NA=0.20，纤芯折射率 <img alt="n_1=1.5" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-beea650167495ca2.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，光纤长度1 km。求子午射线模型中最大传播时延差；原页同时估计相应带宽长度积。</p>
+</div><p class="meta">知识点：接收角与多模时延：两个数值例子</p><details id="16-2-题02-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>原页以轴向与临界射线比较，得到约44 ns，并估计约10 MHz·km。</p>
+<p><img alt="原课件P15，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P015.png"/></p>
+</div><p>对应原页：<span>P15</span></p></details><details id="16-2-题02-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>先画轴向最短路径与接近全反射临界的最长子午路径。忽略材料色散，<img alt="n_2=\sqrt{1.5^2-0.2^2}=1.486607" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-730ee77556a5a60c.svg" style="height:1.38em;width:auto;vertical-align:-0.22em"/>，<img alt="\cos\theta_{1,\max}=n_2/n_1" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-42fe30b6962a3de4.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。</p>
+<div class="equation" role="math"><img alt="\Delta\tau=\frac{n_1L}{c}\left(\frac{n_1}{n_2}-1\right)." src="../../assets/16-2/%E5%85%AC%E5%BC%8F-8661a60f2b26c859.svg" style="width:144.0px;height:auto"/></div>
+<p>取 <img alt="c=3.0\times10^8\,\mathrm{m/s}" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-c1edec68090f9142.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 得45.05 ns；弱导近似 <img alt="L\mathrm{NA}^2/(2n_1c)=44.44" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-daaa7ade9a2ed9f8.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/> ns。原44 ns来自近似，不改写原数据。</p>
+<p>若额外把44 ns近似当高斯脉冲响应FWHM，按课件光3 dB定义 <img alt="f\simeq0.441/W" class="inline-math" src="../../assets/16-2/%E5%85%AC%E5%BC%8F-db4816779f24d3b9.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 得约10 MHz，长度1 km时约10 MHz·km。但最大射线时延差本身不是高斯FWHM，这一步只是估计假设。量纲上时延随 <img alt="L" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-72dfcfb0c470ac25.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 增大、随NA平方增大；NA趋零时模式时延差趋零。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P15：44 ns为近似；10 MHz·km还依赖脉冲形状和带宽定义。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/13.html">返回第13课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算01"><h2>16-2-演算01 · 贝塞尔场、特征根与LP模式</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P16、P17、P18、P19、P20、P21、P22、P23、P24、P25、P26、P27、P28、P29</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：圆柱波导中的场：为什么出现贝塞尔函数</p><details id="16-2-演算01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P16–29的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P16，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P016.png"/></p>
+<p><img alt="原课件P17，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P017.png"/></p>
+<p><img alt="原课件P18，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P018.png"/></p>
+<p><img alt="原课件P19，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P019.png"/></p>
+<p><img alt="原课件P20，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P020.png"/></p>
+<p><img alt="原课件P21，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P021.png"/></p>
+<p><img alt="原课件P22，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P022.png"/></p>
+<p><img alt="原课件P23，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P023.png"/></p>
+<p><img alt="原课件P24，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P024.png"/></p>
+<p><img alt="原课件P25，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P025.png"/></p>
+<p><img alt="原课件P26，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P026.png"/></p>
+<p><img alt="原课件P27，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P027.png"/></p>
+<p><img alt="原课件P28，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P028.png"/></p>
+<p><img alt="原课件P29，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P029.png"/></p>
+</div><p>对应原页：<span>P16</span> · <span>P17</span> · <span>P18</span> · <span>P19</span> · <span>P20</span> · <span>P21</span> · <span>P22</span> · <span>P23</span> · <span>P24</span> · <span>P25</span> · <span>P26</span> · <span>P27</span> · <span>P28</span> · <span>P29</span></p></details><details id="16-2-演算01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/14.html">第14课：圆柱波导中的场：为什么出现贝塞尔函数</a></li>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/15.html">第15课：边界条件怎样选出TE、TM和混合模</a></li>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/16.html">第16课：弱导近似与LP模式图</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P19：包层径向方程w²前应为负号。；P20：归一化贝塞尔函数分母自变量有缺写；复场不要求为实数。；P22：原特征方程第一J漏导数，第二分母J的自变量误写w。；P23：图中HM01名称与TM01不一致。；P24：E与H量纲不同，不能直接按数值大小定义HE/EH。；P26：LP1m截止根表与J0零点不符；后续三个根应为5.520、8.654、11.792。；P27：只列角阶0、1，不是全部模式；低阶模在后续区间继续存在。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/14.html">返回第14课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/15.html">返回第15课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/16.html">返回第16课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算02"><h2>16-2-演算02 · 单模、模场与拍长</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P30、P31、P32、P33</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：单模、模场半径与偏振拍长</p><details id="16-2-演算02-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P30–33的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P30，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P030.png"/></p>
+<p><img alt="原课件P31，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P031.png"/></p>
+<p><img alt="原课件P32，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P032.png"/></p>
+<p><img alt="原课件P33，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P033.png"/></p>
+</div><p>对应原页：<span>P30</span> · <span>P31</span> · <span>P32</span> · <span>P33</span></p></details><details id="16-2-演算02-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/17.html">第17课：单模、模场半径与偏振拍长</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P30：V=2.405为边界极限；λc式中小写v与前文V不一致。；P31：高斯近似应指主要横向场；经验式系数与适用范围来源未核。；P32：首个拍长式漏π；相对双折射B与折射率差定义不同。；P33：保偏要求适当主轴激发，不保任意叠加态不变。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/17.html">返回第17课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算03"><h2>16-2-演算03 · 色散、响应和高斯带宽</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P34、P35、P36、P37、P38、P39、P40</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：色散来自哪些延迟差</p><details id="16-2-演算03-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P34–40的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P34，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P034.png"/></p>
+<p><img alt="原课件P35，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P035.png"/></p>
+<p><img alt="原课件P36，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P036.png"/></p>
+<p><img alt="原课件P37，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P037.png"/></p>
+<p><img alt="原课件P38，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P038.png"/></p>
+<p><img alt="原课件P39，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P039.png"/></p>
+<p><img alt="原课件P40，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P040.png"/></p>
+</div><p>对应原页：<span>P34</span> · <span>P35</span> · <span>P36</span> · <span>P37</span> · <span>P38</span> · <span>P39</span> · <span>P40</span></p></details><details id="16-2-演算03-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/18.html">第18课：色散来自哪些延迟差</a></li>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/19.html">第19课：脉冲响应、带宽与高斯展宽</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P35：材料与波导色散应先有符号相加，不能普遍按独立方差相加。；P36：强度卷积模型有相干性和探测条件；场线性不等于强度普遍线性。；P37：3 dB采用10log幅度比的光学约定，与20log电幅度约定不同。；P38：FWHM符号式漏因子2。；P40：2σ标在1/e高度不一致。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/18.html">返回第18课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/19.html">返回第19课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算04"><h2>16-2-演算04 · 损耗谱、旧标准表与测量</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P41、P42、P43、P44、P45、P46、P47、P48、P49、P50、P51、P52</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：损耗谱：dB与指数衰减怎样换算</p><details id="16-2-演算04-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P41–52的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P41，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P041.png"/></p>
+<p><img alt="原课件P42，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P042.png"/></p>
+<p><img alt="原课件P43，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P043.png"/></p>
+<p><img alt="原课件P44，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P044.png"/></p>
+<p><img alt="原课件P45，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P045.png"/></p>
+<p><img alt="原课件P46，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P046.png"/></p>
+<p><img alt="原课件P47，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P047.png"/></p>
+<p><img alt="原课件P48，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P048.png"/></p>
+<p><img alt="原课件P49，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P049.png"/></p>
+<p><img alt="原课件P50，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P050.png"/></p>
+<p><img alt="原课件P51，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P051.png"/></p>
+<p><img alt="原课件P52，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P052.png"/></p>
+</div><p>对应原页：<span>P41</span> · <span>P42</span> · <span>P43</span> · <span>P44</span> · <span>P45</span> · <span>P46</span> · <span>P47</span> · <span>P48</span> · <span>P49</span> · <span>P50</span> · <span>P51</span> · <span>P52</span></p></details><details id="16-2-演算04-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/20.html">第20课：损耗谱：dB与指数衰减怎样换算</a></li>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/21.html">第21课：读光纤规格：先看波长与测试条件</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P41：指数功率衰减率与dB/km系数差4.343，原符号混用。；P42：吸收峰和材料数据属课件示例，未给具体成分和样品。；P44：缺陷散射平坦及损耗极限仅为指定模型近似。；P45：损耗数值与曲线没有完整材料和测量条件。；P46：标准表未注明年份；光缆与光纤截止不同，不能作为现行标准。；P47：星号注释缺失；绕线直径75的单位未明，数值不是当前标准保证。；P48：市场占比与最新表述未注明年代。；P50：品牌比较和最新表述未有当前产品依据。；P51：历史产品照片；原GIF8帧已看，为旋转返回标记。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/20.html">返回第20课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/21.html">返回第21课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算05"><h2>16-2-演算05 · 掺铒与拉曼放大</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P53、P54、P55、P56、P57、P58、P59、P60、P61、P62</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：掺铒光纤怎样放大1550 nm信号</p><details id="16-2-演算05-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P53–62的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P53，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P053.png"/></p>
+<p><img alt="原课件P54，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P054.png"/></p>
+<p><img alt="原课件P55，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P055.png"/></p>
+<p><img alt="原课件P56，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P056.png"/></p>
+<p><img alt="原课件P57，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P057.png"/></p>
+<p><img alt="原课件P58，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P058.png"/></p>
+<p><img alt="原课件P59，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P059.png"/></p>
+<p><img alt="原课件P60，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P060.png"/></p>
+<p><img alt="原课件P61，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P061.png"/></p>
+<p><img alt="原课件P62，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P062.png"/></p>
+</div><p>对应原页：<span>P53</span> · <span>P54</span> · <span>P55</span> · <span>P56</span> · <span>P57</span> · <span>P58</span> · <span>P59</span> · <span>P60</span> · <span>P61</span> · <span>P62</span></p></details><details id="16-2-演算05-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/22.html">第22课：掺铒光纤怎样放大1550 nm信号</a></li>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/23.html">第23课：拉曼放大与复合放大</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P54：个别饵字按铒理解；原性能为历史描述。；P56：泵浦波长与增益大小的比较依赖工作条件。；P59：历史产品照片未给完整规格。；P60：对EDFA发展状态的评价为历史表述。；P61：全波段及仍在研发不可照作当前无条件事实。；P62：铒钇共掺成分未核；与前页研发状态说法不一致。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/22.html">返回第22课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/23.html">返回第23课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算06"><h2>16-2-演算06 · 双包层与沿程功率</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P63、P64、P65、P66</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：双包层有源光纤：把大泵浦送进小纤芯</p><details id="16-2-演算06-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P63–66的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P63，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P063.png"/></p>
+<p><img alt="原课件P64，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P064.png"/></p>
+<p><img alt="原课件P65，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P065.png"/></p>
+<p><img alt="原课件P66，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P066.png"/></p>
+</div><p>对应原页：<span>P63</span> · <span>P64</span> · <span>P65</span> · <span>P66</span></p></details><details id="16-2-演算06-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/24.html">第24课：双包层有源光纤：把大泵浦送进小纤芯</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P64：能级数字未印单位，cm⁻¹为据波长推断；截面完整量纲和样品条件未核。；P65：功率分布曲线缺完整泵浦边界、浓度等复现条件。；P66：吸收率与内包层形状比较限于原图条件，参数未全给。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/24.html">返回第24课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="16-2-演算07"><h2>16-2-演算07 · 激光腔、泵浦与选频</h2><p class="meta">原讲授与推导（无独立题干） · §16-2 光在光纤中的传播.ppt · 原幻灯片P67、P68、P69、P70、P71</p><div class="lesson-content"><p>原课件的讲授、推导或应用图示，未另附独立作答题。这里保留原页范围与对应讲解，不增加练习要求。</p>
+</div><p class="meta">知识点：从有源光纤到激光器</p><details id="16-2-演算07-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>P67–71的原式、图、表及标注见下方原页；读取副本备注另见原页册。</p>
+<p><img alt="原课件P67，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P067.png"/></p>
+<p><img alt="原课件P68，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P068.png"/></p>
+<p><img alt="原课件P69，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P069.png"/></p>
+<p><img alt="原课件P70，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P070.png"/></p>
+<p><img alt="原课件P71，含原式或原解" src="../../assets/images/%E5%8E%9F%E9%A1%B5/16-2/P071.png"/></p>
+</div><p>对应原页：<span>P67</span> · <span>P68</span> · <span>P69</span> · <span>P70</span> · <span>P71</span></p></details><details id="16-2-演算07-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>补充解释按一个机制一课整理，避免在题目区重复整段课程：</p>
+<ul>
+<li><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/25.html">第25课：从有源光纤到激光器</a></li>
+</ul>
+<p>先按原图确定变量和适用条件，再代公式；原式修正与未给参数分别列明。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：P67：多幅不同腔示意不可串成同一装置；未给阈值参数。；P70：离子聚集与绿色发光描述缺材料、离子和浓度条件。；P71：前沿方向为课件历史清单。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/25.html">返回第25课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC16%E7%AB%A0/index.html#deck-16-2">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><footer class="page-footer"><nav class="nav-row"><a class="button" href="../index.html">返回全部题目</a><a class="button" href="../../index.html">返回全课程首页</a></nav><p class="meta">整理与解析材料供阅读，用户阅读和理解尚未确认；不要求作答，不进行评分。</p></footer></main></body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>读镜头MTF：像差、离焦和相机规格 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第14章</a> → 13</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-13">返回本章首页</a></div><h1>13 读镜头MTF：像差、离焦和相机规格</h1><p class="meta">§14-4 非相干成像系统分析及光学传递函数.ppt · 原幻灯片P12–16</p><p>分别读懂曲线的坐标、视场、波长与验收阈值。</p><nav class="resource-links"><a href="index.html#deck-map-14-4">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC14%E7%AB%A0/14-4.html">本课件题目与解析</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC14%E7%AB%A0/14-4.html#14-4-演算04">14-4-演算04</a></nav><section class="lesson lesson-content" id="lesson-13-content"><p>两只镜头孔径相同，细节也可能差很多。课件P12把实际波前与理想参考球面的光程差记为 <img alt="W" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-fcb5f40df9be6bae.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，它的单位是长度，瞳孔相位为 <img alt="kW" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-37f8670671f6c502.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。把复瞳孔 <img alt="P e^{ikW}" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-9468c115771d3df4.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 代入自相关才能求有像差的OTF。</p>
+<p>P13离焦例中，某些频段的OTF变负，正弦条纹的明暗次序反转。MTF只保留其绝对值，所以还要看PTF或带符号OTF；负OTF不是“负的光强”。图中的离焦量按 <img alt="W_m/\lambda" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-c71b469240a05a90.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 表示。</p>
+<p>P14上图为LAIKIN LENS，波段为0.4800–0.6440 μm，标出0°、2.5°视场和衍射极限；下图为Double Gauss，列出0°、10°、14°视场及656.3、587.6、486.1 nm等权波长。两图横轴范围分别约2088.87和1008周/mm。彩色实线比理想线低，表示给定条件下的像差影响；没有镜头工程与完整设置，不能跨图按横轴长度直接评优劣。</p>
+<p>P15原相机规格完整保留在下图：1–3片普通玻璃或塑料镜片，原图标为Agilent FDCS-2020的CMOS，640×480、像素7.4 μm、有效面3.55×4.74 mm（对角6 mm），固定焦距6 mm、f/3.5，景深750 mm至无穷远，畸变小于4%；角点相对照度大于60%，镜头在400–700 nm透过率大于80%。原页后文又写CCD，器件名称存在混用，不据此替换原条件。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>频率</th>
+<th>中心要求</th>
+<th>外场要求</th>
+<th>P16给出的中心值</th>
+<th>P16外场RAD/TAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17 lp/mm</td>
+<td>&gt;0.90</td>
+<td>&gt;0.85</td>
+<td>0.931</td>
+<td>0.940 / 0.875</td>
+</tr>
+<tr>
+<td>51 lp/mm</td>
+<td>&gt;0.30</td>
+<td>&gt;0.25</td>
+<td>0.725</td>
+<td>0.795 / 0.561</td>
+</tr>
+</tbody>
+</table></div>
+<p>所列数值满足这两个频率点的阈值，但原规格要求覆盖对焦范围，一张离焦量为0的截图不能证明全范围合格。P16设置频率上限68周/mm、间隔17；补充计算：像素采样的奈奎斯特频率约 <img alt="1/(2\times0.0074)=67.57" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-02819e47cdcce209.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 周/mm。光学MTF、像素采样和畸变是不同指标，需要分别检查。</p>
+<p><img alt="离焦OTF与辐条靶的对比度反转" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P013.png"/></p>
+<p>原课件P13：离焦OTF与辐条靶的对比度反转。</p>
+<p><img alt="原相机规格，保留图内全部条件" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P015.png"/></p>
+<p>原课件P15：原相机规格，保留图内全部条件。</p>
+<p><img alt="原MTF截图与两组读数" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P016.png"/></p>
+<p>原课件P16：原MTF截图与两组读数。</p>
+<p><span>两幅MTF原对象和规格大图</span>可放大核读。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-13">返回本章首页</a><a href="12.html">← 上一课</a><a href="14.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

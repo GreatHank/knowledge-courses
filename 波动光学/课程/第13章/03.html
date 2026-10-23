@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>基尔霍夫公式中的方向与相位 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第13章</a> → 03</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-03">返回本章首页</a></div><h1>03 基尔霍夫公式中的方向与相位</h1><p class="meta">§13-1 光波衍射的基本理论.ppt · 原幻灯片P12–15</p><p>把传播距离、倾斜因子和相位约定分开，辨认标量公式的适用范围。</p><nav class="resource-links"><a href="index.html#deck-map-13-1">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC13%E7%AB%A0/13-1.html">本课件题目与解析</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC13%E7%AB%A0/13-1.html#13-1-演算03">13-1-演算03</a></nav><section class="lesson lesson-content" id="lesson-03-content"><h2>同一面元朝不同方向的作用为什么不同？</h2>
+<p>P12用从源S到孔径面元Q、再到观察点P的两段传播，把源的照明条件带入子波积分。记E(Q)=Aexp(ikl)/l，整理为</p>
+<div class="equation" role="math"><img alt="E(P)=\frac{1}{i\lambda}\iint_\Sigma E(Q)\frac{e^{ikr}}{r} K(Q,P)\,dS." src="../../assets/13-1/%E5%85%AC%E5%BC%8F-4fd3693a4450422f.svg" style="width:262.7px;height:auto"/></div>
+<div class="equation" role="math"><img alt="K(Q,P)=\frac{\cos\theta_{\rm in}+\cos\theta_{\rm out}}{2}." src="../../assets/13-1/%E5%85%AC%E5%BC%8F-9b55c9eddfbab7c2.svg" style="width:193.3px;height:auto"/></div>
+<p>这里把孔径面法线统一选为指向接收侧，θ_in是入射传播方向与此法线的夹角，θ_out是QP与此法线的夹角。l、r是两段正距离，λ与它们用同一长度单位，K无量纲。</p>
+<figure><img alt="原页采用朝光源侧的法线n，并写[cos(n,r)−cos(n,l)]/2。按图中指向Q的r箭头理解，正入射给cos(n,l)=−1、cos(n,r)=cosθ。不要把距离r直接当作方向固定的矢量。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/13-1/P012.png"/><figcaption>原P12。原页采用朝光源侧的法线n，并写[cos(n,r)−cos(n,l)]/2。按图中指向Q的r箭头理解，正入射给cos(n,l)=−1、cos(n,r)=cosθ。不要把距离r直接当作方向固定的矢量。</figcaption></figure>
+正入射时，K=(1+cosθ_out)/2；θ_out=0时K=1，θ_out=90°时K=1/2。这也说明P10取90°处为0的假设不适用于此公式。原P14的传播箭头与角度记号容易混读，使用时先声明法线和两段方向，不能只照符号代入。
+<details><summary>补充推导：1/(iλ)和倾斜因子从哪里来</summary>
+单色标量场满足亥姆霍兹方程(∇²+k²)E=0。对它和球面格林函数G=exp(ikr)/r应用格林第二恒等式，把体内的场改写成边界上场及法向导数的积分。然后采用基尔霍夫孔径近似：孔内沿用无屏时的入射场及法向导数，遮挡部分的两者取零；在kl、kr远大于1时，导数的主项分别含ik和两段方向的余弦。两项相减后得到上述K与1/(iλ)。
+<p>这不是任意尺寸屏障的精确麦克斯韦解。孔径尺寸通常需远大于波长，偏振变化和边缘的矢量效应可忽略；孔边界同时指定场及导数只是近似。P23写“精确计算”是相对于后面的近轴简化而言，不能据此抹去这些条件。</p>
+</details>
+<p>P13给C=1/(iλ)=−i/λ。复振幅因子−i的相角是−π/2；原文称“振动相位超前90°”，这与所采用的时间表达有关。用本课exp(−iωt)约定描述实际余弦的时间相位时可对应超前；换约定必须同时改变全部复指数，不能只改这个符号。</p>
+<p>P15把单个球面波照明推广到一般照明。对同频相干分量先加场；互不相干的源或不同频率分量，要在探测时间平均中按相关性合成强度，不能把它们都当作固定相位的同频子波。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-03">返回本章首页</a><a href="02.html">← 上一课</a><a href="04.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

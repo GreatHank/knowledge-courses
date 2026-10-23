@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>相位量化为什么损失衍射效率 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第13章</a> → 37</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-37">返回本章首页</a></div><h1>37 相位量化为什么损失衍射效率</h1><p class="meta">§13-7 二元光学元件.ppt · 原幻灯片P8–13</p><p>把一个周期拆成N个相位小区，再求每个衍射级的系数。</p><nav class="resource-links"><a href="index.html#deck-map-13-7">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC13%E7%AB%A0/13-7.html">本课件题目与解析</a></nav><section class="lesson lesson-content" id="lesson-37-content"><p>连续线性相位斜坡可以把场送向一个级次；阶梯逼近后，每个小区内部没有连续补偿，因此能量分散到其他级。补充用一个周期的傅里叶系数重写P8–11，避免直接对δ函数平方。</p>
+<p>设x∈[jd/N,(j+1)d/N)时t(x)=exp(i2πj/N)，j=0…N−1。m级的归一化振幅为</p>
+<div class="equation" role="math"><img alt="c_m=\frac{1}{d}\sum_{j=0}^{N-1}e^{i2\pi j/N}\int_{jd/N}^{(j+1)d/N}e^{-i2\pi mx/d}\,dx." src="../../assets/13-7/%E5%85%AC%E5%BC%8F-04b62ba67e24c0c1.svg" style="width:308.0px;height:auto"/></div>
+<p>每段积分给sinc(m/N)和位置相位；求和成为N个单位相量。仅m=1+kN时相量同向，其余整数m相消。因此理想标量模型下ηm=|cm|²，在允许级为sinc²(m/N)，其余为0；sinc(v)=sin(πv)/(πv)。</p>
+<div class="equation" role="math"><img alt="\eta_1=\left[\frac{\sin(\pi/N)}{\pi/N}\right]^2." src="../../assets/13-7/%E5%85%AC%E5%BC%8F-3c0ac163c32b86d2.svg" style="width:124.0px;height:auto"/></div>
+<p>N=2、4、8分别为40.53%、81.06%、94.96%；N→∞趋1。二级台阶还把同样40.53%送到−1级。P10–11表格中的−3、5等非目标级符合m=1+kN的选择规则。效率以入射功率归一化；真实反射率、吸收、边缘和刻蚀误差另计，不能说现实效率只由N决定。</p>
+<figure><img alt="原P10：原式、闪耀条件和各级效率表。2π/N是相位差，不是具有长度单位的光程差。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/13-7/P010.png"/><figcaption>原P10。原式、闪耀条件和各级效率表。2π/N是相位差，不是具有长度单位的光程差。</figcaption></figure>
+P8把Δ写成复指数，它是相位因子而非相位差本身。P9有限台阶和式略去了整体相位，强度不受影响；P10分母混用θ、γ，补充式从同一个周期积分统一约定。原反射轮廓使用2Δh的近轴薄相位模型，不能据此替代任意大角度真实表面的矢量衍射。
+<p>P12列透镜、校正板、分/合束、偏转、色散、波形采样、扫描、偏振变换、消色差和多焦点等用途；不同用途需不同结构，单个标量相位函数不能自动完成全部功能。P13为Zemax原演示：备注依次说明保留ρ²、ρ⁴、ρ⁶；仅保留ρ²；去掉相位项。它展示波前变化，未提供完整模型，未在本地复算。原参数、波前读数和剩余缺口见下方。</p>
+<details><summary>P13原软件演示：相位参数与三幅波前图</summary>
+<p>内嵌软件说明图把Binary 2的相位定义为</p>
+<div class="equation" role="math"><img alt="\Phi=M\sum_{i=1}^{N}A_i\rho^{2i}." src="../../assets/13-7/%E5%85%AC%E5%BC%8F-07ea8f3c8098bd1c.svg" style="width:133.3px;height:auto"/></div>
+<p>ρ为归一化径向坐标，M为衍射级次，A_i以弧度计；2π弧度对应一个波。归一化半径使ρ无量纲，不能把表里的系数直接当成长度。</p>
+<p>原编辑器可读到M=1、Norm Radius=12、Max Term #=3；ρ²、ρ⁴、ρ⁶系数依次为−631.693316、83.811102、48.574439。12的项目长度单位未显示。原备注把三幅图依次对应到保留三项、仅保留ρ²、去掉全部相位项。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原图</th>
+<th>波前峰谷值（waves）</th>
+<th>RMS（waves）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保留ρ²、ρ⁴、ρ⁶</td>
+<td>2.4407</td>
+<td>约0.48；原位图末位数字未可靠辨清</td>
+</tr>
+<tr>
+<td>仅保留ρ²</td>
+<td>10.4499</td>
+<td>2.1992</td>
+</tr>
+<tr>
+<td>去掉相位项</td>
+<td>62.2263</td>
+<td>14.4796</td>
+</tr>
+</tbody>
+</table></div>
+<p>三图都标λ=0.5876μm、视场(0°,2°)。这些是原截图读数，说明这个模型下加入相位项后波前误差减小；不等于台阶量化效率的测量。原软件工程未提供，采样与其他设置不完整，未在本地复算。</p>
+<figure><img alt="P13内嵌原截图：相位系数及三幅波前图。" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/13-7/P013-%E5%86%85%E5%B5%8C%E5%8E%9F%E5%9B%BE1.png"/><figcaption>P13内嵌原截图：相位系数及三幅波前图。 <a href="../../assets/images/%E5%8E%9F%E9%A1%B5/13-7/P013-%E5%86%85%E5%B5%8C%E5%8E%9F%E5%9B%BE1.png">打开原图</a></figcaption></figure><figure><img alt="P13内嵌软件说明：Binary 2相位函数及参数定义。" loading="lazy" src="../../assets/images/%E5%8E%9F%E9%A1%B5/13-7/P013-%E5%86%85%E5%B5%8C%E5%8E%9F%E5%9B%BE2.png"/><figcaption>P13内嵌软件说明：Binary 2相位函数及参数定义。 <a href="../../assets/images/%E5%8E%9F%E9%A1%B5/13-7/P013-%E5%86%85%E5%B5%8C%E5%8E%9F%E5%9B%BE2.png">打开原图</a></figcaption></figure>
+</details>
+</section><nav class="lesson-nav"><a href="index.html#lesson-37">返回本章首页</a><a href="36.html">← 上一课</a><a href="38.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

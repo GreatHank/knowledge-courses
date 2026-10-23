@@ -2,7 +2,7 @@
 
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>第 1 章 · 第 5 课 · 网络与系统思想 · CSAPP</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/></head><body data-page="lesson"><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main">
 <header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">CSAPP</a><span aria-hidden="true">→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 计算机系统漫游</a><span aria-hidden="true">→</span><span aria-current="page">第 5 课 · 网络与系统思想</span></nav><p class="eyebrow">第 1 章 / 第 5 课 · §1.8–1.10</p><h1>网络与系统思想</h1><p class="lesson-question">从远程 hello，看性能、并发与抽象</p><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#chapter-map">查看本章总图</a></div><details class="course-menu"><summary>展开本章课程目录 · 5 课</summary><nav aria-label="本章小课程"><a href="01-%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%BF%BB%E8%AF%91.html">第 1 课 · 表示与翻译<span>§1.1–1.3</span></a><a href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html">第 2 课 · 程序怎样运行<span>§1.4</span></a><a href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html">第 3 课 · 缓存与存储层次<span>§1.5–1.6</span></a><a href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html">第 4 课 · 操作系统提供什么<span>§1.7</span></a><a aria-current="page" href="05-%E7%BD%91%E7%BB%9C%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%9D%E6%83%B3.html">第 5 课 · 网络与系统思想<span>§1.8–1.10</span></a></nav></details></header>
-<section><p class="location">章节图位置：先走网络场景的扩展连线，再回到整张图，提炼 §1.9 的三条系统思想。远程执行是可选场景，不是本地 hello 必经的一步。</p>
+<section><p class="location">章节图位置：先看通向网络场景的连线，再回到总图，讨论 §1.9 的性能、并发（concurrency）与抽象（abstraction）。远程执行是可选场景，本地 hello 不必经过这一步。</p>
 <h2>画面在这台机器上，程序也一定在这里执行吗？</h2>
 <figure><img alt="原书 Figure 1.15：本地客户端发送命令，远程服务器交给 shell 执行，并返回输出" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-15-network.png"/><figcaption>Figure 1.15，PDF 第 58 页（印刷页 57）。保留教材的 telnet 示例，用来解释通信路径；本页不配置远程连接。</figcaption></figure>
 <div class="table-wrap"><table><thead><tr><th>沿图中编号读</th><th>本地机器</th><th>网络传递</th><th>远程机器</th></tr></thead><tbody>
@@ -10,14 +10,14 @@
 <tr><td>3</td><td>等待返回结果</td><td>此时关键计算在远程进行</td><td>交给 shell，运行远程的 hello</td></tr>
 <tr><td>4 → 5</td><td>客户端显示 hello, world</td><td>输出字符送回本地</td><td>服务器发回程序输出</td></tr></tbody></table></div>
 <p class="key">执行位置与显示位置可以不同。这里远程 CPU 执行程序，本地接收并显示结果；网络传递的是请求与数据。</p>
-<p>网络适配器在硬件上也是 I/O 设备。把两台计算机连起来后，两端各自仍需要 CPU、存储、操作系统与程序；前面的本地运行机制并没有消失。</p></section>
+<p>网络适配器也是 I/O 设备。两台计算机联网后，各自仍需要 CPU、存储、操作系统与程序；每台机器内部仍按前面介绍的机制运行。</p></section>
 <section><h2>系统思想一：局部快 3 倍，整体会快 3 倍吗？</h2>
 <p>沿用教材“原来 60% 的时间可以加速 3 倍”的例子，把原总时间设为 <strong>100 秒</strong>，便于看图。橙色部分不变，绿色部分被加速。</p>
 <p><strong>改进前：100 秒</strong></p><div aria-label="改进前，不变部分40秒，可改进部分60秒" class="bar" role="img"><span class="fixed" style="width:40%">40 s</span><span class="improved" style="width:60%">60 s</span></div>
 <p><strong>改进后：60 秒</strong>，绿色部分 60 ÷ 3 = 20 秒</p><div aria-label="改进后，不变部分40秒，已加速部分20秒，总计60秒" class="bar" role="img"><span class="fixed" style="width:40%">40 s</span><span class="improved" style="width:20%">20 s</span></div>
 <p><strong>理想极限：40 秒</strong>，假设绿色部分缩短到趋近于零</p><div aria-label="加速部分耗时趋近于零时，仍有40秒未改进部分" class="bar" role="img"><span class="fixed" style="width:40%">40 s</span></div>
-<p class="note">三条横条使用同一个 100 秒标尺；颜色与时间标签对应，没有把缩短后的横条重新归一化。</p>
-<div class="cards"><article class="card"><h3>实际整体加速比</h3><p class="formula">100 / (40 + 60/3) ≈ 1.67</p><p>局部快 3 倍，整项任务约快 1.67 倍。</p></article><article class="card"><h3>即使无限加速那部分</h3><p class="formula">100 / 40 = 2.5</p><p>未改进的 40 秒构成上限约束。</p></article></div>
+<p class="note">三条横条都按同一个 100 秒标尺绘制，颜色对应各自的时间标签；缩短后的横条保持原来的比例。</p>
+<div class="cards"><article class="card"><h3>实际整体加速比</h3><p class="formula">100 / (40 + 60/3) ≈ 1.67</p><p>局部快 3 倍，整项任务约快 1.67 倍。</p></article><article class="card"><h3>即使无限加速那部分</h3><p class="formula">100 / 40 = 2.5</p><p>未改进的部分仍需 40 秒，因此整体加速比（overall speedup）最多趋近于 2.5。</p></article></div>
 <h3>这就是 Amdahl 定律要提醒我们的事</h3>
 <p class="formula">T<sub>new</sub> = T<sub>old</sub> × [(1 − α) + α/k]<br/>S = T<sub>old</sub> / T<sub>new</sub> = 1 / [(1 − α) + α/k]</p>
 <p>α 是<strong>原总时间</strong>中可改进部分的比例，k 是这一部分的加速倍数。这里假设任务固定、其余部分时间不变，且没有额外开销。</p>
@@ -27,10 +27,10 @@
 <p>把 A、B 看成两个任务。下面是示意时间片；颜色只帮助识别任务。</p>
 <div class="cards"><article class="card"><h3>并发：多个活动在一段时间内交错推进</h3><div class="table-wrap"><table><thead><tr><th>时间 →</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><th>单个执行资源</th><td class="a">A</td><td class="b">B</td><td class="a">A</td><td class="b">B</td></tr></tbody></table></div><p>两项活动的执行区间重叠，但这个例子每一刻只执行一项。</p></article>
 <article class="card"><h3>并行：同一时刻实际执行多个活动</h3><div class="table-wrap"><table><thead><tr><th>时间 →</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><th>执行资源 1</th><td class="a">A</td><td class="a">A</td><td class="a">A</td><td class="a">A</td></tr><tr><th>执行资源 2</th><td class="b">B</td><td class="b">B</td><td class="b">B</td><td class="b">B</td></tr></tbody></table></div><p>竖着看同一列：A 和 B 此刻都在执行。</p></article></div>
-<p class="key">并发描述多个活动的推进关系；并行强调同时执行。多个线程可以并发，却不一定获得并行执行的资源。</p>
+<p class="key">并发描述多个活动的推进关系；并行（parallelism）强调同时执行。多个线程可以并发，却不一定获得并行执行的资源。</p>
 <div class="table-wrap"><table><thead><tr><th>教材提到的层次</th><th>哪些事情同时做</th><th>先建立的直觉</th></tr></thead><tbody>
 <tr><td>线程级并行</td><td>不同执行流</td><td>多个处理器核心可执行不同线程</td></tr><tr><td>指令级并行</td><td>多条指令的内部处理</td><td>流水线等机制让指令处理有所重叠</td></tr><tr><td>SIMD</td><td>一条指令作用于多个数据元素</td><td>同一种运算一次处理一组数据</td></tr></tbody></table></div>
-<p>并行还会受任务依赖、共享资源与协调开销影响。它同样受上一幅时间图约束：不能并行的部分仍然耗时。</p>
+<p>并行的效果也受任务依赖、共享资源和协调开销影响。上一幅时间图中的限制仍然成立：不能并行的部分依然需要时间。</p>
 <p class="note">表格只区分概念，不是具体处理器排程或计时仿真。三种层次依据 §1.9.2，已查看 <span>PDF 第 63 页</span>。</p></section>
 <section><h2>系统思想三：抽象让你用好一层，而不必先拆完下面每一层</h2>
 <figure><img alt="原书 Figure 1.18：指令集、虚拟内存、文件、进程与虚拟机分别抽象不同范围的系统资源" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC1%E7%AB%A0/fig1-18-abstractions.png"/><figcaption>Figure 1.18，PDF 第 64 页（印刷页 63）。括号表示抽象覆盖的范围，不是先后执行顺序。</figcaption></figure>
@@ -40,14 +40,14 @@
 <tr><td>文件</td><td>较统一的数据访问方式</td><td>不同 I/O 设备的部分具体操作</td></tr>
 <tr><td>进程</td><td>一次有执行流与资源的程序运行</td><td>系统如何在许多运行之间共享硬件</td></tr>
 <tr><td>虚拟机</td><td>一个计算机执行环境</td><td>底层真实机器的部分实现与共享方式</td></tr></tbody></table></div>
-<p>虚拟机与虚拟内存的范围不同，看原图最上面的长括号就能分开。理解抽象以后，平时可以通过接口使用系统；遇到性能或正确性问题，再往下追到具体机制。</p></section>
+<p>虚拟机（virtual machine）与虚拟内存的范围不同，看原图最上面的长括号就能分开。平时可以通过抽象提供的接口使用系统；遇到性能或正确性问题，再查看接口下面的具体机制。</p></section>
 <section><h2>回到第 1 章总图：现在把几条线接在一起</h2>
 <p><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#chapter-map">打开保留的章节总图</a>。不必重读所有正文，按下面几处定位即可：</p>
 <div class="cards"><article class="card"><h3>顶行：程序怎样变成可运行的东西</h3><p>位与解释 → 预处理、编译、汇编、链接 → 可执行文件。对应 §1.1–1.3。</p></article>
 <article class="card"><h3>运行中心：每次执行怎样发生</h3><p>shell 发起，操作系统建立环境，CPU 执行，存储与 I/O 提供数据。对应 §1.4–1.7。</p></article>
 <article class="card"><h3>网络扩展：另一台机器加入</h3><p>本地与远程各有完整系统；请求与结果通过网络传递。对应 §1.8。</p></article>
 <article class="card"><h3>跨越全图的视角</h3><p>性能看瓶颈，并发看活动关系，抽象看接口与隐藏细节。对应 §1.9；§1.10 收束全章。</p></article></div>
-<p class="key">程序的正确性与性能，来自代码、编译工具、处理器、存储和操作系统之间的共同作用。第一章给出的是整张地图，后面的章节逐层拆开它。</p>
+<p class="key">代码、编译工具、处理器、存储和操作系统共同影响程序的正确性与性能。第 1 章先说明它们怎样配合，后面的章节再分别讲清具体机制。</p>
 <p>第 2 章将沿“信息表示”这条线继续：同一串位表示整数与浮点数时，哪些运算规律成立，哪些会因有限位数而改变。阅读后的疑问可以随时从这张总图回到对应节点。</p>
 <p class="next"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">回到全书总图，看看第 2 章接在哪里 →</a></p></section>
 <footer class="lesson-footer"><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">返回全书总览</a></div><nav aria-label="上一课与下一课" class="lesson-pager"><a class="button" href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html" rel="prev">← 上一课 · 操作系统提供什么</a><span class="end-label">本章小课程到此结束</span></nav><p class="note"></p><p class="note">依据 CSAPP 第 3 版全球版，采用 C、x86-64、Linux/Unix 背景。原书图保留英文；中文说明与示例属于伴读解释。示例用于推理，未在当前 Windows 环境执行。</p></footer>

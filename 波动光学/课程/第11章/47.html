@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>载波与包络为什么走得不一样 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 47</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-47">返回本章首页</a></div><h1>47 载波与包络为什么走得不一样</h1><p class="meta">§11-5 光波的叠加.pptx · 原幻灯片P32–39</p><p>区分相速度与群速度，核对波长约定，再归纳四类叠加。</p><nav class="resource-links"><a href="index.html#deck-map-11-5">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-5.html">本课件题目与解析</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-5.html#11-5-演算05">11-5-演算05</a></nav><section class="lesson lesson-content" id="lesson-47-content"><h2>追踪一个波峰，和追踪一团光，是同一速度吗？</h2>
+<p>P32–33分别追踪快振荡的等相位点和包络的等幅点。对两束近频波，</p>
+<div class="equation" role="math"><img alt="v_p=\frac{\bar{\omega}}{\bar{k}},\qquad v_g=\frac{\Delta\omega}{\Delta k}\longrightarrow\frac{d\omega}{dk}." src="../../assets/11-5/%E5%85%AC%E5%BC%8F-1a664ab38f7b3baa.svg" style="width:222.7px;height:auto"/></div>
+<p><img alt="v_p,v_g" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-d5805aea40efeab4.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>单位m/s，差商到导数要求频带窄、色散关系在该频带可平滑展开。真空中<img alt="\omega=ck" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-2f1ed126be4fcd5f.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，两者均为<img alt="c" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-2e7d2c03a9507ae2.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>；在色散介质中一般不同。</p>
+<figure><img alt="t₁时包络峰在M，t₂时在N；比较峰位置的移动与分波相位的移动。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-5/P033.png"/><figcaption>原幻灯片P33。t₁时包络峰在M，t₂时在N；比较峰位置的移动与分波相位的移动。</figcaption></figure>
+## 为什么波长符号必须先说明（P34–35）？
+由<img alt="\omega=kv_p" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-3b710a10352fa772.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，可得<img alt="v_g=v_p+k\,dv_p/dk" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-7e9ad57b9749abfd.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>。若用介质内波长<img alt="\lambda_m=2\pi/k" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-866116ca88663017.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，
+<div class="equation" role="math"><img alt="v_g=v_p-\lambda_m\frac{dv_p}{d\lambda_m},\qquad n_g=\frac{n}{1+(\lambda_m/n)\,dn/d\lambda_m}." src="../../assets/11-5/%E5%85%AC%E5%BC%8F-008730ccd3e54f50.svg" style="width:317.3px;height:auto"/></div>
+<p>若材料表的自变量用真空波长<img alt="\lambda_0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7238fc50817cce55.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，则<img alt="k=n(\omega)\omega/c" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-90cb4f76f76520ee.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，应写成</p>
+<div class="equation" role="math"><img alt="n_g=n+\omega\frac{dn}{d\omega}=n-\lambda_0\frac{dn}{d\lambda_0},\qquad v_g=c/n_g." src="../../assets/11-5/%E5%85%AC%E5%BC%8F-ae68c26f5f3b3898.svg" style="width:321.3px;height:auto"/></div>
+<p>两式自变量不同。原P34从<img alt="k=2\pi/\lambda" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-35d0d2838fb7726f.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>推出前式，P35表的波长与导数单位没有充分说明，不能把两种波长混用来“修正”原表。透明频段正常色散一般<img alt="n_g&gt;n" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-5ae3623b7850983a.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>、<img alt="v_g&lt;v_p" class="inline-math" src="../../assets/11-5/%E5%85%AC%E5%BC%8F-b557f18214c1ecd1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>；无色散时相等。原表七种材料的数据完整保留在下方，作为课件表值，不作已复核的材料数据库。</p>
+<details><summary>P35–36：材料表与光纤参数原页</summary>
+<figure><img alt="表比较18°C、标称546.1nm处的相折射率与群折射率；导数单位及若干表值有待核实。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-5/P035.png"/><figcaption>原幻灯片P35。表比较18°C、标称546.1nm处的相折射率与群折射率；导数单位及若干表值有待核实。</figcaption></figure><figure><img alt="光纤示例列1550/1625nm的色散上限、零色散波长和斜率，材料型号与出处未给，不作为当前产品规格。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-5/P036.png"/><figcaption>原幻灯片P36。光纤示例列1550/1625nm的色散上限、零色散波长和斜率，材料型号与出处未给，不作为当前产品规格。</figcaption></figure>
+</details>
+<h2>为什么色散限制通信（P36–37）？</h2>
+<p>不同频率的群时延不同，会把短脉冲拉宽，相邻脉冲可能重叠。窄带、弱吸收且包络形状变化不大时，群速度可描述脉冲传播。原页把群速直接等同能量、信号速度，并笼统说反常色散“群速无意义”；这些需要条件，强吸收或明显变形时不能把包络峰速直接当作信息前沿速度。<a href="https://galileoandeinstein.phys.virginia.edu/Elec_Mag/2022_Lectures/EM_50_Group_Velocity.html">弗吉尼亚大学的群速度讲义</a>也区分窄带包络平移与反常色散中的重塑。<a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-5.html#11-5-%E6%BC%94%E7%AE%9705">演算05</a>保留原说法并给出适用范围。</p>
+<h2>把四种情况放回一张表（P38–39）</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>对比</th>
+<th>关键条件</th>
+<th>主要结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同频、同偏振</td>
+<td>相对相位稳定</td>
+<td>交叉项形成稳定明暗</td>
+</tr>
+<tr>
+<td>同频、同偏振、反向</td>
+<td>等幅才是纯驻波</td>
+<td>固定波节与波腹</td>
+</tr>
+<tr>
+<td>同频、同向、正交振动</td>
+<td>幅比与相位差固定</td>
+<td>线、圆或椭圆偏振</td>
+</tr>
+<tr>
+<td>近频、同向、同偏振</td>
+<td>探测器能分辨差频</td>
+<td>拍、包络与群速度</td>
+</tr>
+</tbody>
+</table></div>
+<details><summary>P38–39：原总结公式与对照表</summary>
+<figure><img alt="原页集中列出空间因子、时间因子和三类叠加特征。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-5/P038.png"/><figcaption>原幻灯片P38。原页集中列出空间因子、时间因子和三类叠加特征。</figcaption></figure><figure><img alt="图片内表格比较干涉、驻波、偏振与光学拍；“各向同性介质中v=v_g”须补无色散条件。" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-5/P039.png"/><figcaption>原幻灯片P39。图片内表格比较干涉、驻波、偏振与光学拍；“各向同性介质中v=v_g”须补无色散条件。</figcaption></figure>
+</details>
+本份39页均已有课程或题目去向，两道原例题完整收录；没有把讲授推导计成额外练习。P12、P18的Flash与原PPT点击时序仍未核验。下一份沿反方向提问：既然简谐波能合成复杂波，怎样从复杂波中找回各个分量？</section><nav class="lesson-nav"><a href="index.html#lesson-47">返回本章首页</a><a href="46.html">← 上一课</a><a href="48.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

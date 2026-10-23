@@ -4,7 +4,7 @@
 <header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">CSAPP</a><span aria-hidden="true">→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 1 章 · 计算机系统漫游</a><span aria-hidden="true">→</span><span aria-current="page">第 1 课 · 表示与翻译</span></nav><p class="eyebrow">第 1 章 / 第 1 课 · §1.1–1.3</p><h1>表示与翻译</h1><p class="lesson-question">源代码已经由位组成，为什么还需要翻译与链接？</p><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#chapter-map">查看本章总图</a></div><details class="course-menu"><summary>展开本章课程目录 · 5 课</summary><nav aria-label="本章小课程"><a aria-current="page" href="01-%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%BF%BB%E8%AF%91.html">第 1 课 · 表示与翻译<span>§1.1–1.3</span></a><a href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html">第 2 课 · 程序怎样运行<span>§1.4</span></a><a href="03-%E7%BC%93%E5%AD%98%E4%B8%8E%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1.html">第 3 课 · 缓存与存储层次<span>§1.5–1.6</span></a><a href="04-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8F%90%E4%BE%9B%E4%BB%80%E4%B9%88.html">第 4 课 · 操作系统提供什么<span>§1.7</span></a><a href="05-%E7%BD%91%E7%BB%9C%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%9D%E6%83%B3.html">第 5 课 · 网络与系统思想<span>§1.8–1.10</span></a></nav></details></header>
 <section class="reading">
 <h2 id="representation">§1.1 · hello.c 在计算机里是什么？</h2>
-<p>先看图的<strong>左上角</strong>。教材的程序如下；这次只需知道它会输出 <code>hello, world</code> 并换行，随后结束，不必先逐行拆解 C 语法。</p>
+<p>看章节图的<strong>左上角</strong>，对应教材下面这段程序。它会输出 <code>hello, world</code> 并换行，随后结束；这里先看程序的作用，用到具体语法时再解释。</p>
 <pre><code>#include &lt;stdio.h&gt;
 
 int main()
@@ -18,46 +18,46 @@ int main()
 <tbody><tr><td><code>#</code></td><td><code>00100011</code></td><td>35</td></tr><tr><td><code>i</code></td><td><code>01101001</code></td><td>105</td></tr></tbody>
 </table>
 <p>一个<strong>位（bit）</strong>的值是 0 或 1；本书的一个<strong>字节（byte）</strong>由 8 位组成。ASCII 是字符与编码值之间的一套对应规则。这里的“一字符一字节”只针对这个示例，不能直接套到中文。</p>
-<p>再只看第一行：同样的 <code>00100011</code>，按 ASCII 解释得到字符 <code>#</code>，按无符号整数解释得到数值 35。<strong>位没有改变，解释方式改变了。</strong></p>
+<p>看第一行，同样的 <code>00100011</code>，按 ASCII 解释得到字符 <code>#</code>，按无符号整数解释得到数值 35。<strong>位没有改变，解释方式改变了。</strong></p>
 <blockquote><strong>Information Is Bits + Context</strong><br/>信息是位，加上解释这些位的上下文。</blockquote>
 <p>回到章节图：左上角的 <code>hello.c</code> 用位来编码 C 文本。它与右侧可执行程序都由位组成，但组织方式和用途不同。因此，“源代码已经是 0 和 1”并不意味着 CPU 可以直接照着这些字符执行 C 语句。</p>
-<p>这就引出了顶行第一条“翻译与链接”连线：怎样从表示源代码字符的字节，得到包含机器指令的可执行程序？这是 §1.2 要解决的问题。</p>
+<p>沿顶行的“翻译与链接”连线往右看，§1.2 要解释的是：表示源代码字符的字节，怎样变成包含机器指令的可执行程序？</p>
 <p class="note">代码与字符值依据 Figure 1.1、Figure 1.2 和 §1.1，已查看原 PDF 第 39–40 页（印刷页 38–39）。表中的二进制写法与对照解释为教学补充；没有在当前 Windows 环境运行程序。</p>
 <p><span>查看原书代码</span> · <span>查看 §1.1 原页</span> · <span>本章可检索文本</span></p>
 </section>
 <section class="reading" id="translation">
 <h2>§1.2 · 从 hello.c 到 hello：五种文件，四个阶段</h2>
 <p><strong>章节位置：</strong>顶行“hello.c”到“可执行文件 hello”的连线。下面把这条线展开；实线跟着文件走，紫色虚线表示构建之后的运行。</p>
-<iframe class="map" src="../../assets/diagrams/architecture-csapp-build-20261013-105812/build-stages.html" title="五种文件与四个翻译阶段"></iframe>
-<p><a href="../../assets/diagrams/architecture-csapp-build-20261013-105812/build-stages.html">放大四阶段图</a></p>
+<iframe class="map" src="../../../assets/diagrams/architecture-csapp-build-20261013-105812/build-stages.html" title="五种文件与四个翻译阶段"></iframe>
+<p><a href="../../../assets/diagrams/architecture-csapp-build-20261013-105812/build-stages.html">放大四阶段图</a></p>
 <div class="cards">
 <article class="card"><h3>① 预处理：把 C 文本准备好</h3><pre><code>#include &lt;stdio.h&gt;
        ↓
-头文件中的声明等内容被展开</code></pre><p><code>.c → .i</code>：处理 include、宏和条件编译。输出仍是 C 文本。</p><p><strong>知道 printf 怎样调用，仍不等于已有 printf 的实现。</strong>此处头文件提供声明等内容；标准库另行提供函数实现。</p></article>
+头文件中的声明等内容被展开</code></pre><p>预处理（preprocessing），<code>.c → .i</code>：处理 include、宏和条件编译。输出仍是 C 文本。</p><p><strong>知道 printf 怎样调用，仍不等于已有 printf 的实现。</strong>此处头文件提供声明等内容；标准库另行提供函数实现。</p></article>
 <article class="card"><h3>② 编译：把 C 的操作落实为指令</h3><pre><code>printf("hello, world\n");
        ↓
-call puts  /* 教材汇编中的一行 */</code></pre><p><code>.i → .s</code>：生成汇编文本。编译器可以优化，并非每个 C 语句都对应一条汇编指令。</p><p>这里的固定字符串输出可转为 puts 调用。寄存器和调用细节到第 3 章再展开；实际生成结果依编译器与选项而异。</p></article>
+call puts  /* 教材汇编中的一行 */</code></pre><p>编译（compilation），<code>.i → .s</code>：生成汇编文本。编译器可以优化，并非每个 C 语句都对应一条汇编指令。</p><p>这里的固定字符串输出可转为 puts 调用。寄存器和调用细节到第 3 章再展开；实际生成结果依编译器与选项而异。</p></article>
 <article class="card"><h3>③ 汇编：把指令文本编码</h3><pre><code>汇编中的指令助记符
        ↓
-机器指令的字节编码</code></pre><p><code>.s → .o</code>：输出包含机器代码的目标文件，还带有供链接使用的符号、重定位等信息。</p><p><strong>.s 便于人读；.o 已有机器指令。</strong>但有些跨文件引用尚未接好。</p></article>
+机器指令的字节编码</code></pre><p>汇编（assembly），<code>.s → .o</code>：输出包含机器代码（machine code）的目标文件，还带有供链接使用的符号、重定位等信息。</p><p><strong>.s 是便于人读的汇编文本；.o 已包含机器指令。</strong>其中有些跨文件引用还需要链接器处理。</p></article>
 <article class="card"><h3>④ 链接：把各部分接成程序</h3><pre><code>hello.o + 所需目标文件与库
        ↓
-可执行文件 hello</code></pre><p>找到所需函数或变量的定义，组织代码与数据，处理地址引用。</p><p>本图采用教材简化模型。动态链接允许部分工作留到装载或运行时；不把所有库都复制进可执行文件当成普遍规则。</p></article>
+可执行文件 hello</code></pre><p>找到所需函数或变量的定义，组织代码与数据，处理地址引用。</p><p>图中采用教材的简化模型。采用动态链接（dynamic linking）时，部分工作可以留到装载或运行时，因此不能认为所有库都会完整复制进可执行文件。</p></article>
 </div>
 <h3>gcc 为什么看起来“一步就完成”？</h3>
 <pre><code>gcc -o hello hello.c</code></pre>
-<p><code>gcc</code> 在这里是<strong>编译驱动程序</strong>，负责组织各阶段。日常说“编译项目”往往包含整个构建；图中“编译”特指第二阶段。</p>
+<p><code>gcc</code> 在这里是<strong>编译驱动程序（compiler driver）</strong>，负责组织各阶段。日常说“编译项目”往往包含整个构建；图中“编译”特指第二阶段。</p>
 <table class="compact-table"><thead><tr><th>停在哪一步</th><th>对应命令（教材环境示意）</th><th>得到什么</th></tr></thead><tbody>
 <tr><td>预处理结束</td><td><code>gcc -E hello.c -o hello.i</code></td><td>展开后的 C 文本</td></tr>
 <tr><td>编译结束</td><td><code>gcc -S hello.i -o hello.s</code></td><td>汇编文本</td></tr>
 <tr><td>汇编结束</td><td><code>gcc -c hello.s -o hello.o</code></td><td>可重定位目标文件</td></tr>
 <tr><td>链接结束</td><td><code>gcc hello.o -o hello</code></td><td>可执行文件</td></tr>
 </tbody></table>
-<p class="note">以上命令用于说明阶段，本轮未运行。默认的一条 gcc 命令不保证把所有中间文件留在磁盘上。</p>
+<p class="note">以上命令用于说明各阶段，未在本机运行。使用默认 gcc 命令时，不一定会在磁盘上保留所有中间文件。</p>
 </section>
 <section class="reading" id="linking">
 <h2>放大最后一步：有机器指令，为什么还需要链接？</h2>
-<p>用一个补充例子看清楚：<code>main.c</code> 调用 <code>add</code>，函数体放在另一个文件中。这里只看普通的分文件构建，省略跨文件优化。</p>
+<p>下面用一个补充例子说明：<code>main.c</code> 调用 <code>add</code>，函数体放在另一个文件中。这里只看普通的分文件构建，省略跨文件优化。</p>
 <div class="cards">
 <article class="card"><h3>main.c · 声明并调用</h3><pre><code>int add(int, int);  // 声明
 
@@ -68,9 +68,9 @@ int main(void) {
     return a + b;
 }</code></pre><p>函数体给出了实现。构建出的 add.o 定义了 add，能为另一份目标文件提供这个符号。</p></article>
 </div>
-<iframe class="map map-short" src="../../assets/diagrams/architecture-csapp-build-20261013-105812/linking-zoom.html" title="符号解析与重定位局部图"></iframe>
-<p><a href="../../assets/diagrams/architecture-csapp-build-20261013-105812/linking-zoom.html">放大链接局部图</a></p>
-<p>看两条进入“符号解析”的线：<strong>main.o 需要 add，add.o 提供 add。</strong>链接器先让引用找到定义，再安排各部分的位置、修补相关地址引用。这两件事分别叫 <strong>symbol resolution</strong> 与 <strong>relocation</strong>。</p>
+<iframe class="map map-short" src="../../../assets/diagrams/architecture-csapp-build-20261013-105812/linking-zoom.html" title="符号解析与重定位局部图"></iframe>
+<p><a href="../../../assets/diagrams/architecture-csapp-build-20261013-105812/linking-zoom.html">放大链接局部图</a></p>
+<p>看两条进入“符号解析”的线：<strong>main.o 需要 add，add.o 提供 add。</strong>链接（linking）包含两项主要任务：先让引用找到定义，称为<strong>符号解析（symbol resolution）</strong>；再安排各部分的位置、修补相关地址引用，称为<strong>重定位（relocation）</strong>。</p>
 <table class="compact-table"><thead><tr><th>输入</th><th>结果</th><th>原因</th></tr></thead><tbody>
 <tr><td><code>gcc -c main.c -o main.o</code></td><td>可以得到 main.o</td><td>先翻译调用方，留下外部引用</td></tr>
 <tr><td>仅用 main.o 链接本示例</td><td>找不到 add 的定义</td><td>声明没有带来函数实现</td></tr>
@@ -86,9 +86,9 @@ int main(void) {
 <tr><td>undefined reference / 未定义引用</td><td>链接阶段与所需目标文件、库</td><td>有调用，却没有找到对应定义</td></tr>
 <tr><td>能生成程序，但跑得慢或运行出错</td><td>运行行为与对应系统机制</td><td>构建成功不能证明逻辑正确，也不能保证高性能</td></tr>
 </tbody></table>
-<p>教材 §1.3 将价值归为优化性能、理解链接错误与避免安全漏洞；上表是把这些动机落实到常见现象的补充整理。</p>
+<p>教材 §1.3 说明，理解这些阶段有助于优化性能、理解链接错误和避免安全漏洞。上表用常见现象补充说明这三点。</p>
 <p><strong>回到章节总图：</strong>现在到达“可执行文件 hello”。它仍是磁盘上的文件。<a href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html">下一段进入 §1.4：程序怎样运行 →</a> 输入 <code>./hello</code> 后，shell、操作系统、内存与 CPU 怎样让它真正运行。</p>
-<p class="note">主要依据 Figure 1.3 与 §1.2–1.3，PDF 第 42–44 页（印刷页 41–43）；Figure 1.3 和代码已查看原页。教材图以 printf.o 说明链接，而同页汇编写的是 puts；图是阶段示意，不能把所有示例名字理解为同一次具体构建的逐字输出。自制两图已通过 Archify 自动检查与浏览器截图审阅；程序示例未执行，Obsidian 内显示未实测。</p>
+<p class="note">主要依据 Figure 1.3 与 §1.2–1.3，PDF 第 42–44 页（印刷页 41–43）；Figure 1.3 和代码已查看原页。教材图以 printf.o 说明链接，而同页汇编写的是 puts；图用于说明构建阶段，示例中的名字并不都来自同一次构建的原样输出。自制两图已通过 Archify 自动检查与浏览器截图审阅；程序示例未执行，Obsidian 内显示未实测。</p>
 <p><span>Figure 1.3 与四个阶段</span> · <span>符号解析与重定位的教材依据</span> · <a href="#representation">回看 §1.1</a> · <span>回到路线</span></p>
 </section>
 <footer class="lesson-footer"><div class="page-actions"><a class="button chapter-return" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章首页</a><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">返回全书总览</a></div><nav aria-label="上一课与下一课" class="lesson-pager"><span class="end-label">已是本章第一课</span><a class="button" href="02-%E7%A8%8B%E5%BA%8F%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C.html" rel="next">下一课 · 程序怎样运行 →</a></nav><p class="note"></p><p class="note">依据 CSAPP 第 3 版全球版，采用 C、x86-64、Linux/Unix 背景。原书图保留英文；中文说明与示例属于伴读解释。示例用于推理，未在当前 Windows 环境执行。</p></footer>

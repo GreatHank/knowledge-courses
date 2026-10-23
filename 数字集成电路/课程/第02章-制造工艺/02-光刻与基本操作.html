@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>图形怎样变成材料上的变化 · 第 2 章 · 数字集成电路</title><link href="../%E4%BC%B4%E8%AF%BB.css" rel="stylesheet"/><link href="chapter.css" rel="stylesheet"/></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><a class="skip-link" href="#main">跳到主要内容</a><main id="main"><header class="lesson-header"><nav aria-label="阅读位置" class="breadcrumb"><a href="../00-%E5%85%A8%E4%B9%A6%E6%80%BB%E8%A7%88.html">全书总览</a><span>→</span><a href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html">第 2 章 · 制造工艺</a><span>→</span><span aria-current="page">小课程 02</span></nav><p class="eyebrow">§2.2.2–2.2.3 · PDF 36–40／书内 44–48</p><h1>图形怎样变成材料上的变化</h1><p class="lesson-question">光刻负责选哪里加工，哪些操作真正改变材料？</p><div class="page-actions"><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><a href="#sources">本课出处</a></div><details class="course-menu"><summary>本章课程目录</summary><nav aria-label="本章小课程"><a href="01-%E8%8A%AF%E7%89%87%E7%BB%93%E6%9E%84%E4%B8%8E%E6%8E%A9%E8%86%9C.html"><b>01 · 从芯片剖面认识制造对象</b><span>§2.1–2.2.1</span></a><a aria-current="page" href="02-%E5%85%89%E5%88%BB%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.html"><b>02 · 图形怎样变成材料上的变化</b><span>§2.2.2–2.2.3</span></a><a href="03-CMOS%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B.html"><b>03 · 把基本操作接成 CMOS 流程</b><span>§2.2.4</span></a><a href="04-%E7%89%88%E5%9B%BE%E4%B8%8E%E8%AE%BE%E8%AE%A1%E8%A7%84%E5%88%99.html"><b>04 · 从版图还原结构与连接</b><span>§2.3</span></a><a href="05-%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BA%92%E8%BF%9E.html"><b>05 · 裸片怎样接到电路板</b><span>§2.4–2.4.2</span></a><a href="06-%E6%95%A3%E7%83%AD%E4%B8%8E%E9%9B%86%E6%88%90%E8%BE%B9%E7%95%8C.html"><b>06 · 热怎样限制可同时工作的电路</b><span>§2.4.3</span></a><a href="07-%E5%B7%A5%E8%89%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%85%A8%E7%AB%A0%E5%9B%9E%E7%9C%8B.html"><b>07 · 工艺变了，哪些模型也要变</b><span>§2.5–2.6</span></a></nav></details></header>
+<section><h2>把“选区”和“加工”分开看</h2>
+<p>如果把材料沉积到整片表面，或让整片表面都接受同一种处理，并不能自动得到想要的晶体管。需要先确定哪些区域保留、哪些区域暴露，再进行刻蚀或掺杂等操作。</p>
+<p class="key">光刻（photolithography）把掩膜图形转移到光刻胶上。光刻胶形成临时的保护图形，后续加工再改变下面的材料；一次光刻并不会完成整个芯片。</p></section>
+<section><h2>图 2.5：沿着中间的开口追踪材料变化</h2>
+<figure><a href="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC02%E7%AB%A0/%E5%9B%BE2-5-%E5%9B%BE%E5%BD%A2%E8%BD%AC%E7%A7%BB.png"><img alt="六个步骤依次表示硅基底、氧化层和光刻胶、掩膜曝光、显影、氧化层刻蚀和去胶；中间被遮光的负胶区域被去除" loading="lazy" src="../../assets/images/%E5%9B%BE%E9%A1%B5/%E7%AC%AC02%E7%AB%A0/%E5%9B%BE2-5-%E5%9B%BE%E5%BD%A2%E8%BD%AC%E7%A7%BB.png"/></a><figcaption>图 2.5：用负性光刻胶在氧化层中形成开口。教材原图裁剪，PDF 文件第 38 页／书内第 46 页；<span>查看原页</span>。点击图片可同窗放大，浏览器返回即可继续。</figcaption></figure>
+<p>先看 (b)：硅表面有氧化层，上面再涂光刻胶。(c) 的掩膜遮住中央区域，让两侧受光。这里采用<b>负性胶</b>：受光后交联，变得不易被显影液溶解，所以显影后两侧保留、中央未曝光的胶被去除。</p>
+<p>(d) 中央已经没有胶，但氧化层还在。接着刻蚀暴露的氧化层，得到 (e) 的开口；两侧氧化层因上面有胶保护而保留。最后去除剩余光刻胶，得到 (f)。这时留下的是氧化层图形，临时胶层已经完成任务。</p>
+<div class="table-wrap"><table><thead><tr><th>步骤</th><th>直接改变的对象</th><th>读图时检查什么</th></tr></thead><tbody><tr><td>曝光、显影</td><td>光刻胶的性质与保留区域</td><td>选用正胶还是负胶，哪里有胶</td></tr><tr><td>刻蚀氧化层</td><td>开口处的氧化物</td><td>哪里已经失去胶的保护</td></tr><tr><td>去胶</td><td>剩余光刻胶</td><td>下方需要保留的图形还在</td></tr></tbody></table></div>
+<p>正性胶与此相反：曝光区域更容易在显影时被去除。因此，不能脱离胶的类型，只凭“亮处、暗处”判断最终开口。</p>
+<p class="note">原稿差异：<span>PDF 37／书内 45</span>的显影段先说去除未曝光胶，随后又写成去除已曝光胶，与本例负胶定义及图 2.5 不一致。本课按负胶定义和图示解释，原文措辞保留在来源记录中。</p></section>
+<section><h2>画得出图形，还要能把它印出来</h2>
+<p>当特征尺寸接近光刻系统的分辨能力时，衍射等效应使印出的形状不再简单等于掩膜上的形状。原书介绍的 OPC 通过预先修正掩膜图形，补偿一部分成像偏差；这也增加了掩膜制作的复杂度与成本。</p>
+<p>加工之间还要清洗、漂洗和干燥。对很小的结构，残留物或颗粒就可能破坏器件，所以洁净与材料去除同样是流程的一部分。原书关于尺寸极限、设备成本及替代曝光技术的展望属于当时背景，本课不将其当作现行工艺规格。</p></section>
+<section><h2>反复出现的加工操作，各自解决什么问题</h2>
+<div class="table-wrap"><table><thead><tr><th>操作</th><th>作用</th><th>与图形选择的关系</th></tr></thead><tbody>
+<tr><td>氧化、生长或沉积</td><td>形成绝缘、导电或临时保护材料</td><td>先形成材料，再用选择性加工得到所需区域</td></tr>
+<tr><td>扩散 / 离子注入</td><td>改变局部掺杂</td><td>让选定区域接受掺杂，其余区域被阻挡</td></tr>
+<tr><td>刻蚀 Etching</td><td>去除暴露的材料</td><td>将保护层的开口转移到下层材料</td></tr>
+<tr><td>化学机械抛光 CMP</td><td>减小表面起伏</td><td>为后续层提供较平坦的加工表面</td></tr></tbody></table></div>
+<p>扩散依靠高温下杂质在材料中迁移；离子注入用加速后的离子束送入杂质。教材强调，注入能量影响深度，束流和注入时间影响剂量，因而可以较独立地控制这两个量。注入会损伤晶格，后续退火有助于修复。</p>
+<p>沉积是把材料形成在表面；热氧化则通过硅与氧化环境反应生长氧化层，不能把两者都理解为“往上涂一层”。湿法刻蚀使用液体化学反应，干法刻蚀可利用等离子体等方式；对方向性和不同材料的选择性有不同要求。</p>
+<p>CMP 用化学与机械作用减小层间高度变化。若前一层的起伏不断传到后一层，后续图形和互连更难控制。抛光负责平坦化，本身不定义哪两个电路节点要相连。</p>
+<p class="note">术语核对：PDF 39／书内 47 的沉积段把 polysilicon 与 amorphous 混写，而 PDF 40／书内 48 使用 polycrystalline silicon。本课按“多晶硅”表述，不将多晶硅与非晶硅当作同义词。</p></section>
+<section><h2>为什么总图的“02 → 03”写着重复加工</h2>
+<p>一次图形转移只解决某一步的区域选择。形成阱、栅、接触孔和各层金属，需要按不同目的重复选区与加工。一次工艺操作可以同时作用于很多已经定义的区域，也不能据此把整颗芯片的制造理解成一次曝光。</p>
+<p>下一课把这些操作按结构依赖排列：有隔离区域，才能布置器件；有栅和源漏，才能谈怎样接触它们；有层间绝缘和孔，才可能在不同高度可靠互连。</p></section>
+<section id="sources"><h2>本课出处与范围</h2><p>依据 Rabaey、Chandrakasan、Nikolić 的 <cite>Digital Integrated Circuits: A Design Perspective</cite> 第二版，本地排版稿 §2.2.2–2.2.3，PDF 36–40／书内 44–48。<span>打开本课原文</span>；<span>来源、原稿差异与材料限制</span>。</p><p class="note">中文串讲、读图指引和标明的推导为伴读解释。工艺数字及发展背景属于原书情境；页面准备不代表已讨论或已经理解。</p></section><footer><a class="button" href="00-%E7%AB%A0%E8%8A%82%E9%A6%96%E9%A1%B5.html#lessons">← 返回本章目录</a><nav aria-label="前后课程" class="lesson-pager"><a class="button" href="01-%E8%8A%AF%E7%89%87%E7%BB%93%E6%9E%84%E4%B8%8E%E6%8E%A9%E8%86%9C.html" rel="prev">← 从芯片剖面认识制造对象</a><a class="button" href="03-CMOS%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B.html" rel="next">把基本操作接成 CMOS 流程 →</a></nav></footer></main></body></html>

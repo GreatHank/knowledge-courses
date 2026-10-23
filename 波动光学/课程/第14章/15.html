@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>波特实验：频谱狭缝为何改变网格方向 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第14章</a> → 15</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-15">返回本章首页</a></div><h1>15 波特实验：频谱狭缝为何改变网格方向</h1><p class="meta">§14-5 阿贝成像理论与波特实验.pptx · 原幻灯片P7–12</p><p>对照频谱筛选与像面结果，避免把狭缝方向当成条纹方向。</p><nav class="resource-links"><a href="index.html#deck-map-14-5">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC14%E7%AB%A0/14-5.html">本课件题目与解析</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC14%E7%AB%A0/14-5.html#14-5-演算02">14-5-演算02</a></nav><section class="lesson lesson-content" id="lesson-15-content"><p>二维网格的后焦面是一组二维谱点。改变频谱面的通光区域，像面结构会改变，即使物本身没动。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>频谱面操作</th>
+<th>保留的主要分量</th>
+<th>像面现象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>让各级通过</td>
+<td>两个横向方向的级次</td>
+<td>恢复网格细节，受孔径限制</td>
+</tr>
+<tr>
+<td>水平狭缝</td>
+<td><img alt="v\simeq0" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-d76c28332e2139f7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>、不同 <img alt="u" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-0bfe935e70c321c7.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/></td>
+<td>沿 <img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/> 变化，呈竖条纹</td>
+</tr>
+<tr>
+<td>竖直狭缝</td>
+<td><img alt="u\simeq0" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-ffc12df6a8f26798.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>、不同 <img alt="v" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-4c94485e0c21ae6c.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/></td>
+<td>沿 <img alt="y" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-a1fce4363854ff88.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 变化，呈横条纹</td>
+</tr>
+<tr>
+<td>只让零级通过</td>
+<td>近零频背景</td>
+<td>理想模型中趋于均匀</td>
+</tr>
+<tr>
+<td>遮住零级</td>
+<td>去掉平均场分量</td>
+<td>原图出现明暗重分布，不能一概称反相</td>
+</tr>
+</tbody>
+</table></div>
+<p>图上横向谱点代表沿横坐标变化的相位，因此对应的条纹沿竖直方向延伸。P8–10的光路和狭缝必须照这个关系读，不能按外形猜。</p>
+<p>P11备注写 <img alt="E=E_1+(E_2+E_3)" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-7c814f972fe0ad6f.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，其中 <img alt="E_1" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-a6ee72f7ee077722.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 为零级，另两项为正负一级。某点原来全暗，意味着它们恰好相消；遮掉 <img alt="E_1" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-a6ee72f7ee077722.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 后，该点一般就不再暗。这能解释图中的反转现象，但任意物的强度 <img alt="|E-E_1|^2" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-be52ba21c5bc24b5.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/> 并不恒等于某常量减 <img alt="|E|^2" class="inline-math" src="../../assets/14-5/%E5%85%AC%E5%BC%8F-77acc8024503c7bc.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。</p>
+<p>原件附有短音频，已保留可播放副本；声音意义和完整点击时序未核验，以下原图仅代表静态呈现。</p>
+<p><img alt="水平频谱狭缝与竖条纹" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-5/P008.png"/></p>
+<p>原课件P8：水平频谱狭缝与竖条纹。</p>
+<p><img alt="竖直频谱狭缝与横条纹" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-5/P010.png"/></p>
+<p>原课件P10：竖直频谱狭缝与横条纹。</p>
+<p><img alt="遮住零级后的强度变化" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-5/P011.png"/></p>
+<p>原课件P11：遮住零级后的强度变化。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-15">返回本章首页</a><a href="14.html">← 上一课</a><a href="16.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

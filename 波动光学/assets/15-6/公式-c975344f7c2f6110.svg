@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="62pt" height="20pt" viewBox="0 0 62 20" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-23T10:13:48.241331</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 20 
+L 62 20 
+L 62 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <!-- $\mathbf{E}_1^\dagger\mathbf{E}_2=0$ -->
+   <g style="fill: #111827" transform="translate(0 15) scale(0.16 -0.16)">
+    <defs>
+     <path id="STIXGeneral-Bold-45" d="M 4102 1331 
+L 3846 0 
+L 102 0 
+L 102 160 
+Q 448 198 557 294 
+Q 666 390 666 646 
+L 666 3712 
+Q 666 3955 550 4051 
+Q 435 4147 102 4166 
+L 102 4326 
+L 3795 4326 
+L 3795 3040 
+L 3635 3040 
+Q 3526 3680 3216 3894 
+Q 2906 4109 2118 4109 
+Q 1875 4109 1788 4032 
+Q 1702 3955 1702 3763 
+L 1702 2323 
+Q 2221 2330 2451 2531 
+Q 2682 2733 2739 3277 
+L 2906 3277 
+L 2906 1114 
+L 2739 1114 
+Q 2694 1677 2464 1891 
+Q 2234 2106 1702 2106 
+L 1702 557 
+Q 1702 352 1814 275 
+Q 1926 198 2234 198 
+Q 2982 198 3398 544 
+Q 3558 672 3667 838 
+Q 3776 1005 3923 1331 
+L 4102 1331 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-2020" d="M 1536 -954 
+L 1536 -166 
+Q 1536 282 1459 790 
+Q 1382 1299 1267 1619 
+Q 1536 1894 1536 2803 
+Q 1242 2778 954 2662 
+Q 749 2586 659 2586 
+Q 378 2586 378 2861 
+Q 378 2982 448 3062 
+Q 518 3142 627 3142 
+Q 730 3142 941 3059 
+Q 1280 2925 1536 2918 
+Q 1536 3181 1507 3337 
+Q 1478 3494 1382 3738 
+Q 1306 3930 1306 4038 
+Q 1306 4147 1398 4236 
+Q 1491 4326 1606 4326 
+Q 1722 4326 1814 4236 
+Q 1907 4147 1907 4038 
+Q 1907 3942 1824 3738 
+Q 1728 3501 1702 3344 
+Q 1677 3187 1677 2918 
+Q 1933 2925 2266 3059 
+Q 2470 3142 2586 3142 
+Q 2688 3142 2758 3062 
+Q 2829 2982 2829 2860 
+Q 2829 2739 2761 2662 
+Q 2694 2586 2592 2586 
+Q 2458 2586 2253 2662 
+Q 1952 2778 1677 2803 
+Q 1677 1901 1939 1619 
+Q 1677 941 1677 -166 
+L 1677 -954 
+L 1536 -954 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-31" d="M 2522 0 
+L 755 0 
+L 755 96 
+Q 1107 115 1235 227 
+Q 1363 339 1363 608 
+L 1363 3482 
+Q 1363 3795 1171 3795 
+Q 1082 3795 883 3718 
+L 710 3654 
+L 710 3744 
+L 1856 4326 
+L 1914 4307 
+L 1914 486 
+Q 1914 275 2042 185 
+Q 2170 96 2522 96 
+L 2522 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-32" d="M 3034 877 
+L 2688 0 
+L 186 0 
+L 186 77 
+L 1325 1286 
+Q 1773 1754 1965 2144 
+Q 2157 2534 2157 2950 
+Q 2157 3379 1920 3616 
+Q 1683 3853 1267 3853 
+Q 922 3853 720 3673 
+Q 518 3494 326 3021 
+L 192 3053 
+Q 301 3648 630 3987 
+Q 960 4326 1523 4326 
+Q 2054 4326 2380 4006 
+Q 2707 3686 2707 3200 
+Q 2707 2477 1888 1613 
+L 832 486 
+L 2330 486 
+Q 2541 486 2665 569 
+Q 2790 653 2944 915 
+L 3034 877 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-3d" d="M 4077 2048 
+L 307 2048 
+L 307 2470 
+L 4077 2470 
+L 4077 2048 
+z
+M 4077 768 
+L 307 768 
+L 307 1190 
+L 4077 1190 
+L 4077 768 
+z
+" transform="scale(0.015625)"/>
+     <path id="STIXGeneral-Regular-30" d="M 3046 2112 
+Q 3046 1683 2963 1302 
+Q 2880 922 2717 602 
+Q 2554 282 2266 96 
+Q 1978 -90 1600 -90 
+Q 1210 -90 915 108 
+Q 621 307 461 640 
+Q 301 973 227 1350 
+Q 154 1728 154 2150 
+Q 154 2746 301 3222 
+Q 448 3699 790 4012 
+Q 1133 4326 1626 4326 
+Q 2253 4326 2649 3712 
+Q 3046 3098 3046 2112 
+z
+M 2432 2080 
+Q 2432 3091 2217 3625 
+Q 2003 4160 1587 4160 
+Q 1190 4160 979 3622 
+Q 768 3085 768 2106 
+Q 768 1120 979 598 
+Q 1190 77 1600 77 
+Q 2003 77 2217 598 
+Q 2432 1120 2432 2080 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#STIXGeneral-Bold-45" transform="translate(0 0.890625)"/>
+    <use xlink:href="#STIXGeneral-Regular-2020" transform="translate(78.351276 44.684375) scale(0.7)"/>
+    <use xlink:href="#STIXGeneral-Regular-31" transform="translate(68.243278 -25.565625) scale(0.7)"/>
+    <use xlink:href="#STIXGeneral-Bold-45" transform="translate(127.868637 0.890625)"/>
+    <use xlink:href="#STIXGeneral-Regular-32" transform="translate(196.111916 -12.3375) scale(0.7)"/>
+    <use xlink:href="#STIXGeneral-Regular-3d" transform="translate(249.961276 0.890625)"/>
+    <use xlink:href="#STIXGeneral-Regular-30" transform="translate(332.901257 0.890625)"/>
+   </g>
+  </g>
+ </g>
+</svg>

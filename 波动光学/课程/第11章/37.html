@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>吸收怎样减弱光，又怎样用来测浓度 · 波动光学</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav class="breadcrumb"><a href="../../index.html">波动光学</a> → <a href="index.html">第11章</a> → 37</nav><nav><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a> · <a href="../../%E9%A2%98%E7%9B%AE/index.html">题目</a></nav></header><main class="page"><div class="nav-row"><a href="index.html#lesson-37">返回本章首页</a></div><h1>37 吸收怎样减弱光，又怎样用来测浓度</h1><p class="meta">§11-4 光的吸收、色散和散射.ppt · 原幻灯片P1–5</p><p>用指数衰减连接复折射率、吸收系数和浓度，再看材料透光范围与血氧仪。</p><nav class="resource-links"><a href="index.html#deck-map-11-4">课件逻辑链</a> · <a href="../../%E9%A2%98%E7%9B%AE/%E7%AC%AC11%E7%AB%A0/11-4.html">本课件题目与解析</a></nav><section class="lesson lesson-content" id="lesson-37-content"><h2>红玻璃为什么能让白光变红？</h2>
+<p>白光含多种波长。红玻璃对不同波长的吸收不同，透过光便偏向红色。P1–5依次介绍吸收机制、衰减规律、波长选择性和应用。</p>
+<p>金属中，自由电子受电场驱动形成电流，部分光能转为焦耳热；有吸收的电介质中，束缚电荷的受迫振动通过耗散把能量传给介质。吸收使光能转为其他形式的能量；散射则把光送往其他方向，二者都可能让直射束变弱。</p>
+<h2>从场的衰减到光强衰减（P2–3）</h2>
+<p>沿用时间因子<img alt="e^{-i\omega t}" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-af5258f7222f20b2.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>，取<img alt="x" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-2d711642b726b044.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>沿光在均匀介质中的传播方向。课件记复折射率<img alt="\widetilde n=n(1+i\kappa)=n+iK" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-4ce354e323b58eb6.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>，所以<img alt="K=n\kappa" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-34c4f524296f8d6a.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>；<img alt="k_0=\omega/c=2\pi/\lambda_0" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-2204565753b3f365.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，<img alt="\lambda_0" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-7238fc50817cce55.svg" style="height:1.00em;width:auto;vertical-align:-0.22em"/>是真空波长。</p>
+<div class="equation" role="math"><img alt="E(x,t)=Ae^{-k_0Kx}e^{i(k_0nx-\omega t)}." src="../../assets/11-4/%E5%85%AC%E5%BC%8F-212dd4450b2829aa.svg" style="width:226.7px;height:auto"/></div>
+<p><img alt="A" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-559aead08264d579.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>是<img alt="x=0" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-794d66ff4ebd363e.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>处电场复振幅（V/m）。这里写的是复场，实际瞬时场取实部。同一均匀介质内，平均光强与场的模平方成正比，传播距离<img alt="l" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-acac86c0e609ca90.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>后便有朗伯定律：</p>
+<div class="equation" role="math"><img alt="I(l)=I(0)e^{-\alpha l},\qquad \alpha=2k_0K=\frac{4\pi K}{\lambda_0}." src="../../assets/11-4/%E5%85%AC%E5%BC%8F-1228ffc6291bd6c5.svg" style="width:286.7px;height:auto"/></div>
+<p><img alt="n,K,\kappa" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-e3a3fe3b401c25e1.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>无量纲，<img alt="l" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-acac86c0e609ca90.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>单位m，<img alt="\alpha" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-4893e9df8b5496eb.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/>单位m⁻¹；<img alt="\alpha l" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-8d0ebd955c0682d5.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>必须无量纲。<img alt="I(0)" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-04217058f9896324.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>和<img alt="I(l)" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-3e42d4aec4f36d88.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>都指介质内部的光强，表面反射损失需另外计算。原P2把<img alt="I" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-a83dd0ccbffe39d0.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>直接写作<img alt="EE^*" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-f5b7879da4714bdd.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>是省略共同系数的记法，不能直接据此得到SI光强。</p>
+<p>对均匀稀溶液，课件再给出比尔定律：</p>
+<div class="equation" role="math"><img alt="I(l)=I(0)e^{-\beta Cl},\qquad C=\frac{\ln[I(0)/I(l)]}{\beta l}." src="../../assets/11-4/%E5%85%AC%E5%BC%8F-806ccb3513a5bd34.svg" style="width:277.3px;height:auto"/></div>
+<p><img alt="C" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-6b23c0d5f35d1b11.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>是溶液浓度，<img alt="\beta" class="inline-math" src="../../assets/11-3/%E5%85%AC%E5%BC%8F-f3f3804480e8551a.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>是在指定波长和浓度单位下的系数，单位应使<img alt="\beta Cl" class="inline-math" src="../../assets/11-4/%E5%85%AC%E5%BC%8F-17e9bfacd30119d2.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>无量纲。右边的反解是<strong>补充解题方法</strong>：先扣除不属于溶质吸收的损失，再由光强比求浓度。浓度不均匀、显著散射或强光导致响应改变时，不能直接套这个常系数指数式。</p>
+<details><summary>原页与吸收系数的量级</summary>
+<figure><img alt="原P2：复折射率、场衰减与朗伯定律" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-4/P002.png"/></figure>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">P3所列吸收系数/cm⁻¹</th>
+<th style="text-align:right">换成m⁻¹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>玻璃</td>
+<td style="text-align:right">10⁻²</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>金属</td>
+<td style="text-align:right">10⁶</td>
+<td style="text-align:right">10⁸</td>
+</tr>
+<tr>
+<td>一个大气压的空气</td>
+<td style="text-align:right">10⁻⁵</td>
+<td style="text-align:right">10⁻³</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些是课件给出的量级，没有指定波长、材料品种和温度，不能作为任意样品的固定参数。原页还提醒强光下可能出现非线性吸收；是否发生仍取决于材料和光强，不能把“激光”直接等同于非线性。</p>
+</details>
+<h2>吸收选择了哪些波长（P3–4）</h2>
+<p>课件把弱、随波长变化较缓的情形称为一般吸收，把吸收强且随波长变化显著的情形称为选择吸收。入射频率接近某个共振频率时可有共振吸收；稀薄气体常表现为较窄的吸收线，固体、液体的相互作用与展宽使其常呈吸收带。带外吸收较小时可视为透明区。</p>
+<p>下表按P4原值保留，实际透光率还取决于厚度、材料等级和测量条件；“透光范围”不表示范围内完全无损。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原页材料名</th>
+<th style="text-align:right">透光范围/nm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冕牌玻璃</td>
+<td style="text-align:right">350–2000</td>
+</tr>
+<tr>
+<td>火石玻璃</td>
+<td style="text-align:right">380–2500</td>
+</tr>
+<tr>
+<td>石英（SiO₂）</td>
+<td style="text-align:right">180–4000</td>
+</tr>
+<tr>
+<td>莹石（CaF₂，原页用字）</td>
+<td style="text-align:right">125–9500</td>
+</tr>
+<tr>
+<td>岩盐（NaCl）</td>
+<td style="text-align:right">175–14500</td>
+</tr>
+<tr>
+<td>氯化钾（KCl）</td>
+<td style="text-align:right">180–23000</td>
+</tr>
+</tbody>
+</table></div>
+<p>P4用水蒸气的红外吸收、臭氧的紫外吸收说明大气窗口；300 nm是原页的粗略分区，不能读成所有大气条件下的精确透明截止线。激光稳频利用谱线作为频率参考，DPSSL利用泵浦光与吸收带匹配，空间与红外系统则需选择合适的工作波段。这些都回用了吸收的波长选择性。</p>
+<h2>血氧仪利用什么差别（P5）</h2>
+<figure><img alt="P5血氧仪原图：手指夹式测量装置" src="../../assets/images/%E5%8E%9F%E9%A1%B5/11-4/P005.png"/><figcaption>原页只给器件照片；屏幕读数是图片内容，不是本课程测量结果。</figcaption></figure>
+<p><strong>补充解释：</strong>氧合与去氧血红蛋白的吸收谱不同。仪器比较红光和近红外光的测量信号，并利用随脉搏变化的部分估计血氧；常见波长为660 nm和940 nm。这里比较的是相对吸收差别，不能说两种血红蛋白各自只吸收一种颜色，也不能仅由一次总透光强度读出血氧。<a href="https://www.fda.gov/media/162709/download">FDA原理说明，第III节</a>。</p>
+<p>这节已把光强衰减与介质响应联系起来；下一课追问同一响应为什么还会改变折射率。</p>
+</section><nav class="lesson-nav"><a href="index.html#lesson-37">返回本章首页</a><a href="36.html">← 上一课</a><a href="38.html">下一课 →</a></nav></main><footer class="page-footer">本地课程网站 · 原课件与补充解释分别标注 · 页面整理不表示已学习或掌握</footer></body></html>

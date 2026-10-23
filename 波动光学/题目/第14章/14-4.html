@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>§14-4 · 题目、推导与解析 · 波动光学题目</title><link href="../../assets/site.css" rel="stylesheet"/><script defer="" src="../../assets/site.js"></script></head><body><nav aria-label="学习库入口" style="padding:12px 20px;font:15px system-ui;border-bottom:1px solid #64748b55"><a href="../../../index.html">← 课程与题目首页</a></nav><header class="site-header"><nav aria-label="当前位置" class="breadcrumb"><a href="../../index.html">波动光学</a> <span aria-hidden="true">›</span> <a href="../index.html">题目</a> <span aria-hidden="true">›</span> <a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html">第14章</a> <span aria-hidden="true">›</span> <span>§14-4 · 题目、推导与解析</span></nav><nav aria-label="全课程入口"><a href="../../index.html#course-directory">总目录</a> · <a href="../../index.html#course-overview">全课程总图</a></nav></header><main class="page"><section class="panel"><h1>§14-4 · 题目、推导与解析</h1></section><section class="panel" id="题目目录"><nav class="nav-row"><a href="index.html">第14章题目目录</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html#deck-14-4">本课件课程</a></nav><h2>原题与课堂提问</h2><p>静态图及关联备注中未发现独立作答题；下方保留原讲授推导与数值示例，没有另编练习。</p><h2>原讲授推导与示例</h2><ul><li><a href="#14-4-演算01">14-4-演算01 · 非相干成像：从强度卷积到MTF</a></li><li><a href="#14-4-演算02">14-4-演算02 · OTF为什么等于瞳孔的自相关</a></li><li><a href="#14-4-演算03">14-4-演算03 · 方孔与圆孔的非相干通带</a></li><li><a href="#14-4-演算04">14-4-演算04 · 读镜头MTF：像差、离焦和相机规格</a></li></ul><p class="meta">原件完整播放及列明的媒体缺口仍待核。题目整理不表示用户已经阅读或掌握。</p></section><article class="question panel" id="14-4-演算01"><h2>14-4-演算01 · 非相干成像：从强度卷积到MTF</h2><p class="meta">原讲授推导 / 观察与应用（非独立练习） · §14-4 非相干成像系统分析及光学传递函数.ppt · 原幻灯片P1、P2、P3、P4、P5</p><div class="lesson-content"><p>原讲授内容：不相关物点的交叉项平均消失，因此系统对强度线性。</p>
+<p>这一段没有独立作答题。原页与补充解释分别展开。</p>
+</div><p><strong>使用条件：</strong>各段所需近似、坐标及适用条件见补充解释；原件完整点击时序未核验。</p>
+<p class="meta">知识点：非相干成像：从强度卷积到MTF</p><details id="14-4-演算01-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>以下为本条完整原页，保留原式、图示及其顺序；备注可从原页册继续查看。</p>
+<p><img alt="原讲授P1，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P001.png"/></p>
+<p>原课件P1：原讲授P1，含原式和原图。</p>
+<p><img alt="原讲授P2，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P002.png"/></p>
+<p>原课件P2：原讲授P2，含原式和原图。</p>
+<p><img alt="原讲授P3，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P003.png"/></p>
+<p>原课件P3：原讲授P3，含原式和原图。</p>
+<p><img alt="原讲授P4，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P004.png"/></p>
+<p>原课件P4：原讲授P4，含原式和原图。</p>
+<p><img alt="原讲授P5，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P005.png"/></p>
+<p>原课件P5：原讲授P5，含原式和原图。</p>
+</div><p>对应原页：<span>P1</span> · <span>P2</span> · <span>P3</span> · <span>P4</span> · <span>P5</span></p></details><details id="14-4-演算01-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>在通常的非相干成像模型里，各物点的相对相位随时间变化。探测器作时间平均后，交叉干涉项消失，便可把各点的强度像相加：</p>
+<div class="equation" role="math"><img alt="I_i=I_{\rm geom}*h_I,\qquad h_I=|h|^2." src="../../assets/14-4/%E5%85%AC%E5%BC%8F-8e76e49e50c5fdfd.svg" style="width:221.3px;height:auto"/></div>
+<p>这里先按需要归一化PSF能量；<img alt="h" class="inline-math" src="../../assets/14-3/%E5%85%AC%E5%BC%8F-aaa9402664f1a41f.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 为同一系统的相干振幅PSF，<img alt="h_I" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-c8da476367a77c99.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 为强度PSF。傅里叶变换得到强度谱关系。若系统有非零通光量，将传递函数除以零频值，定义归一化OTF：</p>
+<div class="equation" role="math"><img alt="H_I(0,0)=1,\qquad H_I=|H_I|e^{i\phi},\qquad {\rm MTF}=|H_I|." src="../../assets/14-4/%E5%85%AC%E5%BC%8F-12cc031567a39328.svg" style="width:376.0px;height:auto"/></div>
+<p>PTF为相位 <img alt="\phi" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-10ce0200b450ea95.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。输入强度条纹 <img alt="a+b\cos(2\pi ux)" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-967f687c15bd9e28.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 的对比度为 <img alt="b/a" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-bc8a2f071c78f3e3.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，输出对比度乘以MTF，条纹位置的相移由PTF给出。MTF描述细节对比度传递，不能直接当成总透光率。</p>
+<p>因强度PSF非负，归一化后 <img alt="|\iint h_Ie^{-i2\pi\mathbf{u}\cdot\mathbf{x}}|\le\iint h_I" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-588e6ebe98c4a6c1.svg" style="height:1.25em;width:auto;vertical-align:-0.22em"/>，所以 <img alt="0\le{\rm MTF}\le1" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-76e5fc22c9185ad1.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>。课件P5“MTF不可能等于1”遗漏零频必为1的情况；MTF为0时相位没有定义。P4空间域核的大小写也与频域符号混用，本课用小写 <img alt="h_I" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-c8da476367a77c99.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 区分。</p>
+<p><img alt="输入和输出强度条纹的对比度" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P003.png"/></p>
+<p>原课件P3：输入和输出强度条纹的对比度。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/10.html">返回课程正文</a>。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原空间PSF与频域OTF存在大小写混用。；原“MTF不可能等于1”遗漏零频情况。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/10.html">返回第10课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html#deck-14-4">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="14-4-演算02"><h2>14-4-演算02 · OTF为什么等于瞳孔的自相关</h2><p class="meta">原讲授推导 / 观察与应用（非独立练习） · §14-4 非相干成像系统分析及光学传递函数.ppt · 原幻灯片P6、P7、P8</p><div class="lesson-content"><p>原讲授内容：从强度PSF是振幅PSF模平方出发，推出频域自相关。</p>
+<p>这一段没有独立作答题。原页与补充解释分别展开。</p>
+</div><p><strong>使用条件：</strong>各段所需近似、坐标及适用条件见补充解释；原件完整点击时序未核验。</p>
+<p class="meta">知识点：OTF为什么等于瞳孔的自相关</p><details id="14-4-演算02-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>以下为本条完整原页，保留原式、图示及其顺序；备注可从原页册继续查看。</p>
+<p><img alt="原讲授P6，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P006.png"/></p>
+<p>原课件P6：原讲授P6，含原式和原图。</p>
+<p><img alt="原讲授P7，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P007.png"/></p>
+<p>原课件P7：原讲授P7，含原式和原图。</p>
+<p><img alt="原讲授P8，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P008.png"/></p>
+<p>原课件P8：原讲授P8，含原式和原图。</p>
+</div><p>对应原页：<span>P6</span> · <span>P7</span> · <span>P8</span></p></details><details id="14-4-演算02-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>要算强度传递，不必每次先求完整艾里斑再变换。<img alt="h_I=h h^*" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-7896f58255307202.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/> 的乘积在频域变成卷积，与共轭的变换性质合用，得到</p>
+<div class="equation" role="math"><img alt="H_I(\mathbf{u})=\frac{\iint H_c(\mathbf{q}+\mathbf{u})H_c^*(\mathbf{q})\,d^2q}{\iint |H_c(\mathbf{q})|^2\,d^2q}." src="../../assets/14-4/%E5%85%AC%E5%BC%8F-469297350f11fd0e.svg" style="width:212.0px;height:auto"/></div>
+<p><img alt="\mathbf{u}=(u,v)" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-cd2f14b8f28580fd.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 为考察的空间频率，<img alt="\mathbf{q}" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-c218b7de88e8a80b.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 为积分频率。分母保证零频为1。代入上一节的缩放瞳孔后，两个瞳孔副本在孔径平面相差 <img alt="\lambda l'\mathbf{u}" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-52655df119b4df98.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/>。</p>
+<p>若瞳孔内振幅均匀且无像差，重叠区的乘积都是1，积分就变成“重叠面积/总面积”。这就是P8的面积法。频率越大，平移越远；当两孔不再重叠，OTF为0。若瞳孔有相位或振幅变化，必须积分复乘积，不能只算几何面积。</p>
+<p>原P7最后代换的一个共轭函数中，两个积分变量的符号不一致。上式用统一的向量变量重写，可直接在零频检查它等于1。</p>
+<p><img alt="瞳孔副本平移后的重叠" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P008.png"/></p>
+<p>原课件P8：瞳孔副本平移后的重叠。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/11.html">返回课程正文</a>。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原代换后共轭函数两个积分变量符号不一致。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/11.html">返回第11课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html#deck-14-4">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="14-4-演算03"><h2>14-4-演算03 · 方孔与圆孔的非相干通带</h2><p class="meta">原讲授推导 / 观察与应用（非独立练习） · §14-4 非相干成像系统分析及光学传递函数.ppt · 原幻灯片P9、P10、P11</p><div class="lesson-content"><p>原讲授内容：用重叠面积算OTF，并解释截止频率加倍为何不等于成像全面更好。</p>
+<p>这一段没有独立作答题。原页与补充解释分别展开。</p>
+</div><p><strong>使用条件：</strong>各段所需近似、坐标及适用条件见补充解释；原件完整点击时序未核验。</p>
+<p class="meta">知识点：方孔与圆孔的非相干通带</p><details id="14-4-演算03-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>以下为本条完整原页，保留原式、图示及其顺序；备注可从原页册继续查看。</p>
+<p><img alt="原讲授P9，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P009.png"/></p>
+<p>原课件P9：原讲授P9，含原式和原图。</p>
+<p><img alt="原讲授P10，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P010.png"/></p>
+<p>原课件P10：原讲授P10，含原式和原图。</p>
+<p><img alt="原讲授P11，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P011.png"/></p>
+<p>原课件P11：原讲授P11，含原式和原图。</p>
+</div><p>对应原页：<span>P9</span> · <span>P10</span> · <span>P11</span></p></details><details id="14-4-演算03-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>方孔沿两个方向平移后，重叠区仍是矩形。边长为 <img alt="a" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-ca978112ca1bbdca.svg" style="height:0.56em;width:auto;vertical-align:-0.22em"/> 时，设 <img alt="B=a/(\lambda l')" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-be74abe796d53b2e.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/>、<img alt="[t]_+=\max(t,0)" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-149e003f8a0737e8.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/>，则</p>
+<div class="equation" role="math"><img alt="H_I(u,v)=\left[1-\frac{|u|}{B}\right]_+\left[1-\frac{|v|}{B}\right]_+." src="../../assets/14-4/%E5%85%AC%E5%BC%8F-096da0b907da3b26.svg" style="width:253.3px;height:auto"/></div>
+<p>这是两条三角函数的乘积。它在轴向的截止为 <img alt="B" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-df7e70e5021544f4.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，通带仍是方形，并非半径为 <img alt="B" class="inline-math" src="../../assets/11-1/%E5%85%AC%E5%BC%8F-df7e70e5021544f4.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 的圆。</p>
+<p>圆瞳孔直径为 <img alt="D" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-3f39d5c348e5b79d.svg" style="height:0.69em;width:auto;vertical-align:-0.22em"/>，两个圆心间隔 <img alt="d=\lambda l'\rho" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-73f29ca9e31c6425.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>。重叠面积由两个圆弓形组成；用半径 <img alt="R=D/2" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-4178cd0955042019.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 和 <img alt="s=d/(2R)" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-3ee5d97477c800d8.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 表示，归一化后为</p>
+<div class="equation" role="math"><img alt="H_I(\rho)=\frac{2}{\pi}\left[\arccos s-s\sqrt{1-s^2}\right]." src="../../assets/14-4/%E5%85%AC%E5%BC%8F-d01e6f76c4167aff.svg" style="width:272.0px;height:auto"/></div>
+<p>其中 <img alt="s=\rho/[D/(\lambda l')]" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-2cf54fa26c829fa9.svg" style="height:1.12em;width:auto;vertical-align:-0.22em"/>，上式适用于 <img alt="0\le s\le1" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-6684f491e7ef6c73.svg" style="height:0.81em;width:auto;vertical-align:-0.22em"/>。</p>
+<p><img alt="s&gt;1" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-eb6b7f7d0d5eadd7.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/> 时为0。零频两圆重合，OTF为1；边界两圆相切，重叠面积为0。非相干截止 <img alt="D/(\lambda l')" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-f7f073bd889c6aad.svg" style="height:1.06em;width:auto;vertical-align:-0.22em"/> 是同一圆瞳孔相干截止的两倍。</p>
+<p>P11备注提醒不能因此断言非相干系统一定更好：前者传递强度对比度，后者传递复振幅，两者输入变量不同。比较具体图像，还要给出物的振幅、相位及照明相干性。</p>
+<p><img alt="方孔重叠面积" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P009.png"/></p>
+<p>原课件P9：方孔重叠面积。</p>
+<p><img alt="圆孔重叠面积与归一化频率" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P010.png"/></p>
+<p>原课件P10：圆孔重叠面积与归一化频率。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/12.html">返回课程正文</a>。</p>
+</div></details><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/12.html">返回第12课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html#deck-14-4">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><article class="question panel" id="14-4-演算04"><h2>14-4-演算04 · 读镜头MTF：像差、离焦和相机规格</h2><p class="meta">原讲授推导 / 观察与应用（非独立练习） · §14-4 非相干成像系统分析及光学传递函数.ppt · 原幻灯片P12、P13、P14、P15、P16</p><div class="lesson-content"><p>原讲授内容：分别读懂曲线的坐标、视场、波长与验收阈值。</p>
+<p>这一段没有独立作答题。原页与补充解释分别展开。</p>
+</div><p><strong>使用条件：</strong>各段所需近似、坐标及适用条件见补充解释；原件完整点击时序未核验。</p>
+<p class="meta">知识点：读镜头MTF：像差、离焦和相机规格</p><details id="14-4-演算04-原解"><summary>课件原解答 / 原讲授与备注</summary><div class="lesson-content"><p>以下为本条完整原页，保留原式、图示及其顺序；备注可从原页册继续查看。</p>
+<p><img alt="原讲授P12，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P012.png"/></p>
+<p>原课件P12：原讲授P12，含原式和原图。</p>
+<p><img alt="原讲授P13，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P013.png"/></p>
+<p>原课件P13：原讲授P13，含原式和原图。</p>
+<p><img alt="原讲授P14，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P014.png"/></p>
+<p>原课件P14：原讲授P14，含原式和原图。</p>
+<p><img alt="原讲授P15，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P015.png"/></p>
+<p>原课件P15：原讲授P15，含原式和原图。</p>
+<p><img alt="原讲授P16，含原式和原图" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P016.png"/></p>
+<p>原课件P16：原讲授P16，含原式和原图。</p>
+</div><p>对应原页：<span>P12</span> · <span>P13</span> · <span>P14</span> · <span>P15</span> · <span>P16</span></p></details><details id="14-4-演算04-补充解析"><summary>补充解析（伴读解释）</summary><div class="lesson-content"><p>两只镜头孔径相同，细节也可能差很多。课件P12把实际波前与理想参考球面的光程差记为 <img alt="W" class="inline-math" src="../../assets/11-2/%E5%85%AC%E5%BC%8F-fcb5f40df9be6bae.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>，它的单位是长度，瞳孔相位为 <img alt="kW" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-37f8670671f6c502.svg" style="height:0.75em;width:auto;vertical-align:-0.22em"/>。把复瞳孔 <img alt="P e^{ikW}" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-9468c115771d3df4.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 代入自相关才能求有像差的OTF。</p>
+<p>P13离焦例中，某些频段的OTF变负，正弦条纹的明暗次序反转。MTF只保留其绝对值，所以还要看PTF或带符号OTF；负OTF不是“负的光强”。图中的离焦量按 <img alt="W_m/\lambda" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-c71b469240a05a90.svg" style="height:0.88em;width:auto;vertical-align:-0.22em"/> 表示。</p>
+<p>P14上图为LAIKIN LENS，波段为0.4800–0.6440 μm，标出0°、2.5°视场和衍射极限；下图为Double Gauss，列出0°、10°、14°视场及656.3、587.6、486.1 nm等权波长。两图横轴范围分别约2088.87和1008周/mm。彩色实线比理想线低，表示给定条件下的像差影响；没有镜头工程与完整设置，不能跨图按横轴长度直接评优劣。</p>
+<p>P15原相机规格完整保留在下图：1–3片普通玻璃或塑料镜片，原图标为Agilent FDCS-2020的CMOS，640×480、像素7.4 μm、有效面3.55×4.74 mm（对角6 mm），固定焦距6 mm、f/3.5，景深750 mm至无穷远，畸变小于4%；角点相对照度大于60%，镜头在400–700 nm透过率大于80%。原页后文又写CCD，器件名称存在混用，不据此替换原条件。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>频率</th>
+<th>中心要求</th>
+<th>外场要求</th>
+<th>P16给出的中心值</th>
+<th>P16外场RAD/TAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17 lp/mm</td>
+<td>&gt;0.90</td>
+<td>&gt;0.85</td>
+<td>0.931</td>
+<td>0.940 / 0.875</td>
+</tr>
+<tr>
+<td>51 lp/mm</td>
+<td>&gt;0.30</td>
+<td>&gt;0.25</td>
+<td>0.725</td>
+<td>0.795 / 0.561</td>
+</tr>
+</tbody>
+</table></div>
+<p>所列数值满足这两个频率点的阈值，但原规格要求覆盖对焦范围，一张离焦量为0的截图不能证明全范围合格。P16设置频率上限68周/mm、间隔17；补充计算：像素采样的奈奎斯特频率约 <img alt="1/(2\times0.0074)=67.57" class="inline-math" src="../../assets/14-4/%E5%85%AC%E5%BC%8F-02819e47cdcce209.svg" style="height:0.94em;width:auto;vertical-align:-0.22em"/> 周/mm。光学MTF、像素采样和畸变是不同指标，需要分别检查。</p>
+<p><img alt="离焦OTF与辐条靶的对比度反转" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P013.png"/></p>
+<p>原课件P13：离焦OTF与辐条靶的对比度反转。</p>
+<p><img alt="原相机规格，保留图内全部条件" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P015.png"/></p>
+<p>原课件P15：原相机规格，保留图内全部条件。</p>
+<p><img alt="原MTF截图与两组读数" src="../../assets/images/%E5%8E%9F%E9%A1%B5/14-4/P016.png"/></p>
+<p>原课件P16：原MTF截图与两组读数。</p>
+<p><span>两幅MTF原对象和规格大图</span>可放大核读。</p>
+<p><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/13.html">返回课程正文</a>。</p>
+</div></details><p class="source-note">尚未核实或与原页的差异：原软件工程与完整参数未提供，不能复现两图；图内波段与视场已回读取副本内嵌WMF核读。；原图型号写FDCS-2020，实际型号未另核；CMOS/CCD称谓混用，原设计工程未提供。；截图不能证明全对焦范围满足规格，原工程未提供。</p><nav class="nav-row"><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/13.html">返回第13课</a><a href="../../%E8%AF%BE%E7%A8%8B/%E7%AC%AC14%E7%AB%A0/index.html#deck-14-4">返回本章课程目录</a><a href="#题目目录">本页题目目录</a></nav></article><footer class="page-footer"><nav class="nav-row"><a class="button" href="../index.html">返回全部题目</a><a class="button" href="../../index.html">返回全课程首页</a></nav><p class="meta">整理与解析材料供阅读，用户阅读和理解尚未确认；不要求作答，不进行评分。</p></footer></main></body></html>

@@ -1,0 +1,20 @@
+.timing td:not(:first-child),.timing th:not(:first-child){text-align:center;white-space:nowrap}
+.timing td:not(:first-child){background:#e5f4fa;font:600 16px Consolas,"Microsoft YaHei",monospace}
+.cycle-demo{padding:22px;border:1px solid #91b5c5;border-radius:14px;background:#f2f9fc;margin-top:24px}
+.cycle-demo label{font-weight:650;display:block}
+.cycle-demo input[type=range]{width:min(100%,680px);min-height:44px;accent-color:#14748e}
+.demo-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 20px}
+.demo-buttons button{font:inherit;min-height:44px;padding:8px 16px;border:1px solid #87abbc;border-radius:8px;background:#fff;color:#214e64;cursor:pointer}
+.demo-buttons button:disabled{opacity:.45;cursor:default}
+.demo-buttons button:focus-visible,.cycle-demo input:focus-visible{outline:3px solid #05a7cb;outline-offset:3px}
+.stage-board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.stage-board>div{border:1px solid #9fbdcc;border-radius:10px;background:#fff;padding:14px 12px;min-height:95px}
+.stage-board strong,.stage-board span{display:block}
+.stage-board strong{font-size:16px;color:#346478}
+.stage-board span{font-size:18px;margin-top:8px;overflow-wrap:anywhere}
+.stage-board .active{background:#d9f1eb;border-color:#66a695}
+.stage-board .bubble{background:#fff0d6;border-color:#cfa35e}
+figure img{max-height:none}
+@media(prefers-color-scheme:dark){.timing td:not(:first-child){background:#213e50}.cycle-demo{background:#1b3041;border-color:#537b91}.demo-buttons button{background:#263e50;color:#d5eaf5}.stage-board>div{background:#203243;border-color:#537b91}.stage-board strong{color:#a8dbe8}.stage-board .active{background:#1c5149;border-color:#73bba4}.stage-board .bubble{background:#514127;border-color:#a18853}}
+@media(max-width:600px){.table-wrap table{min-width:650px}.table-wrap th:first-child,.table-wrap td:first-child{min-width:125px}.table-wrap::before{content:"表格可左右滑动";display:block;font-size:12px;color:#526174}.table-wrap{margin-top:16px}.cycle-demo{padding:14px}.stage-board{grid-template-columns:1fr}.stage-board>div{min-height:0;display:flex;align-items:center;gap:16px;padding:10px 12px}.stage-board strong{min-width:80px}.stage-board span{font-size:16px;margin-top:0}}
+@media(max-width:600px) and (prefers-color-scheme:dark){.table-wrap::before{color:#adbdcf}}
